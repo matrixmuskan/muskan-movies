@@ -20,6 +20,8 @@
   var flushBusy = false;
   var flushAgain = false;
   var trailerReturn = null;
+  var sheetReturn = null;
+  var TOUCH_LAYOUT = window.matchMedia("(max-width: 799px), (hover: none)");
   var UNLOCK_KEY = "muskan-movies-unlock";
 
   function el(tag, className, text) {
@@ -525,9 +527,11 @@
     hero.appendChild(frame);
 
     var copy = el("div", "hero-copy");
-    copy.appendChild(el("p", "kicker", "Top pick · " + formatWeek(pick.week)));
-    copy.appendChild(el("h1", null, pick.title));
-    copy.appendChild(metaWithRating("hero-meta", [pick.year, pick.language, typeLabel(pick.type)].join(" · ") + " · ", pick));
+    var head = el("div", "hero-head");
+    head.appendChild(el("p", "kicker", "Top pick · " + formatWeek(pick.week)));
+    head.appendChild(el("h1", null, pick.title));
+    head.appendChild(metaWithRating("hero-meta", [pick.year, pick.language, typeLabel(pick.type)].join(" · ") + " · ", pick));
+    copy.appendChild(head);
     var heroHook = el("p", "hero-hook", pick.hook);
     copy.appendChild(heroHook);
     copy.appendChild(el("p", "hero-watch", pick.where_to_watch));
@@ -706,40 +710,88 @@
     flush();
   }
 
+  function pickById(id) {
+    return state.picks.find(function (item) { return item.id === id; });
+  }
+
+  function closeSheet() {
+    var sheet = document.getElementById("sheet");
+    if (!sheet || sheet.hidden) return;
+    sheet.hidden = true;
+    document.getElementById("sheet-body").replaceChildren();
+    document.body.classList.remove("sheet-open");
+    if (sheetReturn && sheetReturn.isConnected && sheetReturn.focus) sheetReturn.focus();
+    sheetReturn = null;
+  }
+
+  function openSheet(pick, source) {
+    var body = document.getElementById("sheet-body");
+    body.replaceChildren();
+    var heading = el("h2", null, pick.title);
+    heading.id = "sheet-title";
+    body.appendChild(heading);
+    body.appendChild(metaWithRating("sheet-meta", [pick.year, pick.language, typeLabel(pick.type)].join(" · ") + " · ", pick));
+    body.appendChild(el("p", "sheet-hook", pick.hook));
+    body.appendChild(el("p", "sheet-watch", pick.where_to_watch));
+    var endorsed = endorsementLine(pick, "endorsed sheet-endorsed");
+    if (endorsed) body.appendChild(endorsed);
+    var note = trailerNote(pick);
+    if (note) body.appendChild(note);
+    if (pick.kid_safe) body.appendChild(el("p", "badge", "Kid-safe"));
+    if (pick.status === "removed" && pick.removed_reason) body.appendChild(el("p", "removed-reason", pick.removed_reason));
+    var actions = el("div", "sheet-actions");
+    actions.dataset.id = pick.id;
+    var play = playControl(pick);
+    if (play) actions.appendChild(play);
+    var keep = document.createElement("button");
+    keep.type = "button";
+    keep.className = "ghost";
+    keep.dataset.action = "keep";
+    keep.textContent = "Keep";
+    var discard = document.createElement("button");
+    discard.type = "button";
+    discard.className = "ghost";
+    discard.dataset.action = "discard";
+    discard.textContent = "Discard";
+    actions.appendChild(keep);
+    actions.appendChild(discard);
+    actions.appendChild(stars(pick, ratingFor(state.entries, pick.id)));
+    body.appendChild(actions);
+    sheetReturn = source || null;
+    document.getElementById("sheet").hidden = false;
+    document.body.classList.add("sheet-open");
+    document.getElementById("sheet-close").focus();
+  }
+
   function onClick(event) {
     var trailer = event.target.closest("[data-trailer]");
     if (trailer) {
-      var trailerPick = state.picks.find(function (item) { return item.id === trailer.dataset.trailer; });
-      if (trailerPick) openTrailer(trailerPick, trailer);
+      var trailerPick = pickById(trailer.dataset.trailer);
+      var fromSheet = !!trailer.closest("#sheet");
+      if (fromSheet) closeSheet();
+      if (trailerPick) openTrailer(trailerPick, fromSheet ? null : trailer);
       return;
     }
     var star = event.target.closest("[data-star]");
     if (star) {
       var starHost = star.closest("[data-id]");
       if (starHost) apply(starHost.dataset.id, "rate", Number(star.dataset.star));
+      closeSheet();
       return;
     }
     var action = event.target.closest("[data-action]");
     if (action) {
       var host = action.closest("[data-id]");
       if (host) apply(host.dataset.id, action.dataset.action, null);
+      closeSheet();
       return;
     }
-    var toggle = event.target.closest(".details-toggle");
+    if (event.target.closest("a, #sheet")) return;
+    var toggle = event.target.closest(".details-toggle") || (TOUCH_LAYOUT.matches && event.target.closest(".card-body"));
     if (!toggle) return;
     var card = toggle.closest(".card");
-    var open = !card.classList.contains("is-open");
-    app.querySelectorAll(".card.is-open").forEach(function (node) {
-      node.classList.remove("is-open");
-      var button = node.querySelector(".details-toggle");
-      if (button) {
-        button.setAttribute("aria-expanded", "false");
-        button.textContent = "Details";
-      }
-    });
-    card.classList.toggle("is-open", open);
-    toggle.setAttribute("aria-expanded", open ? "true" : "false");
-    toggle.textContent = open ? "Hide" : "Details";
+    var pick = card && pickById(card.dataset.id);
+    if (pick) openSheet(pick, card.querySelector(".details-toggle"));
   }
 
   function load() {
@@ -812,12 +864,16 @@
 
   document.addEventListener("click", function (event) {
     if (event.target.closest("[data-close-trailer]")) closeTrailer();
+    if (event.target.closest("[data-close-sheet]")) closeSheet();
   });
   document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape") closeTrailer();
+    if (event.key !== "Escape") return;
+    if (!document.getElementById("trailer").hidden) closeTrailer();
+    else closeSheet();
   });
   window.addEventListener("online", flush);
   app.addEventListener("click", onClick);
+  document.getElementById("sheet").addEventListener("click", onClick);
   if (isUnlocked()) showSite();
   else bindGate();
 })();

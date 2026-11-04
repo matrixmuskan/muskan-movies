@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#111113">
   <meta name="description" content="Weekly movie and show picks for Muskan.">
   <title>Muskan · Weekly picks</title>
@@ -47,6 +47,16 @@
       <div class="trailer-screen">
         <iframe id="trailer-frame" title="Trailer" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
       </div>
+    </div>
+  </div>
+  <div id="sheet" class="sheet" hidden>
+    <div class="sheet-backdrop" data-close-sheet></div>
+    <div class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+      <div class="sheet-bar">
+        <span class="sheet-grip" aria-hidden="true"></span>
+        <button type="button" id="sheet-close" data-close-sheet>Close</button>
+      </div>
+      <div id="sheet-body"></div>
     </div>
   </div>
   <script src="assets/js/config.js"></script>
