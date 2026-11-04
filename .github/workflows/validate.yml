@@ -10,4 +10,4 @@ jobs:
       - name: Check picks, feedback, and the recorder
         run: |
           python3 tools/validate.py
-          python3 tools/test_record_feedback.py
+          python3 tools/test_inject_feedback_token.py

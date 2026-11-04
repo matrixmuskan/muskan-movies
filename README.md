@@ -12,7 +12,7 @@ python3 -m http.server 8765
 
 Then open <http://127.0.0.1:8765/>. Paths are relative, so the page works on a project site (`/muskan-movies/`) and on localhost.
 
-There is no analytics, no font service, and no token in the page. Type is the system UI font.
+There is no analytics and no font service. Type is the system UI font. The copy of the site in git has a token placeholder; the published page receives the feedback token during the Pages build.
 
 ## Turn on GitHub Pages
 
@@ -23,21 +23,17 @@ The workflow is in the repo. Pages still has to be switched on once, by the owne
 3. Under **Build and deployment**, set **Source** to **GitHub Actions**.
 4. If GitHub asks you to approve the `github-pages` environment, approve it.
 
-The `pages` workflow then runs on every push to `main`. It publishes `index.html`, `assets/`, `data/picks.json`, `data/feedback.json`, and `.nojekyll`. The README, `tools/`, `.github/`, and `data/taste-profile.json` are not on the site.
-
-The first push to `main` also runs the `feedback` workflow, which creates a GitHub label named `feedback` (neutral gray). That label is what the Keep / Discard / star links request. You can re-run the workflow with **Actions → feedback → Run workflow** if the label is missing.
-
-If a feedback run cannot push, open **Settings → Actions → General → Workflow permissions** and allow Actions to read and write. This repo's personal default is usually enough, because the workflow itself asks for `contents: write`.
+The `pages` workflow then runs on every push to `main`. It publishes `index.html`, `assets/`, `data/picks.json`, and `.nojekyll`. During that job it replaces the placeholder in `assets/js/config.js` with the Actions secret `MOVIES_FEEDBACK_TOKEN`. The README, `tools/`, `.github/`, and `data/taste-profile.json` are not on the site. The token is not stored in git.
 
 ## Layout
 
 The newest `week` in `data/picks.json` is **This Week**, even if today is not that Friday. Its first pick that is still open is the hero. Older weeks are rows under that, newest first. **Kept** is its own row. **History** is collapsed and holds discarded or rated titles.
 
-Each card shows the poster, title, year, language, movie or series, IMDb rating, a one-line hook, where to watch, and a Kid-safe badge when `kid_safe` is true. The poster and **Play trailer** open `trailer_url`. On a wide screen, hover or keyboard focus reveals Keep, Discard, and the stars. On a narrow screen, **Details** reveals those actions so a scroll does not file an issue by accident.
+Each card shows the poster, title, year, language, movie or series, IMDb rating, a one-line hook, where to watch, and a Kid-safe badge when `kid_safe` is true. The poster and **Play trailer** open `trailer_url`. On a wide screen, hover or keyboard focus reveals Keep, Discard, and the stars. On a narrow screen, **Details** reveals those actions.
 
 ## `data/picks.json`
 
-The file is a JSON array. A bot appends the next Friday's objects to that array. Leave `data/feedback.json` and `data/taste-profile.json` alone when adding a week. One object per title:
+The file is a JSON array. A bot appends the next Friday's objects to that array. Leave `data/taste-profile.json` alone when adding a week. Viewer feedback is not in this repo. One object per title:
 
 | Field | Type | Required | Meaning |
 | --- | --- | --- | --- |
@@ -59,7 +55,7 @@ The file is a JSON array. A bot appends the next Friday's objects to that array.
 | `status` | string | yes | `new`, `kept`, `discarded`, or `seen`. A new drop uses `new`. |
 | `example` | boolean | no | Optional. Current picks are real and do not set this. |
 
-`status` in this file is the editorial starting point. A newer row in `data/feedback.json` for the same `id` overrides it. The site does not need the bot to edit `status` after the viewer acts.
+`status` in this file is the editorial starting point. A newer feedback file for the same `id` overrides it. The site does not need the bot to edit `status` after the viewer acts.
 
 `tools/validate.py` checks this shape on pull requests. A week that is not a Friday fails the check.
 
@@ -71,38 +67,22 @@ The bot's preference model: weights, hard filters, and what Muskan has already s
 
 ## Feedback
 
-The page has no backend. An action does three things:
+Keep, Discard, and a star are one tap. The card moves immediately and the page stays put. Nothing opens a GitHub issue.
 
-1. It writes `{ id, action, rating, timestamp }` into `localStorage` under `muskan-movies-feedback`, and the card moves immediately.
-2. It opens a prefilled new-issue URL on this repo. The title is `feedback: <id>`, the label is `feedback`, and the body contains a small JSON block.
-3. On load, the page reads `data/feedback.json` and merges it with anything still only in `localStorage`. The newer timestamp wins.
+Each tap writes one file to the private repo `matrixmuskan/muskan-movies-feedback`:
 
-Actions:
+`feedback/<year>/<timestamp>-<id>.json`
 
-| Action | `rating` | Where the card goes |
-| --- | --- | --- |
-| `keep` | `null` | Kept |
-| `discard` | `null` | History, marked Discarded |
-| `rate` | integer 1–5 | History, marked Seen. A rating means you have seen it. |
-
-A later action wins. Keep after a rating puts the title back in Kept and still shows the stars. Rating something you had kept moves it to History.
-
-Issue body:
+The timestamp in the file name is the ISO time with `:` replaced by `-`, so a keep on Udta Teer looks like `feedback/2026/2026-11-04T22-15-01.123Z-udta-teer.json`. One file per tap, so two taps never edit the same path.
 
 ```json
 {
-  "id": "andhadhun-2018",
+  "id": "udta-teer",
   "action": "keep",
   "rating": null,
-  "timestamp": "2026-11-04T21:40:00.000Z"
+  "timestamp": "2026-11-04T22:15:01.123Z"
 }
 ```
-
-The `feedback` workflow runs when an issue titled `feedback: ...` is opened. `tools/record_feedback.py` appends one object to `data/feedback.json` (adding the issue number), pushes that commit to `main`, closes the issue, and starts the Pages workflow so the new file is published. Filing the same issue twice does not duplicate the row.
-
-Anyone who can open an issue on this repo can write feedback. For a single viewer, that is the GitHub account already signed in on the phone. Restrict who can open issues if this repo is public and that is too open.
-
-`data/feedback.json` shape:
 
 | Field | Type | Meaning |
 | --- | --- | --- |
@@ -110,6 +90,15 @@ Anyone who can open an issue on this repo can write feedback. For a single viewe
 | `action` | string | `keep`, `discard`, or `rate`. |
 | `rating` | number or null | `1`–`5` for `rate`, otherwise null. |
 | `timestamp` | string | ISO-8601 time from the browser. |
-| `issue` | number | GitHub issue that carried the action. |
 
-The committed file starts as `{ "entries": [] }`.
+On load the site lists `feedback/` and reads those files, using the same token. The newest timestamp for an id wins, on the phone and on a laptop. `localStorage` keys `muskan-movies-feedback` (last remote snapshot) and `muskan-movies-feedback-queue` (taps not yet confirmed) update the page before the network returns. A failed write stays in the queue and is retried.
+
+| Action | `rating` | Where the card goes |
+| --- | --- | --- |
+| `keep` | `null` | Kept |
+| `discard` | `null` | History, marked Discarded |
+| `rate` | integer 1–5 | History, marked Seen. A rating means you have seen it. |
+
+A later file wins. Keep after a rating puts the title back in Kept and still shows the stars. Rating something that was kept moves it to History.
+
+The write uses the GitHub Contents API and the Actions secret `MOVIES_FEEDBACK_TOKEN`. That secret is a fine-grained token with Contents read and write on `matrixmuskan/muskan-movies-feedback` only. The Pages workflow injects it into the built `config.js`. Do not commit a token, and do not print it in a workflow log. A bot that wants the viewer's taps should read `muskan-movies-feedback/feedback/`, not this repo.

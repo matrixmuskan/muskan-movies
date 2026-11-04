@@ -1,5 +1,6 @@
 name: pages
-# Deploys the static site (index.html, assets/, data/picks.json, data/feedback.json).
+# Deploys the static site (index.html, assets/, data/picks.json).
+# The feedback token is injected into the built config.js and is not in git.
 # README, tools/, .github/, and data/taste-profile.json are not served.
 # Pages source: GitHub Actions.
 on:
@@ -26,7 +27,11 @@ jobs:
           mkdir -p _site/data
           cp index.html .nojekyll _site/
           cp -a assets _site/
-          cp data/picks.json data/feedback.json _site/data/
+          cp data/picks.json _site/data/
+      - name: Inject feedback token
+        env:
+          MOVIES_FEEDBACK_TOKEN: ${{ secrets.MOVIES_FEEDBACK_TOKEN }}
+        run: python3 tools/inject_feedback_token.py _site/assets/js/config.js
       - uses: actions/upload-pages-artifact@v4
         with:
           path: _site

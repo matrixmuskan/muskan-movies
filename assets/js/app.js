@@ -1,8 +1,9 @@
 (function () {
   "use strict";
 
-  var REPO = "matrixmuskan/muskan-movies";
-  var STORAGE_KEY = "muskan-movies-feedback";
+  var CACHE_KEY = "muskan-movies-feedback";
+  var QUEUE_KEY = "muskan-movies-feedback-queue";
+  var TOKEN_PLACEHOLDER = "__MOVIES_FEEDBACK_TOKEN__";
   var WEEK_FORMAT = new Intl.DateTimeFormat("en-GB", {
     day: "numeric",
     month: "short",
@@ -16,7 +17,8 @@
   };
 
   var app = document.getElementById("app");
-  var notice = document.getElementById("notice");
+  var flushBusy = false;
+  var flushAgain = false;
 
   function el(tag, className, text) {
     var node = document.createElement(tag);
@@ -35,34 +37,194 @@
     }
   }
 
-  function readLocal() {
+  function isEntry(entry) {
+    return entry && typeof entry.id === "string" && typeof entry.action === "string" && typeof entry.timestamp === "string";
+  }
+
+  function readList(key) {
     try {
-      var raw = localStorage.getItem(STORAGE_KEY);
-      var parsed = raw ? JSON.parse(raw) : [];
+      var parsed = JSON.parse(localStorage.getItem(key) || "[]");
       return Array.isArray(parsed) ? parsed.filter(isEntry) : [];
     } catch (err) {
       return [];
     }
   }
 
-  function writeLocal(entries) {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
+  function writeList(key, entries) {
+    localStorage.setItem(key, JSON.stringify(entries));
   }
 
-  function isEntry(entry) {
-    return entry && typeof entry.id === "string" && typeof entry.action === "string" && typeof entry.timestamp === "string";
+  function knownEntries() {
+    return readList(CACHE_KEY).concat(readList(QUEUE_KEY));
   }
 
-  function mergeFeedback(remote, local) {
-    var remoteKeys = {};
+  function feedbackCfg() {
+    var cfg = window.MOVIES_FEEDBACK || {};
+    var token = typeof cfg.token === "string" ? cfg.token : "";
+    if (!token || token === TOKEN_PLACEHOLDER) return null;
+    return {
+      repo: cfg.repo || "matrixmuskan/muskan-movies-feedback",
+      token: token,
+    };
+  }
+
+  function apiUrl(path) {
+    var cfg = feedbackCfg();
+    return "https://api.github.com/repos/" + cfg.repo + "/contents/" + path.split("/").map(encodeURIComponent).join("/");
+  }
+
+  function apiHeaders() {
+    return {
+      Authorization: "Bearer " + feedbackCfg().token,
+      Accept: "application/vnd.github+json",
+      "X-GitHub-Api-Version": "2022-11-28",
+      "Content-Type": "application/json",
+    };
+  }
+
+  function b64(str) {
+    var bytes = new TextEncoder().encode(str);
+    var binary = "";
+    var size = 0x8000;
+    for (var index = 0; index < bytes.length; index += size) {
+      binary += String.fromCharCode.apply(null, bytes.subarray(index, index + size));
+    }
+    return btoa(binary);
+  }
+
+  function decodeContent(content) {
+    var binary = atob(String(content).replace(/\n/g, ""));
+    var bytes = new Uint8Array(binary.length);
+    for (var index = 0; index < binary.length; index += 1) bytes[index] = binary.charCodeAt(index);
+    return new TextDecoder().decode(bytes);
+  }
+
+  function pathFor(entry) {
+    return "feedback/" + entry.timestamp.slice(0, 4) + "/" + entry.timestamp.replace(/:/g, "-") + "-" + entry.id + ".json";
+  }
+
+  function putEntry(item) {
+    if (!feedbackCfg()) return Promise.resolve(0);
+    var body = {
+      id: item.id,
+      action: item.action,
+      rating: item.rating == null ? null : item.rating,
+      timestamp: item.timestamp,
+    };
+    return fetch(apiUrl(item.path), {
+      method: "PUT",
+      headers: apiHeaders(),
+      body: JSON.stringify({
+        message: "feedback " + item.id + " " + item.action,
+        content: b64(JSON.stringify(body, null, 2) + "\n"),
+        branch: "main",
+      }),
+    }).then(function (response) {
+      return response.status;
+    }, function () {
+      return 0;
+    });
+  }
+
+  function dropQueued(path) {
+    writeList(QUEUE_KEY, readList(QUEUE_KEY).filter(function (item) {
+      return item.path !== path;
+    }));
+  }
+
+  function flush() {
+    if (flushBusy) {
+      flushAgain = true;
+      return;
+    }
+    if (!feedbackCfg()) return;
+    flushBusy = true;
+    var queue = readList(QUEUE_KEY);
+    var index = 0;
+
+    function next() {
+      if (index >= queue.length) {
+        flushBusy = false;
+        if (flushAgain) {
+          flushAgain = false;
+          flush();
+        }
+        return;
+      }
+      var item = queue[index];
+      index += 1;
+      putEntry(item).then(function (status) {
+        if (status === 201 || status === 200 || status === 422) {
+          dropQueued(item.path);
+          next();
+          return;
+        }
+        flushBusy = false;
+        if (status === 0 || status === 401 || status === 403 || status === 429 || status >= 500) {
+          window.setTimeout(flush, 4000);
+        }
+      });
+    }
+
+    next();
+  }
+
+  function listDir(path) {
+    return fetch(apiUrl(path), { headers: apiHeaders(), cache: "no-store" }).then(function (response) {
+      if (response.status === 404) return [];
+      if (!response.ok) throw new Error(String(response.status));
+      return response.json();
+    }).then(function (data) {
+      return Array.isArray(data) ? data : [];
+    });
+  }
+
+  function readRemoteFile(path) {
+    return fetch(apiUrl(path), { headers: apiHeaders(), cache: "no-store" }).then(function (response) {
+      if (!response.ok) throw new Error(String(response.status));
+      return response.json();
+    }).then(function (doc) {
+      if (!doc || typeof doc.content !== "string") return null;
+      var parsed = JSON.parse(decodeContent(doc.content));
+      return isEntry(parsed) ? parsed : null;
+    });
+  }
+
+  function loadRemote() {
+    if (!feedbackCfg()) return Promise.resolve(null);
+    return listDir("feedback").then(function (years) {
+      var dirs = years.filter(function (item) {
+        return item && item.type === "dir" && /^\d{4}$/.test(item.name);
+      });
+      return Promise.all(dirs.map(function (dir) {
+        return listDir(dir.path);
+      }));
+    }).then(function (groups) {
+      var files = [];
+      groups.forEach(function (items) {
+        items.forEach(function (item) {
+          if (item && item.type === "file" && /\.json$/.test(item.name)) files.push(item.path);
+        });
+      });
+      return Promise.all(files.map(function (path) {
+        return readRemoteFile(path).catch(function () { return null; });
+      }));
+    }).then(function (entries) {
+      return entries.filter(Boolean);
+    });
+  }
+
+  function reconcile(remote) {
+    var seen = {};
     remote.forEach(function (entry) {
-      remoteKeys[entry.id + "|" + entry.timestamp] = true;
+      seen[entry.id + "|" + entry.timestamp] = true;
     });
-    var pending = local.filter(function (entry) {
-      return !remoteKeys[entry.id + "|" + entry.timestamp];
+    var queue = readList(QUEUE_KEY).filter(function (entry) {
+      return !seen[entry.id + "|" + entry.timestamp];
     });
-    writeLocal(pending);
-    return remote.concat(pending);
+    writeList(QUEUE_KEY, queue);
+    writeList(CACHE_KEY, remote);
+    state.entries = remote.concat(queue);
   }
 
   function latestById(entries) {
@@ -387,55 +549,24 @@
     window.scrollTo(0, scrollY);
   }
 
-  function feedbackUrl(entry) {
-    var payload = {
-      id: entry.id,
-      action: entry.action,
-      rating: entry.rating,
-      timestamp: entry.timestamp,
-    };
-    var body = "Feedback from the picks site.\n\n```json\n" + JSON.stringify(payload, null, 2) + "\n```\n";
-    var url = new URL("https://github.com/" + REPO + "/issues/new");
-    url.searchParams.set("title", "feedback: " + entry.id);
-    url.searchParams.set("labels", "feedback");
-    url.searchParams.set("body", body);
-    return url.href;
-  }
-
-  function showNotice(pick, entry, url) {
-    var verb = entry.action === "keep" ? "Kept" : entry.action === "discard" ? "Discarded" : "Rated";
-    notice.hidden = false;
-    notice.replaceChildren();
-    notice.appendChild(document.createTextNode(verb + " " + pick.title + " on this phone. "));
-    var link = document.createElement("a");
-    link.href = url;
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-    link.textContent = "Open the GitHub issue";
-    notice.appendChild(link);
-    notice.appendChild(document.createTextNode(" to save it in the repo."));
-  }
-
   function apply(id, action, rating) {
     var pick = state.picks.find(function (item) { return item.id === id; });
     if (!pick) return;
+    if (action !== "keep" && action !== "discard" && action !== "rate") return;
+    if (action === "rate" && !(rating >= 1 && rating <= 5)) return;
     var entry = {
       id: id,
       action: action,
-      rating: rating,
+      rating: action === "rate" ? rating : null,
       timestamp: new Date().toISOString(),
     };
-    var local = readLocal();
-    local.push(entry);
-    writeLocal(local);
-    state.entries = mergeFeedback(state.entries.filter(function (item) {
-      return item.issue != null;
-    }), local);
+    entry.path = pathFor(entry);
+    var queue = readList(QUEUE_KEY);
+    queue.push(entry);
+    writeList(QUEUE_KEY, queue);
+    state.entries = readList(CACHE_KEY).concat(queue);
     render();
-    var url = feedbackUrl(entry);
-    showNotice(pick, entry, url);
-    var tab = window.open(url, "_blank");
-    if (tab) tab.opener = null;
+    flush();
   }
 
   function onClick(event) {
@@ -469,26 +600,25 @@
   }
 
   function load() {
-    Promise.all([
-      fetch("data/picks.json", { cache: "no-store" }).then(function (response) {
-        if (!response.ok) throw new Error("picks");
-        return response.json();
-      }),
-      fetch("data/feedback.json", { cache: "no-store" }).then(function (response) {
-        if (!response.ok) throw new Error("feedback");
-        return response.json();
-      }),
-    ]).then(function (results) {
-      var picksDoc = results[0];
+    fetch("data/picks.json", { cache: "no-store" }).then(function (response) {
+      if (!response.ok) throw new Error("picks");
+      return response.json();
+    }).then(function (picksDoc) {
       state.picks = Array.isArray(picksDoc) ? picksDoc : (Array.isArray(picksDoc.picks) ? picksDoc.picks : []);
-      var remote = Array.isArray(results[1].entries) ? results[1].entries.filter(isEntry) : [];
-      state.entries = mergeFeedback(remote, readLocal());
+      state.entries = knownEntries();
       render();
+      flush();
+      loadRemote().then(function (remote) {
+        if (!remote) return;
+        reconcile(remote);
+        render();
+      }).catch(function () {});
     }).catch(function () {
       app.replaceChildren(el("p", "status-line", "Could not load picks."));
     });
   }
 
+  window.addEventListener("online", flush);
   app.addEventListener("click", onClick);
   load();
 })();

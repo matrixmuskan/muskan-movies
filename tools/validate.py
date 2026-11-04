@@ -32,7 +32,6 @@ PICK_FIELDS = {
 }
 STATUSES = {"new", "kept", "discarded", "seen"}
 TYPES = {"movie", "series"}
-ACTIONS = {"keep", "discard", "rate"}
 SECRET_MARKERS = (
     "gh" + "p_",
     "github_" + "pat_",
@@ -123,32 +122,21 @@ def check_pick(index: int, pick: object, seen_ids: set[str]) -> None:
         https_url(pick.get("imdb_url"), f"{label}.imdb_url")
 
 
-def check_entry(index: int, entry: object, seen_issues: set[int]) -> None:
-    label = f"entries[{index}]"
-    if not isinstance(entry, dict):
-        error(f"{label} must be an object")
-        return
-    if not isinstance(entry.get("id"), str) or not ID_RE.fullmatch(entry["id"]):
-        error(f"{label}.id must be a lowercase slug")
-    action = entry.get("action")
-    if action not in ACTIONS:
-        error(f"{label}.action must be keep, discard, or rate")
-    rating = entry.get("rating")
-    if isinstance(rating, bool) or (rating is not None and not isinstance(rating, int)):
-        error(f"{label}.rating must be an integer from 1 to 5, or null")
-    elif action == "rate" and (rating is None or not 1 <= rating <= 5):
-        error(f"{label}.rating must be 1 to 5 for a rate action")
-    elif action in {"keep", "discard"} and rating is not None:
-        error(f"{label}.rating must be null unless the action is rate")
-    if not isinstance(entry.get("timestamp"), str) or "T" not in entry["timestamp"]:
-        error(f"{label}.timestamp must be an ISO-8601 string")
-    issue = entry.get("issue")
-    if isinstance(issue, bool) or not isinstance(issue, int) or issue < 1:
-        error(f"{label}.issue must be a positive integer")
-    elif issue in seen_issues:
-        error(f"{label}.issue {issue} is duplicated")
+def check_feedback_wiring() -> None:
+    config = ROOT / "assets" / "js" / "config.js"
+    app_js = ROOT / "assets" / "js" / "app.js"
+    if not config.is_file():
+        error("assets/js/config.js is missing")
     else:
-        seen_issues.add(issue)
+        text = config.read_text()
+        if text.count("__MOVIES_FEEDBACK_TOKEN__") != 1:
+            error("assets/js/config.js must contain exactly one token placeholder")
+    if app_js.is_file() and "issues/new" in app_js.read_text():
+        error("assets/js/app.js still opens a GitHub issue")
+    if (ROOT / ".github" / "workflows" / "feedback.yml").exists():
+        error("the issue-recording workflow should be removed")
+    if (ROOT / "data" / "feedback.json").exists():
+        error("viewer feedback no longer lives in data/feedback.json")
 
 
 def check_secrets() -> None:
@@ -166,9 +154,7 @@ def check_secrets() -> None:
 
 def main() -> None:
     picks_path = ROOT / "data" / "picks.json"
-    feedback_path = ROOT / "data" / "feedback.json"
     picks_doc = load(picks_path)
-    feedback_doc = load(feedback_path)
     picks = None
     if isinstance(picks_doc, list):
         picks = picks_doc
@@ -180,17 +166,12 @@ def main() -> None:
         seen_ids: set[str] = set()
         for index, pick in enumerate(picks):
             check_pick(index, pick, seen_ids)
-    if isinstance(feedback_doc, dict) and isinstance(feedback_doc.get("entries"), list):
-        seen_issues: set[int] = set()
-        for index, entry in enumerate(feedback_doc["entries"]):
-            check_entry(index, entry, seen_issues)
-    else:
-        error("data/feedback.json must be an object with an entries array")
+    check_feedback_wiring()
     check_secrets()
     if errors:
         print("\n".join(errors))
         sys.exit(1)
-    print(f"ok {len(picks)} picks, {len(feedback_doc['entries'])} feedback entries")
+    print(f"ok {len(picks)} picks")
 
 
 if __name__ == "__main__":
