@@ -1,0 +1,138 @@
+{
+  "version": 1,
+  "created": "2026-11-04",
+  "viewer": "Muskan's household (adult viewer + 9-year-old for family picks)",
+  "update_rules": {
+    "scale": "weights are 0.0-1.0; 0.5 = neutral",
+    "keep": "+0.03 to every genre/theme/language tag on the title and +0.03 to its source reviewer",
+    "discard": "-0.05 to the title's tags and -0.03 to its source reviewer; add title to seen_or_rejected",
+    "rating_1_to_5": "delta = (rating - 3) * 0.04 applied to tags and source reviewer; 4-5 also adds title to liked_examples, 1-2 to disliked_examples",
+    "clamp": [
+      0.0,
+      1.0
+    ],
+    "hard_filters_never_change": [
+      "imdb_rating >= 6.0",
+      "no heavy horror",
+      "hollywood share <= 0.20",
+      "hollywood only feel-good or big theatrical, OK for a 9-year-old"
+    ]
+  },
+  "hard_filters": {
+    "min_imdb_rating": 6.0,
+    "exclude_genres": [
+      "heavy horror"
+    ],
+    "max_hollywood_share": 0.2,
+    "hollywood_must_be": [
+      "feel-good",
+      "big theatrical release"
+    ],
+    "kid_safe_default": "conservative (false unless family/PG)"
+  },
+  "language_weights": {
+    "Hindi": 1.0,
+    "Tamil (Hindi dub)": 0.75,
+    "Telugu (Hindi dub)": 0.75,
+    "Malayalam (Hindi dub)": 0.75,
+    "Kannada (Hindi dub)": 0.7,
+    "English (Hollywood)": 0.3,
+    "Other": 0.1
+  },
+  "genre_weights": {
+    "comedy": 0.9,
+    "thriller": 0.85,
+    "suspense/mystery": 0.85,
+    "crime": 0.8,
+    "slice-of-life": 0.9,
+    "drama": 0.6,
+    "courtroom/legal": 0.8,
+    "biopic": 0.6,
+    "family/kids": 0.75,
+    "animation (family)": 0.5,
+    "action": 0.45,
+    "romance": 0.35,
+    "mythology/epic": 0.5,
+    "horror-comedy": 0.3,
+    "heavy horror": 0.0
+  },
+  "theme_weights": {
+    "rustic/small-town (TVF, Panchayat-style)": 0.95,
+    "scam/fraud ring/pills/smuggling": 0.9,
+    "study/college/coaching life": 0.9,
+    "medical": 0.8,
+    "legal/courtroom": 0.8,
+    "victim-side justice": 0.8,
+    "stories with kids": 0.8,
+    "father-daughter/family warmth": 0.7,
+    "cop/investigation": 0.7,
+    "gangster violence": 0.45,
+    "Excel Entertainment Prime shows": 0.8,
+    "TVF production": 0.9
+  },
+  "producer_weights": {
+    "TVF": 0.9,
+    "Excel Entertainment": 0.8,
+    "Posham Pa Pictures": 0.65,
+    "Rajkumar Hirani Films": 0.65
+  },
+  "liked_examples": [
+    "Panchayat",
+    "Gullak",
+    "Yeh Meri Family",
+    "Kota Factory",
+    "Half CA",
+    "Parking"
+  ],
+  "disliked_examples": [
+    "heavy horror (any)"
+  ],
+  "reviewer_trust_weights": {
+    "Rahul Desai (The Hollywood Reporter India critic)": 0.5,
+    "Film Critics Guild Reviews (FCG)": 0.5,
+    "Sucharita Tyagi": 0.5,
+    "ABHI KA REVIEW": 0.5,
+    "Shubhra Gupta (The Indian Express / SCREEN)": 0.5,
+    "Tried & Refused Productions": 0.5,
+    "Suraj Kumar Review": 0.5,
+    "The Indian Web Series (Dharmil Mehta)": 0.5,
+    "Ormax Media (weekly OTT viewership charts)": 0.5,
+    "The Hollywood Reporter India": 0.5,
+    "Yogi Bolta Hai": 0.5,
+    "Shan Prasher": 0.5,
+    "OTTplay": 0.5,
+    "Baradwaj Rangan (Galatta Plus)": 0.5,
+    "Taran Adarsh": 0.5,
+    "Film Critics Guild Reviews": 0.5,
+    "The Indian Express - Movie Reviews": 0.5,
+    "Rediff Movies (Sukanya Verma, others)": 0.5,
+    "The Hindu - Reviews": 0.5,
+    "The Hollywood Reporter India - Reviews": 0.5
+  },
+  "seen": [
+    "Panchayat",
+    "Gullak",
+    "Kota Factory",
+    "Scam 1992",
+    "Yeh Meri Family",
+    "Aspirants",
+    "Mirzapur (series)",
+    "The Family Man",
+    "Paatal Lok",
+    "Delhi Crime",
+    "Sacred Games",
+    "TVF Pitchers",
+    "Made in Heaven",
+    "Farzi",
+    "Jamtara",
+    "Rocket Boys",
+    "Inside Edge",
+    "Laapataa Ladies",
+    "12th Fail",
+    "Parking",
+    "Half CA",
+    "top all-time Bollywood grossers (e.g. Dangal, Pathaan, Jawan, Animal, Stree 2, Gadar 2, Baahubali 2, KGF 2, RRR, Pushpa 2)"
+  ],
+  "seen_or_rejected": [],
+  "feedback_log": []
+}
