@@ -54,8 +54,28 @@
     localStorage.setItem(key, JSON.stringify(entries));
   }
 
+  function entryKey(entry) {
+    return entry.id + "|" + entry.timestamp;
+  }
+
+  function uniqueEntries(entries) {
+    var seen = {};
+    return entries.filter(function (entry) {
+      var key = entryKey(entry);
+      if (seen[key]) return false;
+      seen[key] = true;
+      return true;
+    });
+  }
+
+  // Confirmed taps (cache) plus taps still waiting for a 201 (queue, marked pending).
   function knownEntries() {
-    return readList(CACHE_KEY).concat(readList(QUEUE_KEY));
+    var pending = readList(QUEUE_KEY).map(function (entry) {
+      var copy = Object.assign({}, entry);
+      copy.pending = true;
+      return copy;
+    });
+    return uniqueEntries(pending.concat(readList(CACHE_KEY)));
   }
 
   function feedbackCfg() {
@@ -126,10 +146,19 @@
     });
   }
 
-  function dropQueued(path) {
-    writeList(QUEUE_KEY, readList(QUEUE_KEY).filter(function (item) {
-      return item.path !== path;
+  function confirm(item) {
+    var saved = {
+      id: item.id,
+      action: item.action,
+      rating: item.rating == null ? null : item.rating,
+      timestamp: item.timestamp,
+      confirmed: Date.now(),
+    };
+    writeList(CACHE_KEY, uniqueEntries(readList(CACHE_KEY).concat([saved])));
+    writeList(QUEUE_KEY, readList(QUEUE_KEY).filter(function (entry) {
+      return entryKey(entry) !== entryKey(item);
     }));
+    state.entries = knownEntries();
   }
 
   function flush() {
@@ -155,7 +184,7 @@
       index += 1;
       putEntry(item).then(function (status) {
         if (status === 201 || status === 200 || status === 422) {
-          dropQueued(item.path);
+          confirm(item);
           next();
           return;
         }
@@ -214,24 +243,41 @@
     });
   }
 
+  // The contents listing can lag a fresh write, so a tap confirmed on this device
+  // survives a listing that does not show it yet. After the grace period the server is the record.
+  var LISTING_GRACE_MS = 15 * 60 * 1000;
+
   function reconcile(remote) {
-    var seen = {};
+    var onServer = {};
     remote.forEach(function (entry) {
-      seen[entry.id + "|" + entry.timestamp] = true;
+      onServer[entryKey(entry)] = true;
     });
-    var queue = readList(QUEUE_KEY).filter(function (entry) {
-      return !seen[entry.id + "|" + entry.timestamp];
+    var now = Date.now();
+    var recent = readList(CACHE_KEY).filter(function (entry) {
+      return !onServer[entryKey(entry)] && typeof entry.confirmed === "number" && now - entry.confirmed < LISTING_GRACE_MS;
     });
-    writeList(QUEUE_KEY, queue);
-    writeList(CACHE_KEY, remote);
-    state.entries = remote.concat(queue);
+    writeList(CACHE_KEY, uniqueEntries(remote.concat(recent)));
+    writeList(QUEUE_KEY, readList(QUEUE_KEY).filter(function (entry) {
+      return !onServer[entryKey(entry)];
+    }));
+    state.entries = knownEntries();
   }
 
+  // Latest action per title wins. A pending local tap beats every server entry until it is confirmed.
   function latestById(entries) {
     var map = {};
     entries.forEach(function (entry) {
       var current = map[entry.id];
-      if (!current || entry.timestamp >= current.timestamp) map[entry.id] = entry;
+      if (!current) {
+        map[entry.id] = entry;
+        return;
+      }
+      if (entry.pending && !current.pending) {
+        map[entry.id] = entry;
+        return;
+      }
+      if (current.pending && !entry.pending) return;
+      if (entry.timestamp >= current.timestamp) map[entry.id] = entry;
     });
     return map;
   }
@@ -564,7 +610,7 @@
     var queue = readList(QUEUE_KEY);
     queue.push(entry);
     writeList(QUEUE_KEY, queue);
-    state.entries = readList(CACHE_KEY).concat(queue);
+    state.entries = knownEntries();
     render();
     flush();
   }
