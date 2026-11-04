@@ -19,6 +19,8 @@
   var app = document.getElementById("app");
   var flushBusy = false;
   var flushAgain = false;
+  var trailerReturn = null;
+  var UNLOCK_KEY = "muskan-movies-unlock";
 
   function el(tag, className, text) {
     var node = document.createElement(tag);
@@ -390,14 +392,13 @@
     return row;
   }
 
-  function posterLink(pick, className) {
+  function posterControl(pick, className) {
     var href = safeHttps(pick.trailer_url);
-    var poster = href ? document.createElement("a") : el("div");
+    var poster = href ? document.createElement("button") : el("div");
     poster.className = className;
     if (href) {
-      poster.href = href;
-      poster.target = "_blank";
-      poster.rel = "noopener noreferrer";
+      poster.type = "button";
+      poster.dataset.trailer = pick.id;
       poster.setAttribute("aria-label", "Play trailer: " + pick.title);
     }
     var src = safeHttps(pick.poster_url);
@@ -413,19 +414,67 @@
     return poster;
   }
 
-  function playLink(pick) {
-    var href = safeHttps(pick.trailer_url);
-    if (!href) return null;
-    var link = document.createElement("a");
-    link.className = "play";
-    link.href = href;
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
+  function playControl(pick) {
+    if (!safeHttps(pick.trailer_url)) return null;
+    var button = document.createElement("button");
+    button.type = "button";
+    button.className = "play";
+    button.dataset.trailer = pick.id;
     var icon = el("span", "play-icon");
     icon.setAttribute("aria-hidden", "true");
-    link.appendChild(icon);
-    link.appendChild(document.createTextNode("Play trailer"));
-    return link;
+    button.appendChild(icon);
+    button.appendChild(document.createTextNode("Play trailer"));
+    return button;
+  }
+
+  function youtubeId(url) {
+    try {
+      var parsed = new URL(url);
+      var host = parsed.hostname.replace(/^www\./, "").replace(/^m\./, "");
+      var id = "";
+      if (host === "youtu.be") id = parsed.pathname.split("/").filter(Boolean)[0] || "";
+      else if (host === "youtube.com" || host === "youtube-nocookie.com") {
+        if (parsed.pathname === "/watch") id = parsed.searchParams.get("v") || "";
+        else {
+          var parts = parsed.pathname.split("/");
+          var slot = ["embed", "shorts", "v"].map(function (name) { return parts.indexOf(name); }).find(function (index) { return index >= 0; });
+          if (slot >= 0) id = parts[slot + 1] || "";
+        }
+      }
+      return /^[A-Za-z0-9_-]{11}$/.test(id) ? id : "";
+    } catch (err) {
+      return "";
+    }
+  }
+
+  function closeTrailer() {
+    var dialog = document.getElementById("trailer");
+    if (!dialog || dialog.hidden) return;
+    dialog.hidden = true;
+    document.getElementById("trailer-frame").src = "";
+    document.body.classList.remove("trailer-open");
+    if (trailerReturn && trailerReturn.focus) trailerReturn.focus();
+    trailerReturn = null;
+  }
+
+  function openTrailer(pick, source) {
+    var href = safeHttps(pick.trailer_url);
+    if (!href) return;
+    var id = youtubeId(href);
+    if (!id) {
+      var tab = window.open(href, "_blank", "noopener");
+      if (tab) tab.opener = null;
+      return;
+    }
+    var dialog = document.getElementById("trailer");
+    var frame = document.getElementById("trailer-frame");
+    document.getElementById("trailer-title").textContent = pick.title;
+    frame.title = "Trailer: " + pick.title;
+    frame.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0&playsinline=1";
+    trailerReturn = source || null;
+    dialog.hidden = false;
+    document.body.classList.add("trailer-open");
+    document.getElementById("trailer-close").focus();
   }
 
   function renderHero(pick) {
@@ -440,10 +489,13 @@
       return hero;
     }
 
-    var poster = posterLink(pick, "hero-poster");
+    var poster = posterControl(pick, "hero-poster");
     var image = poster.querySelector("img");
     if (image) image.setAttribute("fetchpriority", "high");
-    hero.appendChild(poster);
+    var frame = el("div", "poster-wrap");
+    frame.appendChild(poster);
+    frame.appendChild(el("span", "type-tag", typeLabel(pick.type)));
+    hero.appendChild(frame);
 
     var copy = el("div", "hero-copy");
     copy.appendChild(el("p", "kicker", "Top pick · " + formatWeek(pick.week)));
@@ -456,7 +508,7 @@
 
     var actions = el("div", "hero-actions");
     actions.dataset.id = pick.id;
-    var play = playLink(pick);
+    var play = playControl(pick);
     if (play) actions.appendChild(play);
     var keep = document.createElement("button");
     keep.type = "button";
@@ -481,10 +533,11 @@
     card.dataset.id = pick.id;
 
     var wrap = el("div", "poster-wrap");
-    var poster = posterLink(pick, "poster");
+    var poster = posterControl(pick, "poster");
     var image = poster.querySelector("img");
     if (image) image.loading = "lazy";
     wrap.appendChild(poster);
+    wrap.appendChild(el("span", "type-tag", typeLabel(pick.type)));
     card.appendChild(wrap);
 
     var body = el("div", "card-body");
@@ -616,6 +669,12 @@
   }
 
   function onClick(event) {
+    var trailer = event.target.closest("[data-trailer]");
+    if (trailer) {
+      var trailerPick = state.picks.find(function (item) { return item.id === trailer.dataset.trailer; });
+      if (trailerPick) openTrailer(trailerPick, trailer);
+      return;
+    }
     var star = event.target.closest("[data-star]");
     if (star) {
       var starHost = star.closest("[data-id]");
@@ -664,7 +723,63 @@
     });
   }
 
+  function passwordHash() {
+    var cfg = window.MOVIES_FEEDBACK || {};
+    return typeof cfg.passwordHash === "string" ? cfg.passwordHash : "";
+  }
+
+  function sha256Hex(text) {
+    return crypto.subtle.digest("SHA-256", new TextEncoder().encode(text)).then(function (buffer) {
+      return Array.from(new Uint8Array(buffer)).map(function (byte) {
+        return (byte < 16 ? "0" : "") + byte.toString(16);
+      }).join("");
+    });
+  }
+
+  function isUnlocked() {
+    try {
+      return passwordHash().length === 64 && localStorage.getItem(UNLOCK_KEY) === passwordHash();
+    } catch (err) {
+      return false;
+    }
+  }
+
+  function showSite() {
+    document.getElementById("gate").hidden = true;
+    document.getElementById("site").hidden = false;
+    load();
+  }
+
+  function bindGate() {
+    var form = document.getElementById("gate-form");
+    var input = document.getElementById("gate-password");
+    var error = document.getElementById("gate-error");
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      sha256Hex(input.value).then(function (hex) {
+        if (hex === passwordHash()) {
+          try { localStorage.setItem(UNLOCK_KEY, passwordHash()); } catch (err) {}
+          input.value = "";
+          error.hidden = true;
+          showSite();
+          return;
+        }
+        error.hidden = false;
+        input.select();
+      }).catch(function () {
+        error.hidden = false;
+      });
+    });
+  }
+
+  document.addEventListener("click", function (event) {
+    if (event.target.closest("[data-close-trailer]")) closeTrailer();
+  });
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") closeTrailer();
+  });
   window.addEventListener("online", flush);
   app.addEventListener("click", onClick);
-  load();
+  if (isUnlocked()) showSite();
+  else bindGate();
 })();

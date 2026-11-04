@@ -126,12 +126,78 @@ a {
   padding: 28px 0;
 }
 
+.gate {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.gate[hidden],
+.trailer[hidden] {
+  display: none;
+}
+
+.gate-card {
+  width: min(360px, 100%);
+}
+
+.gate-brand {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.gate h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.gate label {
+  display: block;
+  margin: 28px 0 8px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.gate input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-raised);
+  color: var(--text);
+}
+
+.gate button {
+  margin-top: 14px;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.gate-error {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
 .hero {
   display: grid;
   grid-template-columns: 260px minmax(0, 1fr);
   gap: 40px;
   align-items: center;
   padding: 40px 0 12px;
+}
+
+.hero .poster-wrap {
+  width: 100%;
 }
 
 .hero-poster {
@@ -340,6 +406,16 @@ a {
   position: relative;
 }
 
+.poster,
+.hero-poster {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  text-align: inherit;
+  cursor: pointer;
+}
+
 .poster {
   display: block;
   background: #2a2c31;
@@ -347,6 +423,20 @@ a {
   overflow: hidden;
   aspect-ratio: var(--poster-ratio);
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+.type-tag {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  z-index: 1;
+  padding: 2px 6px;
+  border-radius: 2px;
+  background: rgba(17, 17, 19, 0.82);
+  color: #d4d4d8;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  pointer-events: none;
 }
 
 .card:hover .poster,
@@ -497,6 +587,70 @@ a {
   margin: 6px 0 0;
   color: var(--faint);
   font-size: 12px;
+}
+
+.trailer {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.trailer-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+}
+
+.trailer-dialog {
+  position: relative;
+  width: min(960px, 100%);
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #0c0c0e;
+}
+
+.trailer-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.trailer-bar p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.trailer-bar button {
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.trailer-screen {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.trailer-screen iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+body.trailer-open {
+  overflow: hidden;
 }
 
 @media (max-width: 799px) {

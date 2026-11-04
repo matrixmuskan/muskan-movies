@@ -29,7 +29,11 @@ The `pages` workflow then runs on every push to `main`. It publishes `index.html
 
 The newest `week` in `data/picks.json` is **This Week**, even if today is not that Friday. Its first pick that is still open is the hero. Older weeks are rows under that, newest first. **Kept** is its own row. **History** is collapsed and holds discarded or rated titles.
 
-Each card shows the poster, title, year, language, movie or series, IMDb rating, a one-line hook, where to watch, and a Kid-safe badge when `kid_safe` is true. The poster and **Play trailer** open `trailer_url`. On a wide screen, hover or keyboard focus reveals Keep, Discard, and the stars. On a narrow screen, **Details** reveals those actions.
+Each card shows the poster, title, year, language, a small Movie or Series label from `type`, IMDb rating, a one-line hook, where to watch, and a Kid-safe badge when `kid_safe` is true. The poster and **Play trailer** open a YouTube trailer in the page when `trailer_url` is a YouTube link. Any other trailer link opens in a new tab. On a wide screen, hover or keyboard focus reveals Keep, Discard, and the stars. On a narrow screen, **Details** reveals those actions.
+
+## Lock
+
+A password field is the first thing on the page. The script published with the site contains a SHA-256 hash of the password, not the password. After a correct entry, that browser stores the hash in `localStorage` under `muskan-movies-unlock` and does not ask again on that device. `data/picks.json` stays a normal file so a weekly build can read and update it. This is a screen in front of the layout, not a lock on the file: the picks file is still reachable at its public URL.
 
 ## `data/picks.json`
 
@@ -40,7 +44,7 @@ The file is a JSON array. A bot appends the next Friday's objects to that array.
 | `id` | string | yes | Stable slug, unique. Pattern: `^[a-z0-9][a-z0-9-]{0,80}$`. Example: `udta-teer`. |
 | `title` | string | yes | Display title. |
 | `year` | number | yes | Release year. |
-| `type` | string | yes | `movie` or `series`. |
+| `type` | string | yes | `movie` or `series`. The tile label is Movie or Series. A weekly build must set this; the site does not guess. |
 | `language` | string | yes | The version being recommended, such as `Hindi` or `Tamil (Hindi dub available)`. |
 | `imdb_rating` | number or null | yes | IMDb score. Use null when you do not have one. The site links it when `imdb_url` is set. |
 | `imdb_id` | string | no | IMDb title id, such as `tt31806773`. |

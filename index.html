@@ -10,21 +10,45 @@
   <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
-  <a class="skip" href="#app">Skip to picks</a>
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="brand" href="./">Muskan</a>
-      <p class="tagline">Weekly picks</p>
+  <div id="gate" class="gate">
+    <form id="gate-form" class="gate-card">
+      <p class="gate-brand">Muskan</p>
+      <h1>Weekly picks</h1>
+      <label for="gate-password">Password</label>
+      <input id="gate-password" type="password" autocomplete="current-password" required>
+      <button type="submit">Continue</button>
+      <p id="gate-error" class="gate-error" hidden>That password is not right.</p>
+    </form>
+  </div>
+  <div id="site" hidden>
+    <a class="skip" href="#app">Skip to picks</a>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="./">Muskan</a>
+        <p class="tagline">Weekly picks</p>
+      </div>
+    </header>
+    <main id="app" class="wrap">
+      <p class="status-line">Loading picks.</p>
+    </main>
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>Keep, discard, and stars save immediately. A star rating means you have seen it.</p>
+      </div>
+    </footer>
+  </div>
+  <div id="trailer" class="trailer" hidden>
+    <div class="trailer-backdrop" data-close-trailer></div>
+    <div class="trailer-dialog" role="dialog" aria-modal="true" aria-labelledby="trailer-title">
+      <div class="trailer-bar">
+        <p id="trailer-title">Trailer</p>
+        <button type="button" id="trailer-close" data-close-trailer>Close</button>
+      </div>
+      <div class="trailer-screen">
+        <iframe id="trailer-frame" title="Trailer" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+      </div>
     </div>
-  </header>
-  <main id="app" class="wrap">
-    <p class="status-line">Loading picks.</p>
-  </main>
-  <footer class="site-footer">
-    <div class="wrap">
-      <p>Keep, discard, and stars save immediately. A star rating means you have seen it.</p>
-    </div>
-  </footer>
+  </div>
   <script src="assets/js/config.js"></script>
   <script src="assets/js/app.js"></script>
   <noscript>

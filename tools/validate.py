@@ -131,6 +131,8 @@ def check_feedback_wiring() -> None:
         text = config.read_text()
         if text.count("__MOVIES_FEEDBACK_TOKEN__") != 1:
             error("assets/js/config.js must contain exactly one token placeholder")
+        if not re.search(r'passwordHash:\s*"[0-9a-f]{64}"', text):
+            error("assets/js/config.js must publish a SHA-256 password hash")
     if app_js.is_file() and "issues/new" in app_js.read_text():
         error("assets/js/app.js still opens a GitHub issue")
     if (ROOT / ".github" / "workflows" / "feedback.yml").exists():
