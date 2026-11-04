@@ -16,7 +16,28 @@
     "week": "2026-11-06",
     "source": "Theater listing (bigscreen.com, Cinemark Pacific Commons, Fri 11/6) + The Hindu review 'Ayushmann Khurrana is on target in this spy misadventure' (Oct 23); also reviewed by ABHI KA REVIEW, Suraj Kumar Review, Yogi Bolta Hai, Tried & Refused (Rahul Desai and Shubhra Gupta were lukewarm)",
     "status": "new",
-    "endorsements": []
+    "endorsements": [
+      {
+        "name": "Suraj Kumar Review",
+        "url": "https://www.youtube.com/watch?v=73PBpU08tWM"
+      },
+      {
+        "name": "Yogi Bolta Hai",
+        "url": "https://www.youtube.com/watch?v=fIDiRc3_H0k"
+      },
+      {
+        "name": "ABHI KA REVIEW",
+        "url": "https://www.youtube.com/watch?v=hQJu7N6Jmcc"
+      },
+      {
+        "name": "Rishabh Suri (Hindustan Times)",
+        "url": "https://www.hindustantimes.com/entertainment/bollywood/udta-teer-review-this-ayushmann-khurrana-spy-comedy-rarely-misses-a-chance-to-make-you-laugh-101792732070865.html"
+      },
+      {
+        "name": "Devesh Sharma (Filmfare)",
+        "url": "https://www.filmfare.com/reviews/bollywood-movies/udta-teer-review-a-spy-spoof-that-hits-the-target-86730.html"
+      }
+    ]
   },
   {
     "id": "baththa",
@@ -35,7 +56,32 @@
     "week": "2026-11-06",
     "source": "Rahul Desai (X, Oct 13): 'such a terrific film. So funny, emotional, subversive, sweet'; Indian Express: 'a film that earns every emotion'; Suraj Kumar Review 'Baththa & Dorothy HINDI DUBBED REVIEW' (Oct 30)",
     "status": "new",
-    "endorsements": [],
+    "endorsements": [
+      {
+        "name": "Rahul Desai",
+        "url": "https://x.com/ReelReptile/status/2110010723036467698"
+      },
+      {
+        "name": "Yashaswini Sri (The Indian Express)",
+        "url": "https://indianexpress.com/article/entertainment/movie-review/baththa-movie-review-vijay-sethupathi-shines-in-a-film-that-earns-every-emotion-10902251/"
+      },
+      {
+        "name": "Suraj Kumar Review",
+        "url": "https://www.youtube.com/watch?v=nFCPBJL6x6A"
+      },
+      {
+        "name": "Yogi Bolta Hai",
+        "url": "https://www.youtube.com/watch?v=v9FWV5oSnNk"
+      },
+      {
+        "name": "Baradwaj Rangan (Galatta Plus)",
+        "url": "https://galattaplus.com/balaji-tharaneetharans-baththa-is-a-wholesome-heartwarming-and-often-funny-story-about-men-and-their-fears/"
+      },
+      {
+        "name": "Prashanth Vallavan (Cinema Express)",
+        "url": "https://www.cinemaexpress.com/tamil/review/2026/Oct/01/baththa-movie-review-a-wholesome-story-about-a-gangster-coming-of-age"
+      }
+    ],
     "trailer_lang": "Hindi"
   },
   {
@@ -55,7 +101,20 @@
     "week": "2026-11-06",
     "source": "Rahul Desai (X, Sep 11): 'I really liked The Last Man in Tower'; THR India review 'a well-acted and sobering middle-class tragedy'; Shubhra Gupta reviewed; Indian Express positive",
     "status": "new",
-    "endorsements": []
+    "endorsements": [
+      {
+        "name": "Rahul Desai",
+        "url": "https://www.hollywoodreporterindia.com/reviews/theatrical/last-man-in-tower-movie-review-a-well-acted-and-sobering-middle-class-tragedy"
+      },
+      {
+        "name": "India Today",
+        "url": "https://www.indiatoday.in/movies/reviews/story/last-man-in-tower-review-manoj-bajpayee-divya-dutta-mumbai-redevelopment-drama-2992139-2026-09-11"
+      },
+      {
+        "name": "Anuj Kumar (The Hindu)",
+        "url": "https://www.thehindu.com/entertainment/movies/last-man-in-tower-movie-review-manoj-bajpayee-elevates-this-timely-portrait-of-middle-class-desperation/article71455243.ece"
+      }
+    ]
   },
   {
     "id": "dupahiya-season-2",
@@ -74,7 +133,12 @@
     "week": "2026-11-06",
     "source": "Rahul Desai (X, Oct 2): 'Didn't mind Season 2 of Dupahiya... does much better than others in Prime's cutesy-village-universe ilk'; Shubhra Gupta reviewed",
     "status": "new",
-    "endorsements": []
+    "endorsements": [
+      {
+        "name": "Rahul Desai",
+        "url": "https://www.hollywoodreporterindia.com/reviews/streaming/dupahiya-season-2-series-review-all-grown-up-and-free-from-the-panchayat-baggage"
+      }
+    ]
   },
   {
     "id": "ohh-my-dog",
@@ -112,7 +176,12 @@
     "week": "2026-10-30",
     "source": "Rahul Desai (X, Oct 23): 'A surprisingly sweet father-daughter story that dropped on Netflix out of nowhere' (THR India: 'a warm and watchable father-daughter comedy')",
     "status": "new",
-    "endorsements": []
+    "endorsements": [
+      {
+        "name": "Rahul Desai",
+        "url": "https://www.hollywoodreporterindia.com/reviews/streaming/matargashti-series-review-a-warm-and-watchable-father-daughter-comedy"
+      }
+    ]
   },
   {
     "id": "sumo-didi",
@@ -131,7 +200,16 @@
     "week": "2026-10-30",
     "source": "Rahul Desai (X, Oct 23): 'elevated by a solid subject and lead performance'; Indian Express: 'throws its weight behind body positivity'",
     "status": "new",
-    "endorsements": []
+    "endorsements": [
+      {
+        "name": "Rahul Desai",
+        "url": "https://x.com/ReelReptile/status/2113519741692444916"
+      },
+      {
+        "name": "Alaka Sahani (The Indian Express)",
+        "url": "https://indianexpress.com/article/entertainment/movie-review/sumo-didi-movie-review-inspired-by-a-real-life-the-film-throws-its-weight-behind-body-positivity-10933560/"
+      }
+    ]
   },
   {
     "id": "babita-singh-reporting",
@@ -150,7 +228,20 @@
     "week": "2026-10-30",
     "source": "Rahul Desai (X, Aug 28): Nimisha Sajayan 'delivers one of the best performances of the year'; Shubhra Gupta (X): 'Ambiecka Pandit is one to watch out for'",
     "status": "new",
-    "endorsements": []
+    "endorsements": [
+      {
+        "name": "Rahul Desai",
+        "url": "https://www.hollywoodreporterindia.com/reviews/streaming/babita-singh-reporting-movie-review-nimisha-sajayan-nails-the-investigation-of-small-town-patriarchy"
+      },
+      {
+        "name": "Sukanya Verma (Rediff)",
+        "url": "https://www.rediff.com/movies/review/babita-singh-reporting-review-different-cop-movie/20260828.htm"
+      },
+      {
+        "name": "Archika Khurana (Times of India)",
+        "url": "https://timesofindia.indiatimes.com/entertainment/hindi/movie-reviews/babita-singh-reporting/ottmoviereview/133532484.cms"
+      }
+    ]
   },
   {
     "id": "the-pyramid-scheme",
@@ -169,7 +260,16 @@
     "week": "2026-10-30",
     "source": "TVF title (Prime Video original, Jun 5 2026)",
     "status": "new",
-    "endorsements": []
+    "endorsements": [
+      {
+        "name": "India Today",
+        "url": "https://www.indiatoday.in/entertainment/ott/story/the-pyramid-scheme-review-a-funny-frightening-look-at-indians-easy-money-dreams-2921744-2026-06-05"
+      },
+      {
+        "name": "Dhaval Roy (Times of India)",
+        "url": "https://timesofindia.indiatimes.com/web-series/reviews/hindi/the-pyramid-scheme/season-1/seasonreview/131487422.cms"
+      }
+    ]
   },
   {
     "id": "gram-chikitsalay-season-2",
@@ -188,7 +288,24 @@
     "week": "2026-10-30",
     "source": "TVF title (Prime Video); Rahul Desai name-checks 'Gram Chikitsalay 1 and 2' in his Dupahiya 2 post",
     "status": "new",
-    "endorsements": []
+    "endorsements": [
+      {
+        "name": "Abhishek Srivastava (Times of India)",
+        "url": "https://timesofindia.indiatimes.com/web-series/reviews/hindi/gram-chikitsalay/gram-chikitsalay-season-2/seasonreview/131924948.cms"
+      },
+      {
+        "name": "Deepa Gahlot (Scroll)",
+        "url": "https://scroll.in/reel/1093748/review-gram-chikitsalay-gets-it-right-in-its-second-season"
+      },
+      {
+        "name": "Devesh Sharma (Filmfare)",
+        "url": "https://www.filmfare.com/reviews/web-series/gram-chikitsalay-season-2-review-finding-its-own-pulse-84686.html"
+      },
+      {
+        "name": "Shweta Keshri (India Today)",
+        "url": "https://www.indiatoday.in/entertainment/ott/story/prime-video-series-gram-chikitsalay-season-2-review-tvf-most-underrated-gem-just-got-better-amol-parashar-2932143-2026-06-23"
+      }
+    ]
   },
   {
     "id": "shaun-the-sheep-beast-of-mossy-bottom",
@@ -227,7 +344,20 @@
     "week": "2026-10-23",
     "source": "Rahul Desai (X, Sep 25): 'a well-crafted series with a solid cast'; Shan Prasher reviewed (Oct 6); Shubhra Gupta was less keen",
     "status": "new",
-    "endorsements": []
+    "endorsements": [
+      {
+        "name": "Rahul Desai",
+        "url": "https://www.hollywoodreporterindia.com/reviews/streaming/hunkkaar-the-roar-series-review-aneet-padda-headlines-a-poignant-and-potent-postmortem-of-abuse"
+      },
+      {
+        "name": "Suchin Mehrotra (THR India)",
+        "url": "https://www.youtube.com/watch?v=iLqJ1JoObbc"
+      },
+      {
+        "name": "Bollywood Hungama",
+        "url": "https://www.bollywoodhungama.com/news/features/web-series-review-hunkkaar-the-roar-is-a-hard-hitting-courtroom-drama-that-works-due-to-various-plusses/"
+      }
+    ]
   },
   {
     "id": "meethe-mein-kya-hai",
@@ -246,7 +376,12 @@
     "week": "2026-10-23",
     "source": "Film Critics Guild (fcgreviews.com): Upma Singh, Navbharat Times positive; Sukanya Verma (Rediff) found it low-key",
     "status": "new",
-    "endorsements": []
+    "endorsements": [
+      {
+        "name": "Upma Singh (Navbharat Times)",
+        "url": "https://navbharattimes.indiatimes.com/entertainment/movie-review/meethe-mein-kya-hai-movie-review-in-hindi-starring-ritwik-bhowmik-rohini-hattangadi-ayesha-raza-directed-by-radhika-bansal-on-netflix/moviereview/135350196.cms"
+      }
+    ]
   },
   {
     "id": "pritam-and-pedro",
@@ -265,7 +400,12 @@
     "week": "2026-10-23",
     "source": "New OTT release (JioHotstar, Jul 3 2026); Times of India: 'strikes the right balance between suspense, humour and heart' (Rahul Desai was lukewarm)",
     "status": "new",
-    "endorsements": []
+    "endorsements": [
+      {
+        "name": "Archika Khurana (Times of India)",
+        "url": "https://timesofindia.indiatimes.com/web-series/reviews/english/pritam-and-pedro/pritam-and-pedro-season-1/seasonreview/132088300.cms"
+      }
+    ]
   },
   {
     "id": "adarsh-baal-vidyalaya",
@@ -284,7 +424,16 @@
     "week": "2026-10-23",
     "source": "New OTT release (Prime Video, Jul 2026), from Biswapati Sarkar and Sameer Saxena; Cinema Express: 'a timely, heartwarming lesson'",
     "status": "new",
-    "endorsements": []
+    "endorsements": [
+      {
+        "name": "Kartik Bhardwaj (Cinema Express)",
+        "url": "https://www.cinemaexpress.com/hindi/review/2026/Jul/24/adarsh-baal-vidyalaya-series-review-kay-kay-menon-led-show-is-a-timely-heartwarming-lesson-on-the-need-for-education"
+      },
+      {
+        "name": "Titas Chowdhury (News18)",
+        "url": "https://www.news18.com/movies/web-series/adarsh-baal-vidyalaya-review-no-cliffhangers-or-pay-offs-but-this-kay-kay-menon-show-is-a-wholesome-watch-ws-l-10227139.html"
+      }
+    ]
   },
   {
     "id": "tenzing",
@@ -303,7 +452,16 @@
     "week": "2026-10-23",
     "source": "Rahul Desai (X, Oct 19): 'Tenzing, such a lovely film... simple and poignant'; The Hindu: 'soulful ode'",
     "status": "new",
-    "endorsements": []
+    "endorsements": [
+      {
+        "name": "Rahul Desai",
+        "url": "https://x.com/ReelReptile/status/2112095237141414165"
+      },
+      {
+        "name": "Ayaan Paul Chowdhury (The Hindu)",
+        "url": "https://www.thehindu.com/entertainment/movies/tenzing-movie-review-genden-phuntsok-jennifer-peedom-tom-hiddleston-willem-dafoe-edmund-hillary/article71589471.ece"
+      }
+    ]
   },
   {
     "id": "mirzapur-the-movie",
@@ -322,7 +480,20 @@
     "week": "2026-10-23",
     "source": "Excel Entertainment; Shubhra Gupta (X, Sep 4): 'Quite enjoyed #MirzapurTheMovie'; Rahul Desai: 'Didn't mind... a much-needed factory reset'; Indian Express: 'overlong but enjoyable ride'",
     "status": "new",
-    "endorsements": []
+    "endorsements": [
+      {
+        "name": "Shubhra Gupta",
+        "url": "https://x.com/shubhragupta/status/2095819277014302959"
+      },
+      {
+        "name": "Rahul Desai",
+        "url": "https://x.com/ReelReptile/status/2095847760578965797"
+      },
+      {
+        "name": "Devesh Sharma (Filmfare)",
+        "url": "https://www.filmfare.com/reviews/bollywood-movies/mirzapur-the-movie-review-a-good-companion-piece-to-the-series-85735.html"
+      }
+    ]
   },
   {
     "id": "taskaree",
@@ -341,7 +512,20 @@
     "week": "2026-10-16",
     "source": "Rahul Desai (X, Jan 14 2026): takes its chance and 'has some fun' (hidden-gem series window, 1 year)",
     "status": "new",
-    "endorsements": []
+    "endorsements": [
+      {
+        "name": "Anuj Kumar (The Hindu)",
+        "url": "https://www.thehindu.com/entertainment/movies/emraan-hashmi-taskaree-series-review-a-neeraj-pandey-special-rewards-patience-netflix-india/article70508989.ece"
+      },
+      {
+        "name": "Amit Bhatia (ABP Live)",
+        "url": "https://news.abplive.com/entertainment/ott/taskaree-review-emraan-hashmi-anchors-neeraj-pandey-s-smartest-smuggling-thriller-yet-1821725"
+      },
+      {
+        "name": "Bollywood Hungama",
+        "url": "https://www.bollywoodhungama.com/news/features/web-series-review-taskaree-smugglers-web-one-kind-show-impresses/"
+      }
+    ]
   },
   {
     "id": "matka-king",
@@ -360,7 +544,16 @@
     "week": "2026-10-16",
     "source": "New OTT release (Prime Video, 2026), Nagraj Manjule; Rahul Desai was mixed ('does not meet great expectations')",
     "status": "new",
-    "endorsements": []
+    "endorsements": [
+      {
+        "name": "Anuj Kumar (The Hindu)",
+        "url": "https://www.thehindu.com/entertainment/movies/matka-king-series-review-vijay-varma-nagraj-manjule-prime-video-sai-tamhankar/article70872309.ece"
+      },
+      {
+        "name": "Nandini Ramnath (Scroll)",
+        "url": "https://scroll.in/reel/1092069/matka-king-review-a-winning-character-study-of-an-honest-gambler"
+      }
+    ]
   },
   {
     "id": "raakh",
@@ -379,7 +572,16 @@
     "week": "2026-10-16",
     "source": "New OTT release (Prime Video, Jun 2026); Rahul Desai: 'alright'",
     "status": "new",
-    "endorsements": []
+    "endorsements": [
+      {
+        "name": "Rachit Gupta (Filmfare)",
+        "url": "https://www.filmfare.com/reviews/web-series/raakh-review-a-genuine-horror-show-that-gets-under-your-skin-84409.html"
+      },
+      {
+        "name": "BH Harsh (Cinema Express)",
+        "url": "https://www.cinemaexpress.com/ott/review/2026/Jun/12/raakh-series-review-a-haunting-anatomy-of-violence-and-humanity"
+      }
+    ]
   },
   {
     "id": "hello-bachhon",

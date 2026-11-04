@@ -38,7 +38,11 @@
       "action": "rate",
       "stars": 4,
       "date": "2026-11-04T22:23:32.329Z",
-      "endorsers": [],
+      "endorsers": [
+        "Anuj Kumar (The Hindu)",
+        "Amit Bhatia (ABP Live)",
+        "Bollywood Hungama"
+      ],
       "lesson": "Customs and smuggling thrillers work; keep the scam/smuggling theme high."
     },
     {
@@ -54,7 +58,9 @@
       "action": "rate",
       "stars": 4,
       "date": "2026-11-04T22:23:25.759Z",
-      "endorsers": [],
+      "endorsers": [
+        "Rahul Desai"
+      ],
       "lesson": "Village comedy in the Panchayat mould keeps landing; a second season is no barrier."
     },
     {
@@ -70,7 +76,10 @@
       "action": "rate",
       "stars": 4,
       "date": "2026-11-04T22:23:10.624Z",
-      "endorsers": [],
+      "endorsers": [
+        "Anuj Kumar (The Hindu)",
+        "Nandini Ramnath (Scroll)"
+      ],
       "lesson": "Period crime about gambling rackets lands even when critics are mixed; trust the theme over the review."
     }
   ],
