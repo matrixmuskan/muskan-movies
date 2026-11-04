@@ -15,7 +15,8 @@
     "kid_safe": false,
     "week": "2026-11-06",
     "source": "Theater listing (bigscreen.com, Cinemark Pacific Commons, Fri 11/6) + The Hindu review 'Ayushmann Khurrana is on target in this spy misadventure' (Oct 23); also reviewed by ABHI KA REVIEW, Suraj Kumar Review, Yogi Bolta Hai, Tried & Refused (Rahul Desai and Shubhra Gupta were lukewarm)",
-    "status": "new"
+    "status": "new",
+    "endorsements": []
   },
   {
     "id": "baththa",
@@ -28,12 +29,14 @@
     "imdb_url": "https://www.imdb.com/title/tt44090278/",
     "hook": "Vijay Sethupathi in a funny, emotional crowd-pleaser that switches tone like a pro.",
     "where_to_watch": "Netflix",
-    "trailer_url": "https://www.youtube.com/watch?v=SQp3Li13tw0",
+    "trailer_url": "https://www.youtube.com/watch?v=jVKwbD9hST8",
     "poster_url": "https://m.media-amazon.com/images/M/MV5BNjRmZGFjMDctMzRiNS00MmIwLTliYmMtODY5ZGFkOTE5YmFkXkEyXkFqcGc@._V1_.jpg",
     "kid_safe": false,
     "week": "2026-11-06",
     "source": "Rahul Desai (X, Oct 13): 'such a terrific film. So funny, emotional, subversive, sweet'; Indian Express: 'a film that earns every emotion'; Suraj Kumar Review 'Baththa & Dorothy HINDI DUBBED REVIEW' (Oct 30)",
-    "status": "new"
+    "status": "new",
+    "endorsements": [],
+    "trailer_lang": "Hindi"
   },
   {
     "id": "last-man-in-tower",
@@ -51,7 +54,8 @@
     "kid_safe": false,
     "week": "2026-11-06",
     "source": "Rahul Desai (X, Sep 11): 'I really liked The Last Man in Tower'; THR India review 'a well-acted and sobering middle-class tragedy'; Shubhra Gupta reviewed; Indian Express positive",
-    "status": "new"
+    "status": "new",
+    "endorsements": []
   },
   {
     "id": "dupahiya-season-2",
@@ -69,7 +73,8 @@
     "kid_safe": false,
     "week": "2026-11-06",
     "source": "Rahul Desai (X, Oct 2): 'Didn't mind Season 2 of Dupahiya... does much better than others in Prime's cutesy-village-universe ilk'; Shubhra Gupta reviewed",
-    "status": "new"
+    "status": "new",
+    "endorsements": []
   },
   {
     "id": "ohh-my-dog",
@@ -87,7 +92,8 @@
     "kid_safe": true,
     "week": "2026-11-06",
     "source": "Indian Express review (Aug 7): 'Pankaj Tripathi, stray dogs are stars of rare kid-friendly film'; Rahul Desai: 'great canine performance' but loses shape",
-    "status": "new"
+    "status": "new",
+    "endorsements": []
   },
   {
     "id": "matargashti",
@@ -105,7 +111,8 @@
     "kid_safe": false,
     "week": "2026-10-30",
     "source": "Rahul Desai (X, Oct 23): 'A surprisingly sweet father-daughter story that dropped on Netflix out of nowhere' (THR India: 'a warm and watchable father-daughter comedy')",
-    "status": "new"
+    "status": "new",
+    "endorsements": []
   },
   {
     "id": "sumo-didi",
@@ -123,7 +130,8 @@
     "kid_safe": false,
     "week": "2026-10-30",
     "source": "Rahul Desai (X, Oct 23): 'elevated by a solid subject and lead performance'; Indian Express: 'throws its weight behind body positivity'",
-    "status": "new"
+    "status": "new",
+    "endorsements": []
   },
   {
     "id": "babita-singh-reporting",
@@ -141,7 +149,8 @@
     "kid_safe": false,
     "week": "2026-10-30",
     "source": "Rahul Desai (X, Aug 28): Nimisha Sajayan 'delivers one of the best performances of the year'; Shubhra Gupta (X): 'Ambiecka Pandit is one to watch out for'",
-    "status": "new"
+    "status": "new",
+    "endorsements": []
   },
   {
     "id": "the-pyramid-scheme",
@@ -159,7 +168,8 @@
     "kid_safe": false,
     "week": "2026-10-30",
     "source": "TVF title (Prime Video original, Jun 5 2026)",
-    "status": "new"
+    "status": "new",
+    "endorsements": []
   },
   {
     "id": "gram-chikitsalay-season-2",
@@ -177,7 +187,8 @@
     "kid_safe": false,
     "week": "2026-10-30",
     "source": "TVF title (Prime Video); Rahul Desai name-checks 'Gram Chikitsalay 1 and 2' in his Dupahiya 2 post",
-    "status": "new"
+    "status": "new",
+    "endorsements": []
   },
   {
     "id": "shaun-the-sheep-beast-of-mossy-bottom",
@@ -195,7 +206,9 @@
     "kid_safe": true,
     "week": "2026-10-30",
     "source": "Indian Express review (Oct 16): 'A wholesome entertainer'",
-    "status": "new"
+    "status": "removed",
+    "endorsements": [],
+    "removed_reason": "Animated film. Well reviewed, but a small release (about $20M worldwide), not an Inside Out-level blockbuster."
   },
   {
     "id": "hunkkaar-the-roar",
@@ -213,7 +226,8 @@
     "kid_safe": false,
     "week": "2026-10-23",
     "source": "Rahul Desai (X, Sep 25): 'a well-crafted series with a solid cast'; Shan Prasher reviewed (Oct 6); Shubhra Gupta was less keen",
-    "status": "new"
+    "status": "new",
+    "endorsements": []
   },
   {
     "id": "meethe-mein-kya-hai",
@@ -231,7 +245,8 @@
     "kid_safe": false,
     "week": "2026-10-23",
     "source": "Film Critics Guild (fcgreviews.com): Upma Singh, Navbharat Times positive; Sukanya Verma (Rediff) found it low-key",
-    "status": "new"
+    "status": "new",
+    "endorsements": []
   },
   {
     "id": "pritam-and-pedro",
@@ -249,7 +264,8 @@
     "kid_safe": false,
     "week": "2026-10-23",
     "source": "New OTT release (JioHotstar, Jul 3 2026); Times of India: 'strikes the right balance between suspense, humour and heart' (Rahul Desai was lukewarm)",
-    "status": "new"
+    "status": "new",
+    "endorsements": []
   },
   {
     "id": "adarsh-baal-vidyalaya",
@@ -267,7 +283,8 @@
     "kid_safe": false,
     "week": "2026-10-23",
     "source": "New OTT release (Prime Video, Jul 2026), from Biswapati Sarkar and Sameer Saxena; Cinema Express: 'a timely, heartwarming lesson'",
-    "status": "new"
+    "status": "new",
+    "endorsements": []
   },
   {
     "id": "tenzing",
@@ -285,7 +302,8 @@
     "kid_safe": false,
     "week": "2026-10-23",
     "source": "Rahul Desai (X, Oct 19): 'Tenzing, such a lovely film... simple and poignant'; The Hindu: 'soulful ode'",
-    "status": "new"
+    "status": "new",
+    "endorsements": []
   },
   {
     "id": "mirzapur-the-movie",
@@ -303,7 +321,8 @@
     "kid_safe": false,
     "week": "2026-10-23",
     "source": "Excel Entertainment; Shubhra Gupta (X, Sep 4): 'Quite enjoyed #MirzapurTheMovie'; Rahul Desai: 'Didn't mind... a much-needed factory reset'; Indian Express: 'overlong but enjoyable ride'",
-    "status": "new"
+    "status": "new",
+    "endorsements": []
   },
   {
     "id": "taskaree",
@@ -321,7 +340,8 @@
     "kid_safe": false,
     "week": "2026-10-16",
     "source": "Rahul Desai (X, Jan 14 2026): takes its chance and 'has some fun' (hidden-gem series window, 1 year)",
-    "status": "new"
+    "status": "new",
+    "endorsements": []
   },
   {
     "id": "matka-king",
@@ -339,7 +359,8 @@
     "kid_safe": false,
     "week": "2026-10-16",
     "source": "New OTT release (Prime Video, 2026), Nagraj Manjule; Rahul Desai was mixed ('does not meet great expectations')",
-    "status": "new"
+    "status": "new",
+    "endorsements": []
   },
   {
     "id": "raakh",
@@ -357,7 +378,8 @@
     "kid_safe": false,
     "week": "2026-10-16",
     "source": "New OTT release (Prime Video, Jun 2026); Rahul Desai: 'alright'",
-    "status": "new"
+    "status": "new",
+    "endorsements": []
   },
   {
     "id": "hello-bachhon",
@@ -375,7 +397,8 @@
     "kid_safe": false,
     "week": "2026-10-16",
     "source": "TVF title (Netflix, Mar 2026); study-life theme",
-    "status": "new"
+    "status": "new",
+    "endorsements": []
   },
   {
     "id": "forgotten-island",
@@ -393,6 +416,8 @@
     "kid_safe": true,
     "week": "2026-10-16",
     "source": "Theater listing (bigscreen.com, Cinemark Pacific Commons and Union Landing, Nov 6)",
-    "status": "new"
+    "status": "removed",
+    "endorsements": [],
+    "removed_reason": "Animated film. Strong reviews, but it underperformed at the box office (about $75M worldwide on an $80M budget), not an Inside Out-level blockbuster."
   }
 ]

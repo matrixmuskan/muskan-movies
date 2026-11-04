@@ -589,6 +589,37 @@ a {
   font-size: 12px;
 }
 
+.endorsed,
+.trailer-lang,
+.removed-reason {
+  margin: 6px 0 0;
+  color: var(--faint);
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.endorsed a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.endorsed a:hover,
+.endorsed a:focus-visible {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.hero-endorsed {
+  margin-top: 10px;
+  font-size: 13px;
+  max-width: 60ch;
+}
+
+.hero-copy .trailer-lang {
+  font-size: 12px;
+}
+
 .trailer {
   position: fixed;
   inset: 0;

@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "updated": "2026-11-04",
+  "source": "matrixmuskan/muskan-movies-feedback/feedback/",
+  "rules": {
+    "loved": "4-5 stars or keep",
+    "neutral": "3 stars",
+    "disliked": "1-2 stars or discard"
+  },
+  "loved": [
+    {
+      "title": "Hello Bachhon",
+      "id": "hello-bachhon",
+      "type": "series",
+      "language": "Hindi",
+      "genres": [
+        "drama",
+        "study/college/coaching life",
+        "TVF production"
+      ],
+      "action": "rate",
+      "stars": 4,
+      "date": "2026-11-04T22:31:40.867Z",
+      "endorsers": [],
+      "lesson": "TVF study-life shows are a safe bet, as Kota Factory and Aspirants suggested."
+    },
+    {
+      "title": "Taskaree: The Smuggler's Web",
+      "id": "taskaree",
+      "type": "series",
+      "language": "Hindi",
+      "genres": [
+        "thriller",
+        "crime",
+        "scam/fraud ring/pills/smuggling",
+        "cop/investigation"
+      ],
+      "action": "rate",
+      "stars": 4,
+      "date": "2026-11-04T22:23:32.329Z",
+      "endorsers": [],
+      "lesson": "Customs and smuggling thrillers work; keep the scam/smuggling theme high."
+    },
+    {
+      "title": "Dupahiya (Season 2)",
+      "id": "dupahiya-season-2",
+      "type": "series",
+      "language": "Hindi",
+      "genres": [
+        "comedy",
+        "slice-of-life",
+        "rustic/small-town (TVF, Panchayat-style)"
+      ],
+      "action": "rate",
+      "stars": 4,
+      "date": "2026-11-04T22:23:25.759Z",
+      "endorsers": [],
+      "lesson": "Village comedy in the Panchayat mould keeps landing; a second season is no barrier."
+    },
+    {
+      "title": "Matka King",
+      "id": "matka-king",
+      "type": "series",
+      "language": "Hindi",
+      "genres": [
+        "crime",
+        "drama",
+        "scam/fraud ring/pills/smuggling"
+      ],
+      "action": "rate",
+      "stars": 4,
+      "date": "2026-11-04T22:23:10.624Z",
+      "endorsers": [],
+      "lesson": "Period crime about gambling rackets lands even when critics are mixed; trust the theme over the review."
+    }
+  ],
+  "neutral": [],
+  "disliked": [
+    {
+      "title": "Shaun the Sheep: The Beast of Mossy Bottom",
+      "id": "shaun-the-sheep-beast-of-mossy-bottom",
+      "type": "movie",
+      "language": "English",
+      "genres": [
+        "animation (family)",
+        "comedy",
+        "English (Hollywood)"
+      ],
+      "action": "discard",
+      "stars": null,
+      "date": "2026-11-04T22:40:31.573Z",
+      "endorsers": [],
+      "lesson": "No cartoons: even a well-reviewed family animation was discarded."
+    },
+    {
+      "title": "Forgotten Island",
+      "id": "forgotten-island",
+      "type": "movie",
+      "language": "English",
+      "genres": [
+        "animation (family)",
+        "adventure",
+        "English (Hollywood)"
+      ],
+      "action": "discard",
+      "stars": null,
+      "date": "2026-11-04T22:31:37.123Z",
+      "endorsers": [],
+      "lesson": "Skip animated films unless they are Inside Out-level blockbusters; good reviews alone are not enough."
+    }
+  ]
+}

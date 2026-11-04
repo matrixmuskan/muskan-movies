@@ -27,7 +27,7 @@ The `pages` workflow then runs on every push to `main`. It publishes `index.html
 
 ## Layout
 
-The newest `week` in `data/picks.json` is **This Week**, even if today is not that Friday. Its first pick that is still open is the hero. Older weeks are rows under that, newest first. **Kept** is its own row. **History** is collapsed and holds discarded or rated titles.
+The newest `week` in `data/picks.json` is **This Week**, even if today is not that Friday. Its first pick that is still open is the hero. Older weeks are rows under that, newest first. **Kept** is its own row. **History** is collapsed and holds discarded or rated titles, plus any pick whose `status` is `removed`, with its `removed_reason` in small text.
 
 Each card shows the poster, title, year, language, a small Movie or Series label from `type`, IMDb rating, a one-line hook, where to watch, and a Kid-safe badge when `kid_safe` is true. The poster and **Play trailer** open a YouTube trailer in the page when `trailer_url` is a YouTube link. Any other trailer link opens in a new tab. On a wide screen, hover or keyboard focus reveals Keep, Discard, and the stars. On a narrow screen, **Details** reveals those actions.
 
@@ -51,23 +51,65 @@ The file is a JSON array. A bot appends the next Friday's objects to that array.
 | `imdb_url` | string | no | Public `https` IMDb title URL. |
 | `hook` | string | yes | Short recommendation line. |
 | `where_to_watch` | string | yes | Service or theater line, such as `SonyLIV`, `Prime Video`, or `In theaters: Cinemark Pacific Commons, Fremont`. |
-| `trailer_url` | string | yes | Public `https` trailer. |
+| `trailer_url` | string | yes | Public `https` trailer. For a Tamil, Telugu, Malayalam, or Kannada title, use the official Hindi-dubbed YouTube trailer when one exists (check that it plays in the site's player). |
+| `trailer_lang` | string | no | Audio language of the trailer, such as `Hindi` or `Tamil`. Set it when a South Indian title has no Hindi trailer and the original stays. Any value other than `Hindi` shows a small `Trailer: Tamil` note on the tile. |
 | `poster_url` | string | yes | Public `https` poster image. |
 | `kid_safe` | boolean | yes | `true` shows a small Kid-safe badge. |
 | `week` | string | yes | Friday of that week, `YYYY-MM-DD`. Every pick from the same drop shares one Friday. The greatest week is This Week. |
 | `source` | string | yes | Who recommended it, and why. Stored for the bot. Not shown on the card. |
-| `status` | string | yes | `new`, `kept`, `discarded`, or `seen`. A new drop uses `new`. |
+| `endorsements` | array | yes | Reviewers and influencers who recommended the title: `[{ "name": "Rahul Desai", "url": "https://x.com/..." }]`. Each `url` must go to that person's own video, post, or review of this title, and must be opened and checked before it is added. Never guess a link. Use `[]` when none is verified; the site then hides the line. Shown as "Recommended by" on the tile and in the hero. |
+| `status` | string | yes | `new`, `kept`, `discarded`, `seen`, or `removed`. A new drop uses `new`. `removed` takes a pick out of every row for good, even if feedback says otherwise, and shows it in History. |
+| `removed_reason` | string | with `removed` | Short reason, shown in small text in History. Required when `status` is `removed`; not allowed otherwise. |
 | `example` | boolean | no | Optional. Current picks are real and do not set this. |
 
 `status` in this file is the editorial starting point. A newer feedback file for the same `id` overrides it. The site does not need the bot to edit `status` after the viewer acts.
 
-`tools/validate.py` checks this shape on pull requests. A week that is not a Friday fails the check.
+`tools/validate.py` checks this shape on every push. A week that is not a Friday fails the check.
+
+### Curation rules for weekly builds
+
+- **South Indian titles.** For Tamil, Telugu, Malayalam, or Kannada picks, prefer the official Hindi-dubbed YouTube trailer (usually from the streamer or studio channel). If none exists, keep the original and set `trailer_lang`.
+- **No cartoons.** Skip animated films and cartoons unless the title is a huge, acclaimed blockbuster on the level of Inside Out. If one gets in, set `status` to `removed` and give a `removed_reason`; do not delete the object.
+- **Endorsements.** Fill `endorsements` from the reviewers in `data/taste-profile.json` (`reviewer_trust_weights`) and the web. Only favourable takes count. Each link is checked by hand or by fetching it.
 
 Append an object in that shape. The current file already holds real weeks. `2026-11-06` is This Week.
 
 ## `data/taste-profile.json`
 
 The bot's preference model: weights, hard filters, and what Muskan has already seen. It stays in the repo so a later run can read it. The page does not fetch it, does not render it, and the Pages artifact does not include it.
+
+## `data/ratings-log.json`
+
+The learning file for the weekly build. It sorts each title the viewer acted on into one of three lists, using the newest feedback file for that title in `muskan-movies-feedback/feedback/`. The site does not fetch or render it, and Pages does not publish it.
+
+```json
+{
+  "version": 1,
+  "updated": "2026-11-04",
+  "source": "matrixmuskan/muskan-movies-feedback/feedback/",
+  "rules": { "loved": "4-5 stars or keep", "neutral": "3 stars", "disliked": "1-2 stars or discard" },
+  "loved": [],
+  "neutral": [],
+  "disliked": []
+}
+```
+
+One entry per title:
+
+| Field | Type | Meaning |
+| --- | --- | --- |
+| `title` | string | Display title. |
+| `id` | string | Pick id. |
+| `type` | string | `movie` or `series`. |
+| `language` | string | Same as the pick. |
+| `genres` | array of strings | Genres and themes, using `genre_weights` and `theme_weights` names from the taste profile where they fit. |
+| `action` | string | `keep`, `discard`, or `rate`. |
+| `stars` | number or null | `1`–`5` for `rate`, otherwise null. |
+| `date` | string | ISO timestamp of the newest feedback file for the title. |
+| `endorsers` | array of strings | Names from the pick's `endorsements`. |
+| `lesson` | string | One sentence the next build should act on. |
+
+Which list: keep or 4–5 stars goes in `loved`; 3 stars in `neutral`; discard or 1–2 stars in `disliked`. When the viewer acts again, move the entry and update it. Do not keep two entries for one id. `tools/validate.py` checks the fields and the list each entry is in.
 
 ## Feedback
 

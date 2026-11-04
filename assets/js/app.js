@@ -298,6 +298,7 @@
   }
 
   function placement(pick, latest) {
+    if (pick.status === "removed") return "history";
     var action = latest ? latest.action : null;
     if (action === "keep" || (!latest && pick.status === "kept")) return "kept";
     if (action === "discard" || (!latest && pick.status === "discarded")) return "history";
@@ -306,6 +307,7 @@
   }
 
   function historyKind(pick, latest) {
+    if (pick.status === "removed") return "Removed";
     if (latest && latest.action === "discard") return "Discarded";
     if (latest && latest.action === "rate") return "Seen";
     if (!latest && pick.status === "discarded") return "Discarded";
@@ -315,6 +317,31 @@
 
   function typeLabel(type) {
     return type === "series" ? "Series" : "Movie";
+  }
+
+  function trailerNote(pick) {
+    var lang = typeof pick.trailer_lang === "string" ? pick.trailer_lang.trim() : "";
+    if (!lang || lang.toLowerCase() === "hindi") return null;
+    return el("p", "trailer-lang", "Trailer: " + lang);
+  }
+
+  function endorsementLine(pick, className) {
+    var list = Array.isArray(pick.endorsements) ? pick.endorsements.filter(function (item) {
+      return item && typeof item.name === "string" && item.name.trim() && safeHttps(item.url);
+    }) : [];
+    if (!list.length) return null;
+    var line = el("p", className);
+    line.appendChild(document.createTextNode("Recommended by "));
+    list.forEach(function (item, index) {
+      if (index) line.appendChild(document.createTextNode(", "));
+      var link = document.createElement("a");
+      link.href = safeHttps(item.url);
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.textContent = item.name.trim();
+      line.appendChild(link);
+    });
+    return line;
   }
 
   function formatWeek(iso) {
@@ -504,6 +531,10 @@
     var heroHook = el("p", "hero-hook", pick.hook);
     copy.appendChild(heroHook);
     copy.appendChild(el("p", "hero-watch", pick.where_to_watch));
+    var heroEndorsed = endorsementLine(pick, "endorsed hero-endorsed");
+    if (heroEndorsed) copy.appendChild(heroEndorsed);
+    var heroTrailer = trailerNote(pick);
+    if (heroTrailer) copy.appendChild(heroTrailer);
     if (pick.kid_safe) copy.appendChild(el("p", "badge", "Kid-safe"));
 
     var actions = el("div", "hero-actions");
@@ -550,9 +581,16 @@
     var watch = el("p", "watch", pick.where_to_watch);
     watch.title = pick.where_to_watch;
     body.appendChild(watch);
+    var endorsed = endorsementLine(pick, "endorsed");
+    if (endorsed) body.appendChild(endorsed);
+    var note = trailerNote(pick);
+    if (note) body.appendChild(note);
     if (pick.kid_safe) body.appendChild(el("p", "badge", "Kid-safe"));
     if (kind === "kept") body.appendChild(el("p", "placement", "Kept"));
     if (kind === "history") body.appendChild(el("p", "placement", historyKind(pick, latestById(state.entries)[pick.id])));
+    if (kind === "history" && pick.status === "removed" && pick.removed_reason) {
+      body.appendChild(el("p", "removed-reason", pick.removed_reason));
+    }
 
     var toggle = document.createElement("button");
     toggle.type = "button";

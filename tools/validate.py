@@ -29,8 +29,13 @@ PICK_FIELDS = {
     "example",
     "imdb_id",
     "imdb_url",
+    "trailer_lang",
+    "endorsements",
+    "removed_reason",
 }
-STATUSES = {"new", "kept", "discarded", "seen"}
+STATUSES = {"new", "kept", "discarded", "seen", "removed"}
+LOG_LISTS = ("loved", "neutral", "disliked")
+LOG_FIELDS = {"title", "id", "type", "language", "genres", "action", "stars", "date", "endorsers", "lesson"}
 TYPES = {"movie", "series"}
 SECRET_MARKERS = (
     "gh" + "p_",
@@ -51,6 +56,9 @@ def error(message: str) -> None:
 
 
 def load(path: Path) -> object:
+    if not path.is_file():
+        error(f"{path.relative_to(ROOT)} is missing")
+        return None
     try:
         return json.loads(path.read_text())
     except json.JSONDecodeError as exc:
@@ -112,7 +120,32 @@ def check_pick(index: int, pick: object, seen_ids: set[str]) -> None:
     if not isinstance(pick.get("source"), str) or not pick["source"].strip():
         error(f"{label}.source must be a non-empty string")
     if pick.get("status") not in STATUSES:
-        error(f"{label}.status must be new, kept, discarded, or seen")
+        error(f"{label}.status must be new, kept, discarded, seen, or removed")
+    reason = pick.get("removed_reason")
+    if pick.get("status") == "removed":
+        if not isinstance(reason, str) or not reason.strip():
+            error(f"{label}.removed_reason is required when status is removed")
+    elif reason is not None:
+        error(f"{label}.removed_reason is only allowed when status is removed")
+    trailer_lang = pick.get("trailer_lang")
+    if trailer_lang is not None and (not isinstance(trailer_lang, str) or not trailer_lang.strip()):
+        error(f"{label}.trailer_lang must be a non-empty string when present")
+    endorsements = pick.get("endorsements")
+    if not isinstance(endorsements, list):
+        error(f"{label}.endorsements must be an array (empty when none are verified)")
+    else:
+        seen_urls: set[str] = set()
+        for e_index, item in enumerate(endorsements):
+            e_label = f"{label}.endorsements[{e_index}]"
+            if not isinstance(item, dict) or set(item) != {"name", "url"}:
+                error(f"{e_label} must be an object with exactly name and url")
+                continue
+            if not isinstance(item["name"], str) or not item["name"].strip():
+                error(f"{e_label}.name must be a non-empty string")
+            https_url(item["url"], f"{e_label}.url")
+            if item["url"] in seen_urls:
+                error(f"{e_label}.url is duplicated")
+            seen_urls.add(item["url"])
     if "example" in pick and not isinstance(pick["example"], bool):
         error(f"{label}.example must be true or false when present")
     imdb_id = pick.get("imdb_id")
@@ -168,12 +201,58 @@ def main() -> None:
         seen_ids: set[str] = set()
         for index, pick in enumerate(picks):
             check_pick(index, pick, seen_ids)
+    log_count = check_ratings_log({p.get("id") for p in picks or [] if isinstance(p, dict)})
     check_feedback_wiring()
     check_secrets()
     if errors:
         print("\n".join(errors))
         sys.exit(1)
-    print(f"ok {len(picks)} picks")
+    print(f"ok {len(picks)} picks, {log_count} ratings-log entries")
+
+
+def check_ratings_log(pick_ids: set) -> int:
+    doc = load(ROOT / "data" / "ratings-log.json")
+    if not isinstance(doc, dict):
+        error("data/ratings-log.json must be an object")
+        return 0
+    count = 0
+    for name in LOG_LISTS:
+        entries = doc.get(name)
+        if not isinstance(entries, list):
+            error(f"ratings-log.{name} must be an array")
+            continue
+        for index, entry in enumerate(entries):
+            label = f"ratings-log.{name}[{index}]"
+            count += 1
+            if not isinstance(entry, dict):
+                error(f"{label} must be an object")
+                continue
+            missing = LOG_FIELDS - set(entry)
+            if missing:
+                error(f"{label} is missing {', '.join(sorted(missing))}")
+            if entry.get("id") not in pick_ids:
+                error(f"{label}.id is not a pick id")
+            action = entry.get("action")
+            stars = entry.get("stars")
+            if action not in {"keep", "discard", "rate"}:
+                error(f"{label}.action must be keep, discard, or rate")
+            if action == "rate" and (isinstance(stars, bool) or not isinstance(stars, int) or not 1 <= stars <= 5):
+                error(f"{label}.stars must be 1 to 5 for a rate action")
+            if action != "rate" and stars is not None:
+                error(f"{label}.stars must be null unless the action is rate")
+            expected = None
+            if action == "keep" or (action == "rate" and isinstance(stars, int) and stars >= 4):
+                expected = "loved"
+            elif action == "discard" or (action == "rate" and isinstance(stars, int) and stars <= 2):
+                expected = "disliked"
+            elif action == "rate" and stars == 3:
+                expected = "neutral"
+            if expected and expected != name:
+                error(f"{label} belongs in {expected}")
+            for key in ("genres", "endorsers"):
+                if not isinstance(entry.get(key), list):
+                    error(f"{label}.{key} must be an array")
+    return count
 
 
 if __name__ == "__main__":
