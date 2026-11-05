@@ -286,7 +286,7 @@
       "alpha": 2.0,
       "beta": 2.0,
       "n_obs": 0,
-      "surfaced": 1,
+      "surfaced": 2,
       "rated": 0,
       "stars_sum": 0,
       "stars_count": 0,
@@ -514,7 +514,7 @@
       "alpha": 2.0,
       "beta": 2.0,
       "n_obs": 0,
-      "surfaced": 2,
+      "surfaced": 4,
       "rated": 0,
       "stars_sum": 0,
       "stars_count": 0,
@@ -552,7 +552,7 @@
       "alpha": 4.0,
       "beta": 2.0,
       "n_obs": 2,
-      "surfaced": 4,
+      "surfaced": 5,
       "rated": 2,
       "stars_sum": 8,
       "stars_count": 2,
@@ -571,7 +571,7 @@
       "alpha": 2.0,
       "beta": 2.0,
       "n_obs": 0,
-      "surfaced": 1,
+      "surfaced": 2,
       "rated": 0,
       "stars_sum": 0,
       "stars_count": 0,
@@ -588,7 +588,7 @@
       "alpha": 3.0,
       "beta": 2.0,
       "n_obs": 1,
-      "surfaced": 9,
+      "surfaced": 11,
       "rated": 1,
       "stars_sum": 4,
       "stars_count": 1,
@@ -648,7 +648,7 @@
       "alpha": 4.0,
       "beta": 2.0,
       "n_obs": 2,
-      "surfaced": 5,
+      "surfaced": 6,
       "rated": 2,
       "stars_sum": 8,
       "stars_count": 2,
@@ -771,6 +771,53 @@
     },
     {
       "id": "ohh-my-dog",
+      "week": "2026-11-06",
+      "slot": "exploit",
+      "sources": [],
+      "votes": {},
+      "votes_recorded": "backfill (prior trust 0.50)",
+      "score": null,
+      "feedback": null,
+      "reward": null
+    },
+    {
+      "id": "sookshmadarshini",
+      "week": "2026-11-06",
+      "slot": "exploit",
+      "sources": [
+        "the-hindu-reviews",
+        "indian-express-reviews",
+        "baradwaj-rangan",
+        "thr-india-reviews"
+      ],
+      "votes": {
+        "the-hindu-reviews": 0.5,
+        "indian-express-reviews": 0.5,
+        "baradwaj-rangan": 0.5,
+        "thr-india-reviews": 0.5
+      },
+      "votes_recorded": "backfill (prior trust 0.50)",
+      "score": null,
+      "feedback": null,
+      "reward": null
+    },
+    {
+      "id": "ghar-waapsi",
+      "week": "2026-11-06",
+      "slot": "explore",
+      "sources": [
+        "indian-express-reviews"
+      ],
+      "votes": {
+        "indian-express-reviews": 0.5
+      },
+      "votes_recorded": "backfill (prior trust 0.50)",
+      "score": null,
+      "feedback": null,
+      "reward": null
+    },
+    {
+      "id": "very-parivarik",
       "week": "2026-11-06",
       "slot": "exploit",
       "sources": [],
@@ -1037,6 +1084,7 @@
     "India Today": 2,
     "Abhishek Srivastava (Times of India)": 1,
     "Amit Bhatia (ABP Live)": 1,
+    "Aunty Eve (All About Eve)": 1,
     "BH Harsh (Cinema Express)": 1,
     "Deepa Gahlot (Scroll)": 1,
     "Dhaval Roy (Times of India)": 1,

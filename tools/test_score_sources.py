@@ -171,7 +171,7 @@ class SelectionTests(unittest.TestCase):
         self.assertEqual(a, b)
 
     def test_off_netflix_prime_quota_and_hollywood_cap(self):
-        # strongest titles are all on Netflix/Prime; two weaker ones are off it
+        # strongest titles are all on Netflix/Prime; three weaker ones are off it
         cands = [cand(f"nf{i}", ["critic-a", "critic-b"], imdb=9.0, where=["Netflix", "Prime Video"][i % 2]) for i in range(6)]
         cands += [cand("hw1", ["critic-a"], imdb=9.0, lang="English", hollywood=True, where="Apple TV+"),
                   cand("hw2", ["critic-a"], imdb=9.0, lang="English", hollywood=True, where="In theaters"),
@@ -179,27 +179,40 @@ class SelectionTests(unittest.TestCase):
                   cand("bad-off", ["critic-c"], imdb=5.0, where="SonyLIV")]
         sel = ss.select_weekly(cands, SOURCES, self.state, PROFILE, "2026-11-13", history=[])
         by_id = {c["id"]: c for c in cands}
-        self.assertGreaterEqual(sum(not ss.on_netflix_prime(by_id[s["id"]]) for s in sel), 2)
+        self.assertGreaterEqual(sum(not ss.on_netflix_prime(by_id[s["id"]]) for s in sel), 3)   # 50-50 base: 3 of 5
         self.assertLessEqual(sum(bool(by_id[s["id"]].get("hollywood")) for s in sel), 1)
         self.assertNotIn("bad-off", {s["id"] for s in sel})       # swaps still obey the hard rules
         self.assertTrue(all("on_netflix_prime" in s for s in sel))
 
     def test_swap_replaces_weakest_netflix_prime_exploit(self):
         cands = [cand(f"nf{i}", ["critic-a", "critic-b"], imdb=6.0 + i / 2, where="Netflix") for i in range(6)]
-        cands += [cand("sony", ["critic-c"], imdb=6.2, where="SonyLIV"), cand("aha", ["critic-c"], imdb=6.1, where="Aha")]
+        cands += [cand("sony", ["critic-c"], imdb=6.2, where="SonyLIV"), cand("aha", ["critic-c"], imdb=6.1, where="Aha"),
+                  cand("zee", ["critic-c"], imdb=6.0, where="ZEE5")]
         sel = ss.select_weekly(cands, SOURCES, self.state, PROFILE, "2026-11-13", history=[])
         ids = {s["id"] for s in sel}
-        self.assertTrue({"sony", "aha"} <= ids)
-        self.assertNotIn("nf0", ids)          # the weakest Netflix title went out
+        self.assertTrue({"sony", "aha", "zee"} <= ids)
+        self.assertNotIn("nf0", ids)          # the weakest Netflix titles went out
+        self.assertNotIn("nf1", ids)
         self.assertIn("nf5", ids)             # the strongest stayed
 
     def test_off_titles_not_forced_onto_netflix(self):
-        # the old (wrong) rule pulled Netflix/Prime titles in; now an all-off week is left alone
+        # an all-off week is left alone: the rule is a floor for off-Netflix/Prime, never a quota for Netflix/Prime
         cands = [cand(f"t{i}", ["critic-a", "critic-b"], imdb=9.0, where="In theaters") for i in range(5)]
         cands += [cand("nf", ["south-x"], imdb=6.5, where="Netflix"), cand("pv", ["gems-y"], imdb=6.5, where="Prime Video")]
         sel = ss.select_weekly(cands, SOURCES, self.state, PROFILE, "2026-11-13", history=[])
         by_id = {c["id"]: c for c in cands}
-        self.assertGreaterEqual(sum(not ss.on_netflix_prime(by_id[s["id"]]) for s in sel), 2)
+        self.assertGreaterEqual(sum(not ss.on_netflix_prime(by_id[s["id"]]) for s in sel), 3)
+
+    def test_theater_title_fills_the_off_quota(self):
+        # a Prime title that is also in a local theater counts toward the off-Netflix/Prime floor
+        cands = [cand(f"nf{i}", ["critic-a", "critic-b"], imdb=9.0, where="Prime Video") for i in range(6)]
+        cands += [cand("thr", ["critic-c"], imdb=6.5, where="Prime Video (also still In theaters: Cinemark)"),
+                  cand("loc", ["critic-c"], imdb=6.4, where="Prime Video", in_local_theater=True),
+                  cand("sony", ["critic-c"], imdb=6.3, where="SonyLIV")]
+        sel = ss.select_weekly(cands, SOURCES, self.state, PROFILE, "2026-11-13", history=[])
+        ids = {s["id"] for s in sel}
+        self.assertTrue({"thr", "loc", "sony"} <= ids)
+        self.assertEqual(sum(not s["on_netflix_prime"] for s in sel), 3)
 
     def test_theater_plus_prime_counts_as_off(self):
         self.assertFalse(ss.on_netflix_prime({"where_to_watch": "Prime Video (also still In theaters: Cinemark Pacific Commons, Fremont)"}))
@@ -209,23 +222,38 @@ class SelectionTests(unittest.TestCase):
         for off in ("ZEE5", "SonyLIV", "JioHotstar (India; US access not verified)", "Aha", "Apple TV+", "In theaters: Cinemark"):
             self.assertFalse(ss.on_netflix_prime({"where_to_watch": off}), off)
 
+    def test_constants_are_the_50_50_rule(self):
+        self.assertEqual(ss.MIN_NON_NETFLIX_PRIME, 3)
+        self.assertEqual(ss.NETFLIX_PRIME_SHARE_CAP, 0.50)
+
     def test_running_share_pushes_further_off(self):
         hist = lambda on, off: [{"where_to_watch": "Netflix"}] * on + [{"where_to_watch": "ZEE5"}] * off
-        self.assertEqual(ss.required_off_netflix_prime([], 5), 2)
-        self.assertEqual(ss.required_off_netflix_prime(hist(13, 7), 5), 2)    # 65% exactly: not above
-        self.assertEqual(ss.required_off_netflix_prime(hist(14, 6), 5), 3)    # 70% -> 3
-        self.assertEqual(ss.required_off_netflix_prime(hist(20, 0), 5), 4)    # capped at n - 1
-        removed = hist(13, 7) + [{"where_to_watch": "Netflix", "status": "removed"}] * 5
-        self.assertEqual(ss.required_off_netflix_prime(removed, 5), 2)        # removed picks ignored
-        mixed = hist(13, 6) + [{"where_to_watch": "Prime Video (also still In theaters: X)"}]
-        self.assertEqual(ss.netflix_prime_share(mixed), (13, 20))
+        self.assertEqual(ss.required_off_netflix_prime([], 5), 3)              # base: 3 of 5
+        self.assertEqual(ss.required_off_netflix_prime(hist(5, 15), 5), 3)     # 25%: base
+        self.assertEqual(ss.required_off_netflix_prime(hist(10, 10), 5), 3)    # 50% exactly: not above
+        self.assertEqual(ss.required_off_netflix_prime(hist(11, 10), 5), 4)    # 52% -> 4
+        self.assertEqual(ss.required_off_netflix_prime(hist(14, 6), 5), 4)     # 70% -> 4
+        self.assertEqual(ss.required_off_netflix_prime(hist(20, 0), 5), 4)     # never more than 4 of 5
+        removed = hist(10, 10) + [{"where_to_watch": "Netflix", "status": "removed"}] * 5
+        self.assertEqual(ss.netflix_prime_share(removed), (10, 20))             # removed picks ignored
+        self.assertEqual(ss.required_off_netflix_prime(removed, 5), 3)
+        mixed = hist(10, 9) + [{"where_to_watch": "Prime Video (also still In theaters: X)"}] + [{"where_to_watch": "Prime Video", "in_local_theater": True}]
+        self.assertEqual(ss.netflix_prime_share(mixed), (10, 21))               # theater titles count as off
+        self.assertEqual(ss.required_off_netflix_prime(mixed, 5), 3)
 
-    def test_high_share_history_selects_three_off(self):
+    def test_high_share_history_selects_four_off(self):
         cands = [cand(f"nf{i}", ["critic-a", "critic-b"], imdb=9.0, where="Netflix") for i in range(6)]
         cands += [cand(f"off{i}", ["critic-c"], imdb=6.5, where="SonyLIV") for i in range(4)]
         hist = [{"where_to_watch": "Netflix"}] * 14 + [{"where_to_watch": "ZEE5"}] * 6
         sel = ss.select_weekly(cands, SOURCES, self.state, PROFILE, "2026-11-13", history=hist)
-        self.assertGreaterEqual(sum(not s["on_netflix_prime"] for s in sel), 3)
+        self.assertGreaterEqual(sum(not s["on_netflix_prime"] for s in sel), 4)
+
+    def test_balanced_history_selects_three_off(self):
+        cands = [cand(f"nf{i}", ["critic-a", "critic-b"], imdb=9.0, where="Netflix") for i in range(6)]
+        cands += [cand(f"off{i}", ["critic-c"], imdb=6.5, where="SonyLIV") for i in range(4)]
+        hist = [{"where_to_watch": "Netflix"}] * 10 + [{"where_to_watch": "ZEE5"}] * 10
+        sel = ss.select_weekly(cands, SOURCES, self.state, PROFILE, "2026-11-13", history=hist)
+        self.assertEqual(sum(not s["on_netflix_prime"] for s in sel), 3)
 
     def test_record_selection(self):
         sel = ss.select_weekly([cand(f"c{i}", ["critic-a"]) for i in range(5)], SOURCES, self.state, PROFILE, "2026-11-13")

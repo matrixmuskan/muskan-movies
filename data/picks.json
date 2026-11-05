@@ -179,8 +179,106 @@
     "kid_safe": true,
     "week": "2026-11-06",
     "source": "Indian Express review (Aug 7): 'Pankaj Tripathi, stray dogs are stars of rare kid-friendly film'; Rahul Desai: 'great canine performance' but loses shape",
-    "status": "new",
+    "status": "removed",
     "endorsements": [],
+    "sources": [],
+    "slot": "exploit",
+    "removed_reason": "rebalanced: 50-50 platform rule"
+  },
+  {
+    "id": "sookshmadarshini",
+    "title": "Sookshmadarshini",
+    "year": 2024,
+    "type": "movie",
+    "language": "Malayalam (Hindi dub available)",
+    "imdb_rating": 7.7,
+    "imdb_id": "tt32495687",
+    "imdb_url": "https://www.imdb.com/title/tt32495687/",
+    "hook": "A nosy housewife and her WhatsApp-group neighbours spy on the odd new guy next door - a Hitchcock-style suspense comedy with Nazriya and Basil Joseph.",
+    "where_to_watch": "Aha (US); also free with ads on Tubi and The Roku Channel (US). Hindi dub on JioHotstar (India); Hindi audio on the US services not verified",
+    "trailer_url": "https://www.youtube.com/watch?v=upohlfTPDYg",
+    "poster_url": "https://m.media-amazon.com/images/M/MV5BYWE3Y2Q4MGItNDY5ZS00ODMzLWJlMzktMDYxM2QxMjhhZWVjXkEyXkFqcGc@._V1_.jpg",
+    "kid_safe": false,
+    "week": "2026-11-06",
+    "source": "Hidden-gem South pick (2024): The Hindu 'a cleverly written thriller'; Indian Express 'a suspenseful and hilarious mystery comedy'; Baradwaj Rangan 'popcorn entertainment with a brain'; THR India 'Hitchcockian comedy'. Official Hindi trailer from JioHotstar",
+    "status": "new",
+    "endorsements": [
+      {
+        "name": "The Hindu",
+        "url": "https://www.thehindu.com/entertainment/movies/sookshmadarshini-movie-review-nazriya-nazim-basil-joseph-headline-a-cleverly-written-thriller-that-delivers-a-satisfying-high/article68898079.ece"
+      },
+      {
+        "name": "Anandu Suresh (The Indian Express)",
+        "url": "https://indianexpress.com/article/entertainment/movie-review/sookshmadarshini-movie-review-basil-joseph-nazriya-nazim-deliver-a-suspenseful-and-hilarious-mystery-comedy-9682324/"
+      },
+      {
+        "name": "Baradwaj Rangan",
+        "url": "https://baradwajrangan.wordpress.com/2024/12/02/briefly-reviewed-mc-jithins-sookshmadarshini/"
+      },
+      {
+        "name": "The Hollywood Reporter India - Reviews",
+        "url": "https://www.hollywoodreporterindia.com/reviews/theatrical/sookshmadarshini-review-nazriya-nazim-basil-joseph-light-up-this-hitchcockian-comedy"
+      }
+    ],
+    "sources": [
+      "the-hindu-reviews",
+      "indian-express-reviews",
+      "baradwaj-rangan",
+      "thr-india-reviews"
+    ],
+    "slot": "exploit"
+  },
+  {
+    "id": "ghar-waapsi",
+    "title": "Ghar Waapsi",
+    "year": 2022,
+    "type": "series",
+    "language": "Hindi",
+    "imdb_rating": 8.7,
+    "imdb_id": "tt21267694",
+    "imdb_url": "https://www.imdb.com/title/tt21267694/",
+    "hook": "Laid off in Bengaluru, Shekhar moves back to his family in Indore - a warm, funny small-town family show in the Gullak and Yeh Meri Family mould.",
+    "where_to_watch": "Hulu (US); JioHotstar (India)",
+    "trailer_url": "https://www.youtube.com/watch?v=wWg-iYV4ojQ",
+    "poster_url": "https://m.media-amazon.com/images/M/MV5BZmZiZmQ5YmUtNzM4NS00MTExLTllN2EtMmFjNjNmOGQ1N2ZkXkEyXkFqcGc@._V1_.jpg",
+    "kid_safe": false,
+    "week": "2026-11-06",
+    "source": "Older hidden-gem series (Dice Media, 2022): Indian Express 'a relatable, endearing show' with warm, funny, tender vignettes",
+    "status": "new",
+    "endorsements": [
+      {
+        "name": "Arushi Jain (The Indian Express)",
+        "url": "https://indianexpress.com/article/entertainment/web-series/ghar-waapsi-review-relatable-endearing-show-8044756/"
+      }
+    ],
+    "sources": [
+      "indian-express-reviews"
+    ],
+    "slot": "explore"
+  },
+  {
+    "id": "very-parivarik",
+    "title": "Very Parivarik",
+    "year": 2024,
+    "type": "series",
+    "language": "Hindi",
+    "imdb_rating": 8.6,
+    "imdb_id": "tt31862849",
+    "imdb_url": "https://www.imdb.com/title/tt31862849/",
+    "hook": "A young Jaipur couple's freedom ends when both sets of parents move in - TVF's clean family comedy from the Panchayat and Gullak makers.",
+    "where_to_watch": "YouTube (free, The Viral Fever channel)",
+    "trailer_url": "https://www.youtube.com/watch?v=Yh1kDry91zc",
+    "poster_url": "https://m.media-amazon.com/images/M/MV5BYTg5Yzk3MzctYzQwOC00YWIzLWFiZjctMGM4MGYyMjJjNDFiXkEyXkFqcGc@._V1_.jpg",
+    "kid_safe": false,
+    "week": "2026-11-06",
+    "source": "TVF title (2024 weekly show, season 2 in 2025), free on YouTube; All About Eve review: 'Clean Comedy For The Whole Family'",
+    "status": "new",
+    "endorsements": [
+      {
+        "name": "Aunty Eve (All About Eve)",
+        "url": "https://allabouteve.co.in/very-parivarik-tvf-review-aunty-eve/"
+      }
+    ],
     "sources": [],
     "slot": "exploit"
   },
@@ -298,7 +396,7 @@
     "kid_safe": false,
     "week": "2026-10-30",
     "source": "TVF title (Prime Video original, Jun 5 2026)",
-    "status": "new",
+    "status": "removed",
     "endorsements": [
       {
         "name": "India Today",
@@ -310,7 +408,8 @@
       }
     ],
     "sources": [],
-    "slot": "exploit"
+    "slot": "exploit",
+    "removed_reason": "rebalanced: 50-50 platform rule"
   },
   {
     "id": "gram-chikitsalay-season-2",
@@ -328,7 +427,7 @@
     "kid_safe": false,
     "week": "2026-10-30",
     "source": "TVF title (Prime Video); Rahul Desai name-checks 'Gram Chikitsalay 1 and 2' in his Dupahiya 2 post",
-    "status": "new",
+    "status": "removed",
     "endorsements": [
       {
         "name": "Abhishek Srivastava (Times of India)",
@@ -348,7 +447,8 @@
       }
     ],
     "sources": [],
-    "slot": "exploit"
+    "slot": "exploit",
+    "removed_reason": "rebalanced: 50-50 platform rule"
   },
   {
     "id": "shaun-the-sheep-beast-of-mossy-bottom",
@@ -425,7 +525,7 @@
     "kid_safe": false,
     "week": "2026-10-23",
     "source": "Film Critics Guild (fcgreviews.com): Upma Singh, Navbharat Times positive; Sukanya Verma (Rediff) found it low-key",
-    "status": "new",
+    "status": "removed",
     "endorsements": [
       {
         "name": "Upma Singh (Navbharat Times)",
@@ -433,7 +533,8 @@
       }
     ],
     "sources": [],
-    "slot": "exploit"
+    "slot": "exploit",
+    "removed_reason": "rebalanced: 50-50 platform rule"
   },
   {
     "id": "pritam-and-pedro",
@@ -645,7 +746,7 @@
     "kid_safe": false,
     "week": "2026-10-16",
     "source": "New OTT release (Prime Video, Jun 2026); Rahul Desai: 'alright'",
-    "status": "new",
+    "status": "removed",
     "endorsements": [
       {
         "name": "Rachit Gupta (Filmfare)",
@@ -657,7 +758,8 @@
       }
     ],
     "sources": [],
-    "slot": "exploit"
+    "slot": "exploit",
+    "removed_reason": "rebalanced: 50-50 platform rule"
   },
   {
     "id": "hello-bachhon",

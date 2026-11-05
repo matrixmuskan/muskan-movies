@@ -19,9 +19,10 @@ Design
     newest feedback file per pick, so re-running never double-counts.
   * Weekly 5: 3-4 exploit (best score with mean trust), 1-2 explore (best Thompson-sampled
     score among titles backed by a new / under-sampled source or a less-tested flavor).
-    Every pick must pass the hard rules first. At least 2 of 5 must be OFF Netflix/Prime Video
-    (theaters, JioHotstar, SonyLIV, ZEE5, Aha, Apple TV+ ...); 3+ when the all-weeks share of
-    Netflix/Prime picks in picks.json is above 65%.
+    Every pick must pass the hard rules first. 50-50 platform rule: at least 3 of 5 must be OFF
+    Netflix/Prime Video (theaters, JioHotstar, SonyLIV, ZEE5, Aha, Apple TV+ ...), and 4 of 5 when
+    the running share of Netflix/Prime across active (not removed) picks in picks.json is above 50%.
+    A title showing in a local theater counts as off Netflix/Prime.
 
 CLI
   score_sources.py fetch    --out feedback.json            (gh or $MOVIES_FEEDBACK_TOKEN; token never printed)
@@ -61,8 +62,8 @@ SAME_FLAVOR_DECAY = 0.5
 DIVERSITY_BONUS = 0.10
 W_VOTES, W_TASTE, W_IMDB = 0.45, 0.35, 0.20
 UNDER_SAMPLED = 3          # a source / flavor with fewer observations than this is "under-sampled"
-MIN_NON_NETFLIX_PRIME = 2  # at least 2 of 5 (40%) OFF Netflix / Prime Video (theaters, JioHotstar, SonyLIV, ZEE5, Aha, Apple TV+ ...)
-NETFLIX_PRIME_SHARE_CAP = 0.65  # if the all-weeks share in picks.json is above this, require more off-Netflix/Prime picks
+MIN_NON_NETFLIX_PRIME = 3  # 50-50 rule: at least 3 of 5 OFF Netflix / Prime Video (theaters, JioHotstar, SonyLIV, ZEE5, Aha, Apple TV+ ...)
+NETFLIX_PRIME_SHARE_CAP = 0.50  # if the running share across active picks is above this, require MIN_NON_NETFLIX_PRIME + 1 (4 of 5)
 MAX_HOLLYWOOD = 1          # <= 20% of 5
 NETFLIX_PRIME = ("netflix", "prime video", "amazon prime")
 THEATER_MARKERS = ("in theaters", "in theatres", "in cinemas")
@@ -371,20 +372,19 @@ def on_netflix_prime(c: dict) -> bool:
 
 
 def netflix_prime_share(history: list[dict]) -> tuple[int, int]:
-    """(on Netflix/Prime, total) across all weeks of published picks; removed picks don't count."""
+    """(on Netflix/Prime, total) across all weeks of active picks; removed picks don't count."""
     live = [p for p in history if p.get("status") != "removed"]
     return sum(on_netflix_prime(p) for p in live), len(live)
 
 
 def required_off_netflix_prime(history: list[dict] | None, n: int = 5) -> int:
-    """At least MIN_NON_NETFLIX_PRIME of n. When the running share is above the cap, ask for
-    enough off-Netflix/Prime picks to bring it back to the cap (at most n - 1)."""
-    need = MIN_NON_NETFLIX_PRIME
+    """50-50 rule: at least MIN_NON_NETFLIX_PRIME (3) of n=5 off Netflix/Prime. When the running
+    share across active picks is above NETFLIX_PRIME_SHARE_CAP (50%), raise it by one (4 of 5).
+    For other n the base scales to ceil(n * 3/5); never more than n - 1."""
+    need = MIN_NON_NETFLIX_PRIME if n == 5 else math.ceil(n * MIN_NON_NETFLIX_PRIME / 5)
     on, total = netflix_prime_share(history or [])
     if total and on / total > NETFLIX_PRIME_SHARE_CAP:
-        # (on + n - k) / (total + n) <= cap  ->  k >= on + n - cap * (total + n)
-        catch_up = math.ceil(on + n - NETFLIX_PRIME_SHARE_CAP * (total + n) - 1e-9)
-        need = max(need + 1, catch_up)
+        need += 1
     return max(0, min(need, n - 1))
 
 
