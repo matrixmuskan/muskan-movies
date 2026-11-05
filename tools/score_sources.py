@@ -19,7 +19,9 @@ Design
     newest feedback file per pick, so re-running never double-counts.
   * Weekly 5: 3-4 exploit (best score with mean trust), 1-2 explore (best Thompson-sampled
     score among titles backed by a new / under-sampled source or a less-tested flavor).
-    Every pick must pass the hard rules first.
+    Every pick must pass the hard rules first. At least 2 of 5 must be OFF Netflix/Prime Video
+    (theaters, JioHotstar, SonyLIV, ZEE5, Aha, Apple TV+ ...); 3+ when the all-weeks share of
+    Netflix/Prime picks in picks.json is above 65%.
 
 CLI
   score_sources.py fetch    --out feedback.json            (gh or $MOVIES_FEEDBACK_TOKEN; token never printed)
@@ -59,9 +61,11 @@ SAME_FLAVOR_DECAY = 0.5
 DIVERSITY_BONUS = 0.10
 W_VOTES, W_TASTE, W_IMDB = 0.45, 0.35, 0.20
 UNDER_SAMPLED = 3          # a source / flavor with fewer observations than this is "under-sampled"
-MIN_STREAMER_PICKS = 2     # at least 2 of 5 (40%) on Netflix or Prime Video
+MIN_NON_NETFLIX_PRIME = 2  # at least 2 of 5 (40%) OFF Netflix / Prime Video (theaters, JioHotstar, SonyLIV, ZEE5, Aha, Apple TV+ ...)
+NETFLIX_PRIME_SHARE_CAP = 0.65  # if the all-weeks share in picks.json is above this, require more off-Netflix/Prime picks
 MAX_HOLLYWOOD = 1          # <= 20% of 5
-STREAMERS = ("netflix", "prime video", "amazon prime")
+NETFLIX_PRIME = ("netflix", "prime video", "amazon prime")
+THEATER_MARKERS = ("in theaters", "in theatres", "in cinemas")
 
 
 # ---------------------------------------------------------------- sources
@@ -356,12 +360,37 @@ def explore_slots(sources: dict, arms: dict) -> int:
     return 2 if taste and under / len(taste) >= 0.5 else 1
 
 
-def _streamer(c: dict) -> bool:
-    return any(s in c.get("where_to_watch", "").lower() for s in STREAMERS)
+def on_netflix_prime(c: dict) -> bool:
+    """True only if the title is watched on Netflix / Prime Video. A title that is also in a
+    local theater this week (where_to_watch says 'In theaters', or in_local_theater is true)
+    counts as off-Netflix/Prime, so it is never double-counted."""
+    where = c.get("where_to_watch", "").lower()
+    if c.get("in_local_theater") or any(m in where for m in THEATER_MARKERS):
+        return False
+    return any(s in where for s in NETFLIX_PRIME)
+
+
+def netflix_prime_share(history: list[dict]) -> tuple[int, int]:
+    """(on Netflix/Prime, total) across all weeks of published picks; removed picks don't count."""
+    live = [p for p in history if p.get("status") != "removed"]
+    return sum(on_netflix_prime(p) for p in live), len(live)
+
+
+def required_off_netflix_prime(history: list[dict] | None, n: int = 5) -> int:
+    """At least MIN_NON_NETFLIX_PRIME of n. When the running share is above the cap, ask for
+    enough off-Netflix/Prime picks to bring it back to the cap (at most n - 1)."""
+    need = MIN_NON_NETFLIX_PRIME
+    on, total = netflix_prime_share(history or [])
+    if total and on / total > NETFLIX_PRIME_SHARE_CAP:
+        # (on + n - k) / (total + n) <= cap  ->  k >= on + n - cap * (total + n)
+        catch_up = math.ceil(on + n - NETFLIX_PRIME_SHARE_CAP * (total + n) - 1e-9)
+        need = max(need + 1, catch_up)
+    return max(0, min(need, n - 1))
 
 
 def select_weekly(candidates: list[dict], sources: dict, state: dict, profile: dict,
-                  week: str, n: int = 5, seed: str | None = None) -> list[dict]:
+                  week: str, n: int = 5, seed: str | None = None,
+                  history: list[dict] | None = None) -> list[dict]:
     rng = random.Random(seed or week)
     resolve = Resolver(sources)
     arms = arms_from_state(state, sources)
@@ -402,14 +431,21 @@ def select_weekly(candidates: list[dict], sources: dict, state: dict, profile: d
             break
         if not used(item) and hollywood_ok(item):
             chosen.append({**item, "slot": "exploit"})
-    # Netflix / Prime share: swap the weakest exploit for the best unused streamer title
-    while sum(_streamer(x["cand"]) for x in chosen) < min(MIN_STREAMER_PICKS, n):
-        spare = [x for x in sorted(pool, key=lambda x: -x["exploit"])
-                 if _streamer(x["cand"]) and not used(x)]
-        weak = [x for x in chosen if x["slot"] == "exploit" and not _streamer(x["cand"])]
-        if not spare or not weak:
+    # Platform mix: at least `need_off` picks OFF Netflix/Prime. Swap the weakest exploit pick that
+    # IS on Netflix/Prime for the best unused off-Netflix/Prime title (pool already passed the hard rules).
+    need_off = required_off_netflix_prime(history, n)
+    while sum(not on_netflix_prime(x["cand"]) for x in chosen) < need_off:
+        weak = sorted((x for x in chosen if x["slot"] == "exploit" and on_netflix_prime(x["cand"])),
+                      key=lambda x: x["exploit"])
+        if not weak:
             break
-        out = min(weak, key=lambda x: x["exploit"])
+        out = weak[0]
+        hw_left = sum(1 for x in chosen if x is not out and x["cand"].get("hollywood"))
+        spare = [x for x in sorted(pool, key=lambda x: -x["exploit"])
+                 if not on_netflix_prime(x["cand"]) and not used(x)
+                 and (not x["cand"].get("hollywood") or hw_left < MAX_HOLLYWOOD)]
+        if not spare:
+            break
         chosen[chosen.index(out)] = {**spare[0], "slot": "exploit"}
     result = []
     for x in chosen:
@@ -417,7 +453,8 @@ def select_weekly(candidates: list[dict], sources: dict, state: dict, profile: d
         result.append({"id": c["id"], "title": c.get("title"), "slot": x["slot"], "sources": x["sids"],
                        "votes": x["detail"]["votes"], "score": x["exploit"],
                        "explore_score": round(x["explore"], 4), "taste": x["detail"]["taste"],
-                       "vote_score": x["detail"]["vote_score"], "week": week})
+                       "vote_score": x["detail"]["vote_score"], "week": week,
+                       "on_netflix_prime": on_netflix_prime(c)})
     return result
 
 
@@ -559,7 +596,7 @@ def main(argv=None) -> None:
         state = _read(state_path)
         cands = _read(a.candidates)
         week = a.week or date.today().isoformat()
-        sel = select_weekly(cands, sources, state, _read(profile_path), week)
+        sel = select_weekly(cands, sources, state, _read(profile_path), week, history=_read(picks_path))
         print(json.dumps(sel, indent=2, ensure_ascii=False))
         if a.out:
             _write(a.out, sel)

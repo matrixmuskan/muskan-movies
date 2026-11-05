@@ -161,9 +161,10 @@ The weekly build learns which reviewers and channels fit Muskan's taste. None of
 
 ### How a title is scored
 
-1. **Hard rules first.** IMDb 6.0+ (no rating yet = not eligible), no heavy horror, no animation unless it is Inside Out-level, nothing already seen. At most 1 of 5 is Hollywood, and at least 2 of 5 are on Netflix or Prime Video.
-2. **Votes.** Each source that recommends the title adds `kind_weight × trust`. The kind weights are critic 1.0, curator/listicle 0.8, chart 0.2, and release-calendar 0, so a release calendar tells us a title exists but gives it no taste vote. Inside one flavor the votes shrink (1, ½, ¼ …). Each extra distinct flavor adds +0.10, so three different flavors agreeing beat three critics from the same bubble. The total is squashed to 0–1 with `1 − e^(−x)`.
-3. **Score** = 0.45 × votes + 0.35 × taste match (language weight plus the top genre, theme, and producer weights from `taste-profile.json`) + 0.20 × IMDb (6 → 0, 9+ → 1).
+1. **Hard rules first.** IMDb 6.0+ (no rating yet = not eligible), no heavy horror, no animation unless it is Inside Out-level, nothing already seen. At most 1 of 5 is Hollywood.
+2. **Platform mix.** At least 2 of the 5 picks (`MIN_NON_NETFLIX_PRIME`) must be **off** Netflix and Prime Video. Theater releases, JioHotstar, SonyLIV, ZEE5, Aha, Apple TV+, and the like count as off. A title that is on Prime and also in a local theater this week (`where_to_watch` says "In theaters", or the candidate has `in_local_theater: true`) counts as off, not as Netflix/Prime. When the running Netflix/Prime share across every week in `data/picks.json` (removed picks excluded) is above 65%, the minimum rises to however many off picks bring the share back to 65%, which is at least 3 and at most 4. If the top picks miss the minimum, the weakest `exploit` pick on Netflix/Prime is swapped for the best unused off-Netflix/Prime title that passes the hard rules and the Hollywood cap. Each ranked pick reports `on_netflix_prime`. Today the share is 14 of 20 (70%), so the next week needs 3 off.
+3. **Votes.** Each source that recommends the title adds `kind_weight × trust`. The kind weights are critic 1.0, curator/listicle 0.8, chart 0.2, and release-calendar 0, so a release calendar tells us a title exists but gives it no taste vote. Inside one flavor the votes shrink (1, ½, ¼ …). Each extra distinct flavor adds +0.10, so three different flavors agreeing beat three critics from the same bubble. The total is squashed to 0–1 with `1 − e^(−x)`.
+4. **Score** = 0.45 × votes + 0.35 × taste match (language weight plus the top genre, theme, and producer weights from `taste-profile.json`) + 0.20 × IMDb (6 → 0, 9+ → 1).
 
 ### Trust as a bandit
 
@@ -195,4 +196,4 @@ python3 tools/test_score_sources.py
 
 `fetch` and `weekly` read `matrixmuskan/muskan-movies-feedback`. They use `$MOVIES_FEEDBACK_TOKEN` when it is set and the logged-in `gh` otherwise. The token is never printed, and the downloaded files go to `tools/feedback_dump/`, which git ignores.
 
-A candidate is a JSON object with `id`, `title`, `language`, `imdb_rating`, `where_to_watch`, `genres`, `themes`, optional `producer`, `hollywood`, `animated`, `inside_out_level`, and either `sources` (ids) or `endorsements` (`{name, url}` or `{source_id, url}`).
+A candidate is a JSON object with `id`, `title`, `language`, `imdb_rating`, `where_to_watch`, `genres`, `themes`, optional `producer`, `hollywood`, `animated`, `inside_out_level`, `in_local_theater`, and either `sources` (ids) or `endorsements` (`{name, url}` or `{source_id, url}`).
