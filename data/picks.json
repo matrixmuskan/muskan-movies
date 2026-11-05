@@ -37,7 +37,13 @@
         "name": "Devesh Sharma (Filmfare)",
         "url": "https://www.filmfare.com/reviews/bollywood-movies/udta-teer-review-a-spy-spoof-that-hits-the-target-86730.html"
       }
-    ]
+    ],
+    "sources": [
+      "suraj-kumar-review",
+      "yogi-bolta-hai",
+      "abhi-ka-review"
+    ],
+    "slot": "exploit"
   },
   {
     "id": "baththa",
@@ -82,7 +88,15 @@
         "url": "https://www.cinemaexpress.com/tamil/review/2026/Oct/01/baththa-movie-review-a-wholesome-story-about-a-gangster-coming-of-age"
       }
     ],
-    "trailer_lang": "Hindi"
+    "trailer_lang": "Hindi",
+    "sources": [
+      "rahul-desai",
+      "indian-express-reviews",
+      "suraj-kumar-review",
+      "yogi-bolta-hai",
+      "baradwaj-rangan"
+    ],
+    "slot": "exploit"
   },
   {
     "id": "last-man-in-tower",
@@ -114,7 +128,12 @@
         "name": "Anuj Kumar (The Hindu)",
         "url": "https://www.thehindu.com/entertainment/movies/last-man-in-tower-movie-review-manoj-bajpayee-elevates-this-timely-portrait-of-middle-class-desperation/article71455243.ece"
       }
-    ]
+    ],
+    "sources": [
+      "rahul-desai",
+      "the-hindu-reviews"
+    ],
+    "slot": "exploit"
   },
   {
     "id": "dupahiya-season-2",
@@ -138,7 +157,11 @@
         "name": "Rahul Desai",
         "url": "https://www.hollywoodreporterindia.com/reviews/streaming/dupahiya-season-2-series-review-all-grown-up-and-free-from-the-panchayat-baggage"
       }
-    ]
+    ],
+    "sources": [
+      "rahul-desai"
+    ],
+    "slot": "exploit"
   },
   {
     "id": "ohh-my-dog",
@@ -157,7 +180,9 @@
     "week": "2026-11-06",
     "source": "Indian Express review (Aug 7): 'Pankaj Tripathi, stray dogs are stars of rare kid-friendly film'; Rahul Desai: 'great canine performance' but loses shape",
     "status": "new",
-    "endorsements": []
+    "endorsements": [],
+    "sources": [],
+    "slot": "exploit"
   },
   {
     "id": "matargashti",
@@ -181,7 +206,11 @@
         "name": "Rahul Desai",
         "url": "https://www.hollywoodreporterindia.com/reviews/streaming/matargashti-series-review-a-warm-and-watchable-father-daughter-comedy"
       }
-    ]
+    ],
+    "sources": [
+      "rahul-desai"
+    ],
+    "slot": "exploit"
   },
   {
     "id": "sumo-didi",
@@ -209,7 +238,12 @@
         "name": "Alaka Sahani (The Indian Express)",
         "url": "https://indianexpress.com/article/entertainment/movie-review/sumo-didi-movie-review-inspired-by-a-real-life-the-film-throws-its-weight-behind-body-positivity-10933560/"
       }
-    ]
+    ],
+    "sources": [
+      "rahul-desai",
+      "indian-express-reviews"
+    ],
+    "slot": "exploit"
   },
   {
     "id": "babita-singh-reporting",
@@ -241,7 +275,12 @@
         "name": "Archika Khurana (Times of India)",
         "url": "https://timesofindia.indiatimes.com/entertainment/hindi/movie-reviews/babita-singh-reporting/ottmoviereview/133532484.cms"
       }
-    ]
+    ],
+    "sources": [
+      "rahul-desai",
+      "rediff-movies"
+    ],
+    "slot": "exploit"
   },
   {
     "id": "the-pyramid-scheme",
@@ -269,7 +308,9 @@
         "name": "Dhaval Roy (Times of India)",
         "url": "https://timesofindia.indiatimes.com/web-series/reviews/hindi/the-pyramid-scheme/season-1/seasonreview/131487422.cms"
       }
-    ]
+    ],
+    "sources": [],
+    "slot": "exploit"
   },
   {
     "id": "gram-chikitsalay-season-2",
@@ -305,7 +346,9 @@
         "name": "Shweta Keshri (India Today)",
         "url": "https://www.indiatoday.in/entertainment/ott/story/prime-video-series-gram-chikitsalay-season-2-review-tvf-most-underrated-gem-just-got-better-amol-parashar-2932143-2026-06-23"
       }
-    ]
+    ],
+    "sources": [],
+    "slot": "exploit"
   },
   {
     "id": "shaun-the-sheep-beast-of-mossy-bottom",
@@ -325,7 +368,9 @@
     "source": "Indian Express review (Oct 16): 'A wholesome entertainer'",
     "status": "removed",
     "endorsements": [],
-    "removed_reason": "Animated film. Well reviewed, but a small release (about $20M worldwide), not an Inside Out-level blockbuster."
+    "removed_reason": "Animated film. Well reviewed, but a small release (about $20M worldwide), not an Inside Out-level blockbuster.",
+    "sources": [],
+    "slot": "exploit"
   },
   {
     "id": "hunkkaar-the-roar",
@@ -357,7 +402,12 @@
         "name": "Bollywood Hungama",
         "url": "https://www.bollywoodhungama.com/news/features/web-series-review-hunkkaar-the-roar-is-a-hard-hitting-courtroom-drama-that-works-due-to-various-plusses/"
       }
-    ]
+    ],
+    "sources": [
+      "rahul-desai",
+      "thr-india-reviews"
+    ],
+    "slot": "exploit"
   },
   {
     "id": "meethe-mein-kya-hai",
@@ -381,7 +431,9 @@
         "name": "Upma Singh (Navbharat Times)",
         "url": "https://navbharattimes.indiatimes.com/entertainment/movie-review/meethe-mein-kya-hai-movie-review-in-hindi-starring-ritwik-bhowmik-rohini-hattangadi-ayesha-raza-directed-by-radhika-bansal-on-netflix/moviereview/135350196.cms"
       }
-    ]
+    ],
+    "sources": [],
+    "slot": "exploit"
   },
   {
     "id": "pritam-and-pedro",
@@ -405,7 +457,9 @@
         "name": "Archika Khurana (Times of India)",
         "url": "https://timesofindia.indiatimes.com/web-series/reviews/english/pritam-and-pedro/pritam-and-pedro-season-1/seasonreview/132088300.cms"
       }
-    ]
+    ],
+    "sources": [],
+    "slot": "exploit"
   },
   {
     "id": "adarsh-baal-vidyalaya",
@@ -433,7 +487,9 @@
         "name": "Titas Chowdhury (News18)",
         "url": "https://www.news18.com/movies/web-series/adarsh-baal-vidyalaya-review-no-cliffhangers-or-pay-offs-but-this-kay-kay-menon-show-is-a-wholesome-watch-ws-l-10227139.html"
       }
-    ]
+    ],
+    "sources": [],
+    "slot": "exploit"
   },
   {
     "id": "tenzing",
@@ -461,7 +517,12 @@
         "name": "Ayaan Paul Chowdhury (The Hindu)",
         "url": "https://www.thehindu.com/entertainment/movies/tenzing-movie-review-genden-phuntsok-jennifer-peedom-tom-hiddleston-willem-dafoe-edmund-hillary/article71589471.ece"
       }
-    ]
+    ],
+    "sources": [
+      "rahul-desai",
+      "the-hindu-reviews"
+    ],
+    "slot": "exploit"
   },
   {
     "id": "mirzapur-the-movie",
@@ -493,7 +554,12 @@
         "name": "Devesh Sharma (Filmfare)",
         "url": "https://www.filmfare.com/reviews/bollywood-movies/mirzapur-the-movie-review-a-good-companion-piece-to-the-series-85735.html"
       }
-    ]
+    ],
+    "sources": [
+      "shubhra-gupta",
+      "rahul-desai"
+    ],
+    "slot": "exploit"
   },
   {
     "id": "taskaree",
@@ -525,7 +591,11 @@
         "name": "Bollywood Hungama",
         "url": "https://www.bollywoodhungama.com/news/features/web-series-review-taskaree-smugglers-web-one-kind-show-impresses/"
       }
-    ]
+    ],
+    "sources": [
+      "the-hindu-reviews"
+    ],
+    "slot": "exploit"
   },
   {
     "id": "matka-king",
@@ -553,7 +623,11 @@
         "name": "Nandini Ramnath (Scroll)",
         "url": "https://scroll.in/reel/1092069/matka-king-review-a-winning-character-study-of-an-honest-gambler"
       }
-    ]
+    ],
+    "sources": [
+      "the-hindu-reviews"
+    ],
+    "slot": "exploit"
   },
   {
     "id": "raakh",
@@ -581,7 +655,9 @@
         "name": "BH Harsh (Cinema Express)",
         "url": "https://www.cinemaexpress.com/ott/review/2026/Jun/12/raakh-series-review-a-haunting-anatomy-of-violence-and-humanity"
       }
-    ]
+    ],
+    "sources": [],
+    "slot": "exploit"
   },
   {
     "id": "hello-bachhon",
@@ -600,7 +676,9 @@
     "week": "2026-10-16",
     "source": "TVF title (Netflix, Mar 2026); study-life theme",
     "status": "new",
-    "endorsements": []
+    "endorsements": [],
+    "sources": [],
+    "slot": "exploit"
   },
   {
     "id": "forgotten-island",
@@ -620,6 +698,8 @@
     "source": "Theater listing (bigscreen.com, Cinemark Pacific Commons and Union Landing, Nov 6)",
     "status": "removed",
     "endorsements": [],
-    "removed_reason": "Animated film. Strong reviews, but it underperformed at the box office (about $75M worldwide on an $80M budget), not an Inside Out-level blockbuster."
+    "removed_reason": "Animated film. Strong reviews, but it underperformed at the box office (about $75M worldwide on an $80M budget), not an Inside Out-level blockbuster.",
+    "sources": [],
+    "slot": "exploit"
   }
 ]

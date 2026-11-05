@@ -148,3 +148,51 @@ On load the site lists `feedback/` and reads those files, using the same token. 
 A later file wins. Keep after a rating puts the title back in Kept and still shows the stars. Rating something that was kept moves it to History.
 
 The write uses the GitHub Contents API and the Actions secret `MOVIES_FEEDBACK_TOKEN`. That secret is a fine-grained token with Contents read and write on `matrixmuskan/muskan-movies-feedback` only. The Pages workflow injects it into the built `config.js`. Do not commit a token, and do not print it in a workflow log. A bot that wants the viewer's taps should read `muskan-movies-feedback/feedback/`, not this repo.
+
+## Sources, voting, and source trust
+
+The weekly build learns which reviewers and channels fit Muskan's taste. None of this is on the site: the Pages job copies only `index.html`, `assets/`, and `data/picks.json`.
+
+| File | What it holds |
+| --- | --- |
+| `data/sources.json` | Every vetted source. Each has a stable `id` (slug), `flavor` (`critic`, `hindi-youtube`, `south`, `hidden-gems`, `listicle`, `ott-charts`, `mainstream-calendar`), `kind` (`critic`, `curator/listicle`, `chart`, `release-calendar`), `status` (`established` = on file before 2026-11-04, `new` = from Muskan's 2026-11-04 list), `aliases` (names used in `endorsements`), and per-platform `accounts` (YouTube channel id + RSS feed, X user id, Instagram marked manual only). |
+| `data/source-scores.json` | The learning state, written by `tools/score_sources.py`: one Beta(alpha, beta) per source and per flavor with tallies, the per-pick log, and endorser names that map to no source yet. |
+| `tools/score_sources.py` | The helper. `tools/test_score_sources.py` is its test suite. |
+
+### How a title is scored
+
+1. **Hard rules first.** IMDb 6.0+ (no rating yet = not eligible), no heavy horror, no animation unless it is Inside Out-level, nothing already seen. At most 1 of 5 is Hollywood, and at least 2 of 5 are on Netflix or Prime Video.
+2. **Votes.** Each source that recommends the title adds `kind_weight × trust`. The kind weights are critic 1.0, curator/listicle 0.8, chart 0.2, and release-calendar 0, so a release calendar tells us a title exists but gives it no taste vote. Inside one flavor the votes shrink (1, ½, ¼ …). Each extra distinct flavor adds +0.10, so three different flavors agreeing beat three critics from the same bubble. The total is squashed to 0–1 with `1 − e^(−x)`.
+3. **Score** = 0.45 × votes + 0.35 × taste match (language weight plus the top genre, theme, and producer weights from `taste-profile.json`) + 0.20 × IMDb (6 → 0, 9+ → 1).
+
+### Trust as a bandit
+
+* Every source starts at Beta(2, 2), a mean trust of 0.50. New sources get the same prior.
+* When Muskan acts on a pick, every source in its `sources` is updated. Keep or 4–5 stars counts as a success (alpha + 1), Discard or 1–2 stars as a failure (beta + 1), and 3 stars as half of each. Only the newest feedback file per pick counts, which matches the site.
+* The state is rebuilt from the prior on every run by replaying `picks.json` against the feedback files, so running it twice never counts a tap twice.
+* **Explore vs exploit.** Of the 5 weekly picks, the `exploit` picks are the top scores using mean trust. The `explore` picks are the top scores using a Thompson sample of each source's Beta, taken from titles backed by a `new` source, a source with fewer than 3 rated picks, or a flavor with fewer than 3 rated picks. That gives 2 explore and 3 exploit while most sources are untested, and 1 and 4 after that. The random seed is the week, so a rerun gives the same list.
+
+### Fields the build adds to `data/picks.json`
+
+| Field | Meaning |
+| --- | --- |
+| `slot` | `exploit` or `explore`. The 22 picks made before 2026-11-04 are `exploit`, because nothing was explored on purpose then. |
+| `sources` | Source ids that surfaced the pick. Back-filled from `endorsements` by name or outlet, so "Anuj Kumar (The Hindu)" maps to `the-hindu-reviews`. Endorsers with no source, such as Filmfare or Times of India critics, are counted in `unmapped_endorsers`. |
+
+`tools/validate.py` accepts both fields. The site ignores them.
+
+### Weekly commands
+
+```bash
+# 1. read the feedback repo, back-fill new picks, rebuild trust, print the source report
+python3 tools/score_sources.py weekly
+# 2. rank this week's candidates into 5 picks and log their votes
+python3 tools/score_sources.py rank --candidates candidates.json --week 2026-11-13 --record --out shortlist.json
+# 3. after the 5 picks (with slot + sources) are appended to data/picks.json
+python3 tools/score_sources.py update
+python3 tools/test_score_sources.py
+```
+
+`fetch` and `weekly` read `matrixmuskan/muskan-movies-feedback`. They use `$MOVIES_FEEDBACK_TOKEN` when it is set and the logged-in `gh` otherwise. The token is never printed, and the downloaded files go to `tools/feedback_dump/`, which git ignores.
+
+A candidate is a JSON object with `id`, `title`, `language`, `imdb_rating`, `where_to_watch`, `genres`, `themes`, optional `producer`, `hollywood`, `animated`, `inside_out_level`, and either `sources` (ids) or `endorsements` (`{name, url}` or `{source_id, url}`).

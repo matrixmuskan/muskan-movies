@@ -32,7 +32,10 @@ PICK_FIELDS = {
     "trailer_lang",
     "endorsements",
     "removed_reason",
+    "slot",
+    "sources",
 }
+SLOTS = {"exploit", "explore"}
 STATUSES = {"new", "kept", "discarded", "seen", "removed"}
 LOG_LISTS = ("loved", "neutral", "disliked")
 LOG_FIELDS = {"title", "id", "type", "language", "genres", "action", "stars", "date", "endorsers", "lesson"}
@@ -146,6 +149,12 @@ def check_pick(index: int, pick: object, seen_ids: set[str]) -> None:
             if item["url"] in seen_urls:
                 error(f"{e_label}.url is duplicated")
             seen_urls.add(item["url"])
+    if "slot" in pick and pick["slot"] not in SLOTS:
+        error(f"{label}.slot must be exploit or explore")
+    if "sources" in pick:
+        srcs = pick["sources"]
+        if not isinstance(srcs, list) or not all(isinstance(x, str) and ID_RE.fullmatch(x) for x in srcs):
+            error(f"{label}.sources must be an array of source-id slugs")
     if "example" in pick and not isinstance(pick["example"], bool):
         error(f"{label}.example must be true or false when present")
     imdb_id = pick.get("imdb_id")

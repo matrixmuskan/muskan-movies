@@ -1,0 +1,934 @@
+{
+  "generated": "2026-11-04 (PT); 12 sources from Muskan added 2026-11-04",
+  "viewer_taste_summary": "Hindi first + Hindi-dubbed South; humor/suspense/thrillers; rustic slice-of-life (TVF, Panchayat, Gullak); fraud/pill crime; college life; medical/legal; kids; Excel Entertainment; no heavy horror; hidden-gem Hindi series; Hollywood only feel-good/big releases",
+  "social_sources": [
+    {
+      "rank": 1,
+      "name": "Rahul Desai (The Hollywood Reporter India critic)",
+      "platform": "X",
+      "handle": "@ReelReptile",
+      "url": "https://x.com/ReelReptile",
+      "followers": "33,971 (X API, Nov 4 2026)",
+      "covers": "Hindi films and OTT series, South films incl. Malayalam/Tamil, some Hollywood; theater + streaming",
+      "frequency": "Several review posts per week (20 original posts Oct 16 - Oct 31 2026)",
+      "why": "Reviews small Hindi OTT titles mainstream critics skip (Matargashti, Chaar Yaar, Sumo Didi, Little Thomas), praised Tamil Baththa; links full THR India reviews",
+      "machine_readable": "Yes - public read via the X tool (user id 83325616, get_users_posts); also https://reelreptile.substack.com/feed (personal essays, less useful)",
+      "verified": true,
+      "id": "rahul-desai",
+      "flavor": "critic",
+      "kind": "critic",
+      "status": "established",
+      "aliases": [
+        "Rahul Desai"
+      ],
+      "platforms": "X"
+    },
+    {
+      "rank": 2,
+      "name": "Film Critics Guild Reviews (FCG)",
+      "platform": "Website",
+      "handle": "fcgreviews.com",
+      "url": "https://www.fcgreviews.com/",
+      "followers": "n/a (aggregator of ~guild critics)",
+      "covers": "Every Hindi + Tamil/Telugu/Malayalam/Kannada release, theater and OTT series, plus Hollywood; several guild critics per title",
+      "frequency": "Daily (homepage shows reviews dated Oct 26 - Nov 3 2026; 112 pages)",
+      "why": "One page shows several trusted critics' takes per title, so hidden-gem Hindi series and South films get covered next to big releases",
+      "machine_readable": "Partly - no RSS (/feed 404), but the homepage HTML is public and parseable without login (title, genre, language, critic, outlet, date)",
+      "verified": true,
+      "id": "fcg",
+      "flavor": "critic",
+      "kind": "critic",
+      "status": "established",
+      "aliases": [
+        "Film Critics Guild",
+        "Film Critics Guild Reviews",
+        "FCG"
+      ],
+      "platforms": "Website"
+    },
+    {
+      "rank": 3,
+      "name": "Sucharita Tyagi",
+      "platform": "YouTube",
+      "handle": "@SucharitaTyagi",
+      "url": "https://www.youtube.com/@SucharitaTyagi",
+      "followers": "161K subscribers",
+      "covers": "Hindi films and OTT series, Hollywood big releases, interviews",
+      "frequency": "~2-3 videos/week (15 uploads Sep 19 - Nov 3 2026)",
+      "why": "Thoughtful, spoiler-light critic who covers Hindi streaming shows as well as theater; good for whether something is worth it",
+      "machine_readable": "https://www.youtube.com/feeds/videos.xml?channel_id=UCUKMwyc8Rz8Blh8E2y8caXg; X tool user id 350728896 (@Su4ita; mixes film posts with politics, so filter for review links)",
+      "verified": true,
+      "id": "sucharita-tyagi",
+      "flavor": "critic",
+      "kind": "critic",
+      "status": "established",
+      "aliases": [
+        "Sucharita",
+        "Su4ita"
+      ],
+      "platforms": "YouTube, X, Instagram (manual)",
+      "accounts": [
+        {
+          "platform": "YouTube",
+          "handle": "@SucharitaTyagi",
+          "url": "https://www.youtube.com/@SucharitaTyagi",
+          "channel_id": "UCUKMwyc8Rz8Blh8E2y8caXg",
+          "feed": "https://www.youtube.com/feeds/videos.xml?channel_id=UCUKMwyc8Rz8Blh8E2y8caXg",
+          "followers": "161K subscribers"
+        },
+        {
+          "platform": "X",
+          "handle": "@Su4ita",
+          "url": "https://x.com/Su4ita",
+          "user_id": "350728896",
+          "followers": "50,822 (X API, Nov 4 2026)",
+          "note": "Bio 'Film critic. She/Her.'; Nov 4 2026 posts link her Ramayan review on YouTube, so it is her"
+        },
+        {
+          "platform": "Instagram",
+          "handle": "@su4ita",
+          "url": "https://www.instagram.com/su4ita/",
+          "followers": "unverified (Instagram login wall)",
+          "machine_readable": "manual only"
+        }
+      ],
+      "merged_from": [
+        "@su4ita (Sucharita Tyagi) - Muskan's 2026-11-04 list"
+      ]
+    },
+    {
+      "rank": 4,
+      "name": "ABHI KA REVIEW",
+      "platform": "YouTube",
+      "handle": "@abhikareview",
+      "url": "https://www.youtube.com/@abhikareview",
+      "followers": "1.65M subscribers",
+      "covers": "Hindi films and web series, Hindi-dubbed South films, Top-10 streaming lists",
+      "frequency": "~5 videos/week (15 uploads Oct 10 - Nov 1 2026)",
+      "why": "Hindi-language reviews, plus 'what to watch on OTT' lists that include dubbed South thrillers (recent: AKKA series + Baththa review)",
+      "machine_readable": "https://www.youtube.com/feeds/videos.xml?channel_id=UCPWqbr91cfbtLHZrHM5GItg; X tool user id 1295242993016872960; Instagram @abhi_review manual only",
+      "verified": true,
+      "id": "abhi-ka-review",
+      "flavor": "hindi-youtube",
+      "kind": "critic",
+      "status": "established",
+      "aliases": [
+        "Abhi Ka Review",
+        "Abhishek Ashok",
+        "abhi_review"
+      ],
+      "platforms": "YouTube, X, Instagram (manual)",
+      "accounts": [
+        {
+          "platform": "YouTube",
+          "handle": "@abhikareview",
+          "url": "https://www.youtube.com/@abhikareview",
+          "channel_id": "UCPWqbr91cfbtLHZrHM5GItg",
+          "feed": "https://www.youtube.com/feeds/videos.xml?channel_id=UCPWqbr91cfbtLHZrHM5GItg",
+          "followers": "1.65M subscribers (channel page, Nov 4 2026)"
+        },
+        {
+          "platform": "X",
+          "handle": "@AbhiKaReview",
+          "url": "https://x.com/AbhiKaReview",
+          "user_id": "1295242993016872960",
+          "followers": "11,033 (X API, Nov 4 2026)",
+          "note": "Linked from the YouTube channel's About links; display name 'Abhishek'"
+        },
+        {
+          "platform": "Instagram",
+          "handle": "@abhi_review",
+          "url": "https://www.instagram.com/abhi_review/",
+          "followers": "unverified (Instagram login wall)",
+          "machine_readable": "manual only",
+          "note": "Linked from the ABHI KA REVIEW YouTube description, so @abhi_review is the same creator"
+        }
+      ],
+      "merged_from": [
+        "@abhi_review (Abhishek Ashok) - Muskan's 2026-11-04 list"
+      ]
+    },
+    {
+      "rank": 5,
+      "name": "Shubhra Gupta (The Indian Express / SCREEN)",
+      "platform": "X",
+      "handle": "@shubhragupta",
+      "url": "https://x.com/shubhragupta",
+      "followers": "57,324 (X API)",
+      "covers": "Hindi films and OTT series, some South and Hollywood; Picture Baazi podcast",
+      "frequency": "~4-6 review links/week (20 posts Oct 2 - Nov 4 2026)",
+      "why": "Senior critic who flags small films (recommended Village Rockstars 2, a kids/nature film; Pyre; Dupahiya 2 review)",
+      "machine_readable": "Yes - public read via the X tool (user id 38718720); her reviews also appear in the Indian Express review RSS (site #2 below)",
+      "verified": true,
+      "id": "shubhra-gupta",
+      "flavor": "critic",
+      "kind": "critic",
+      "status": "established",
+      "aliases": [
+        "Shubhra Gupta"
+      ],
+      "platforms": "X"
+    },
+    {
+      "rank": 6,
+      "name": "Tried & Refused Productions",
+      "platform": "YouTube",
+      "handle": "@TriedRefusedProductions",
+      "url": "https://www.youtube.com/@TriedRefusedProductions",
+      "followers": "1.31M subscribers",
+      "covers": "Hindi films, Netflix/Prime India series, trailers; some South",
+      "frequency": "~3-4 videos/week (15 uploads Oct 5 - Nov 4 2026)",
+      "why": "Hindi-English analysis of Indian OTT shows (e.g. Akka review) with honest verdicts",
+      "machine_readable": "https://www.youtube.com/feeds/videos.xml?channel_id=UCgbzclo4Mfy_D68w_Bm_xHg",
+      "verified": true,
+      "id": "tried-and-refused",
+      "flavor": "hindi-youtube",
+      "kind": "critic",
+      "status": "established",
+      "aliases": [
+        "Tried & Refused",
+        "Tried and Refused"
+      ],
+      "platforms": "YouTube"
+    },
+    {
+      "rank": 7,
+      "name": "Suraj Kumar Review",
+      "platform": "YouTube",
+      "handle": "@SurajKumarReview",
+      "url": "https://www.youtube.com/@SurajKumarReview",
+      "followers": "1.09M subscribers",
+      "covers": "Hindi films, Hindi-dubbed South films, web series, trailers",
+      "frequency": "~2-3 videos/week (15 uploads Sep 20 - Nov 3 2026)",
+      "why": "Funny Hindi reviews that cover Hindi-dubbed South titles (recent: 'Baththa & Dorothy Movie HINDI DUBBED REVIEW')",
+      "machine_readable": "https://www.youtube.com/feeds/videos.xml?channel_id=UCd5Os4gT74gxngzUYqGUzzg",
+      "verified": true,
+      "id": "suraj-kumar-review",
+      "flavor": "hindi-youtube",
+      "kind": "critic",
+      "status": "established",
+      "aliases": [
+        "Suraj Kumar"
+      ],
+      "platforms": "YouTube, Instagram (manual)",
+      "accounts": [
+        {
+          "platform": "YouTube",
+          "handle": "@SurajKumarReview",
+          "url": "https://www.youtube.com/@SurajKumarReview",
+          "channel_id": "UCd5Os4gT74gxngzUYqGUzzg",
+          "feed": "https://www.youtube.com/feeds/videos.xml?channel_id=UCd5Os4gT74gxngzUYqGUzzg",
+          "followers": "1.09M subscribers"
+        },
+        {
+          "platform": "Instagram",
+          "handle": "@surajkumarreview",
+          "url": "https://www.instagram.com/surajkumarreview/",
+          "followers": "unverified (Instagram login wall)",
+          "machine_readable": "manual only"
+        }
+      ],
+      "merged_from": [
+        "@surajkumarreview (Suraj Kumar) - Muskan's 2026-11-04 list"
+      ]
+    },
+    {
+      "rank": 8,
+      "name": "The Indian Web Series (Dharmil Mehta)",
+      "platform": "Instagram",
+      "handle": "@the_indian_web_series",
+      "url": "https://www.instagram.com/the_indian_web_series/",
+      "followers": "unverified (Instagram login wall; posts get 1.2K-6.8K likes)",
+      "covers": "Indian web series only: Netflix, Prime Video, JioHotstar, ZEE5, SonyLIV watchlists",
+      "frequency": "Several posts/week (posts seen Oct 27-28 2026 via a third-party mirror)",
+      "why": "Pure Hindi web-series watchlists of new OTT drops (Chaar Yaar, Sumo Didi, Sapne Vs Everyone S2, Raakh, Pritam and Pedro)",
+      "machine_readable": "No - Instagram blocks reads without login (profile returned a login page to curl). Profile URL returns HTTP 200, but content and follower count are unverified",
+      "verified": false,
+      "id": "the-indian-web-series",
+      "flavor": "hidden-gems",
+      "kind": "curator/listicle",
+      "status": "established",
+      "aliases": [
+        "The Indian Web Series",
+        "Dharmil Mehta"
+      ],
+      "platforms": "Instagram"
+    },
+    {
+      "rank": 9,
+      "name": "Ormax Media (weekly OTT viewership charts)",
+      "platform": "Facebook / Instagram / Website",
+      "handle": "facebook.com/ormaxmedia, @ormaxmedia (IG)",
+      "url": "https://www.facebook.com/ormaxmedia",
+      "followers": "7,854 Facebook followers; IG count unverified",
+      "covers": "Weekly most-watched Indian OTT originals and films (Ormax StreamView Top 50, released Tuesdays)",
+      "frequency": "Weekly chart + monthly reports",
+      "why": "Shows which Hindi series are actually being watched each week, which helps you spot rising non-blockbuster shows early",
+      "machine_readable": "Partly - Facebook/IG need login; the public site https://www.ormaxmedia.com/insights/stories.html (HTTP 200) can be checked as HTML. The IG URL https://www.instagram.com/ormaxmedia/ returns 200 but is login-walled",
+      "verified": true,
+      "id": "ormax-media",
+      "flavor": "ott-charts",
+      "kind": "chart",
+      "status": "established",
+      "aliases": [
+        "Ormax",
+        "Ormax Media"
+      ],
+      "platforms": "Facebook / Instagram / Website"
+    },
+    {
+      "rank": 10,
+      "name": "The Hollywood Reporter India",
+      "platform": "YouTube (+ Facebook)",
+      "handle": "@HollywoodReporterIndia",
+      "url": "https://www.youtube.com/@HollywoodReporterIndia",
+      "followers": "216K YouTube subscribers; 122,302 Facebook followers (facebook.com/HollywoodReporterIndia)",
+      "covers": "Hindi + South films and series, roundtables, interviews",
+      "frequency": "Daily, many of them Shorts (15 uploads Oct 26 - Nov 4 2026)",
+      "why": "Home of Rahul Desai and Suchin Mehrotra reviews; roundtables bring up OTT creators",
+      "machine_readable": "https://www.youtube.com/feeds/videos.xml?channel_id=UCNIGzoK1vgYYqLSF1MvI-3A",
+      "verified": true,
+      "id": "thr-india",
+      "flavor": "critic",
+      "kind": "critic",
+      "status": "established",
+      "aliases": [],
+      "platforms": "YouTube (+ Facebook)"
+    },
+    {
+      "rank": 11,
+      "name": "Yogi Bolta Hai",
+      "platform": "YouTube",
+      "handle": "@yogiboltahai",
+      "url": "https://www.youtube.com/@yogiboltahai",
+      "followers": "1.62M subscribers",
+      "covers": "Hindi films, web series, South, Marvel; song/trailer reactions",
+      "frequency": "Daily+ (15 uploads Oct 23 - Nov 3 2026)",
+      "why": "Quick Hindi verdicts, though it leans toward big releases. Filter by title keywords like 'Review'",
+      "machine_readable": "https://www.youtube.com/feeds/videos.xml?channel_id=UCIihexFQucy1Sm7V7yvL_mA",
+      "verified": true,
+      "id": "yogi-bolta-hai",
+      "flavor": "hindi-youtube",
+      "kind": "critic",
+      "status": "established",
+      "aliases": [],
+      "platforms": "YouTube"
+    },
+    {
+      "rank": 12,
+      "name": "Shan Prasher",
+      "platform": "YouTube",
+      "handle": "@ShanPrasher",
+      "url": "https://www.youtube.com/@ShanPrasher",
+      "followers": "586K subscribers",
+      "covers": "Hindi films, OTT films and series, trailers",
+      "frequency": "~3 videos/week (15 uploads Sep 27 - Nov 2 2026)",
+      "why": "Funny Hindi commentary that also covers smaller OTT films (recent: Dorothy review)",
+      "machine_readable": "https://www.youtube.com/feeds/videos.xml?channel_id=UCVZapV0958xAUsCctF_ED4w",
+      "verified": true,
+      "id": "shan-prasher",
+      "flavor": "hindi-youtube",
+      "kind": "critic",
+      "status": "established",
+      "aliases": [],
+      "platforms": "YouTube"
+    },
+    {
+      "rank": 13,
+      "name": "OTTplay",
+      "platform": "Facebook (+ X)",
+      "handle": "facebook.com/OTTplayApp ; X @ottplayapp",
+      "url": "https://www.facebook.com/OTTplayApp",
+      "followers": "487,942 Facebook followers; 7,916 X followers",
+      "covers": "OTT release news and lists across 30+ Indian apps, Hindi + South",
+      "frequency": "Many posts daily (67K+ tweets total)",
+      "why": "Tracks what is dropping on which app each week, including Hindi dubs of South films",
+      "machine_readable": "Facebook: No (login needed for reliable reads). X @ottplayapp (user id 1326832556830986245): Yes via the X tool",
+      "verified": true,
+      "id": "ottplay",
+      "flavor": "ott-charts",
+      "kind": "release-calendar",
+      "status": "established",
+      "aliases": [],
+      "platforms": "Facebook (+ X)"
+    },
+    {
+      "rank": 14,
+      "name": "Baradwaj Rangan (Galatta Plus)",
+      "platform": "X (+ YouTube)",
+      "handle": "@baradwajrangan ; YouTube @GalattaPlus",
+      "url": "https://x.com/baradwajrangan",
+      "followers": "162,647 X followers; Galatta Plus YouTube 536K",
+      "covers": "Tamil/Telugu/Malayalam cinema, some Hindi; interviews and reviews",
+      "frequency": "Multiple posts daily (mostly interview quotes)",
+      "why": "Best signal for South films worth waiting for the Hindi dub (Maharaja-type stories). Mostly interviews, so filter for 'review'",
+      "machine_readable": "Yes - X tool (user id 211411783); Galatta Plus RSS https://www.youtube.com/feeds/videos.xml?channel_id=UCTTUsQJAdGSd2mMsGGfvzhQ (high volume, 15 items/day)",
+      "verified": true,
+      "id": "baradwaj-rangan",
+      "flavor": "south",
+      "kind": "critic",
+      "status": "established",
+      "aliases": [
+        "Baradwaj Rangan",
+        "Galatta Plus"
+      ],
+      "platforms": "X (+ YouTube)"
+    },
+    {
+      "rank": 15,
+      "name": "Taran Adarsh",
+      "platform": "X",
+      "handle": "@taran_adarsh",
+      "url": "https://x.com/taran_adarsh",
+      "followers": "3,943,762 (X API)",
+      "covers": "Hindi + South theatrical and OTT release announcements, box office, short reviews",
+      "frequency": "10+ posts daily",
+      "why": "Not a hidden-gem source, but the fastest feed of release dates for theater and OTT (e.g. ZEE5 'Last Man in Tower', kids' JioHotstar titles). Use as a calendar, not as taste",
+      "machine_readable": "Yes - X tool (user id 99642673); use exclude=replies,retweets",
+      "verified": true,
+      "id": "taran-adarsh",
+      "flavor": "mainstream-calendar",
+      "kind": "release-calendar",
+      "status": "established",
+      "aliases": [],
+      "platforms": "X"
+    },
+    {
+      "id": "deepak-bhurani",
+      "name": "Deepak Bhurani (Charcha with Bhurani)",
+      "flavor": "hidden-gems",
+      "kind": "critic",
+      "platforms": "YouTube, X, Instagram (manual)",
+      "platform": "YouTube",
+      "handle": "@Charchawithbhurani",
+      "url": "https://www.youtube.com/@Charchawithbhurani",
+      "followers": "168K YouTube subscribers; 212 on X",
+      "accounts": [
+        {
+          "platform": "YouTube",
+          "handle": "@Charchawithbhurani",
+          "url": "https://www.youtube.com/@Charchawithbhurani",
+          "channel_id": "UC3t4DBaHtNHF6gRQGK7t2nQ",
+          "feed": "https://www.youtube.com/feeds/videos.xml?channel_id=UC3t4DBaHtNHF6gRQGK7t2nQ",
+          "followers": "168K subscribers (channel page, Nov 4 2026)"
+        },
+        {
+          "platform": "X",
+          "handle": "@deepak_bhurani",
+          "url": "https://x.com/deepak_bhurani",
+          "user_id": "874135358690254850",
+          "followers": "212 (X API, Nov 4 2026)",
+          "note": "Bio 'Turning movies into experiences | World Cinema - Thrillers - Hidden Gems'; last original post Sep 4 2026"
+        },
+        {
+          "platform": "Instagram",
+          "handle": "@deepsbhurani",
+          "url": "https://www.instagram.com/deepsbhurani/",
+          "followers": "unverified (Instagram login wall)",
+          "machine_readable": "manual only"
+        }
+      ],
+      "covers": "Hindi films, Hindi-dubbed South films (Netflix/Prime/JioHotstar), web series, songs and trailers",
+      "frequency": "Several videos a day (8 uploads Nov 2-4 2026); X is sparse",
+      "why": "Muskan's pick for underrated cult cinema and hidden gems; reviews dubbed South OTT films the big channels skip (Avarachan & Sons, Comrade Kalyan, Rhymes) and monthly OTT-release lists",
+      "machine_readable": "https://www.youtube.com/feeds/videos.xml?channel_id=UC3t4DBaHtNHF6gRQGK7t2nQ ; X tool user id 874135358690254850; Instagram @deepsbhurani manual only. The YouTube About page links both instagram.com/deepsbhurani and x.com/deepak_bhurani, which ties the three together",
+      "verified": true,
+      "aliases": [
+        "Deepak Bhurani",
+        "Charcha with Bhurani",
+        "deepsbhurani"
+      ],
+      "rank": 16,
+      "status": "new"
+    },
+    {
+      "id": "sudhir-srinivasan",
+      "name": "Sudhir Srinivasan",
+      "flavor": "south",
+      "kind": "critic",
+      "platforms": "X, YouTube, Instagram (manual)",
+      "platform": "X",
+      "handle": "@sudhirsrinivasn",
+      "url": "https://x.com/sudhirsrinivasn",
+      "followers": "77,393 on X; 146K YouTube subscribers",
+      "accounts": [
+        {
+          "platform": "X",
+          "handle": "@sudhirsrinivasn",
+          "url": "https://x.com/sudhirsrinivasn",
+          "user_id": "166227445",
+          "followers": "77,393 (X API, Nov 4 2026)",
+          "note": "Bio 'Critic... Formerly Executive Editor (Entertainment), New Indian Express'. Note the X handle has no 'a' and no underscore; @sudhir_srinivasan is his Instagram"
+        },
+        {
+          "platform": "YouTube",
+          "handle": "@SudhirSrinivasanOfficial",
+          "url": "https://www.youtube.com/@SudhirSrinivasanOfficial",
+          "channel_id": "UCSHTtPCL2CV5eoj9uMPz_tg",
+          "feed": "https://www.youtube.com/feeds/videos.xml?channel_id=UCSHTtPCL2CV5eoj9uMPz_tg",
+          "followers": "146K subscribers (channel page, Nov 4 2026)"
+        },
+        {
+          "platform": "Instagram",
+          "handle": "@sudhir_srinivasan",
+          "url": "https://www.instagram.com/sudhir_srinivasan/",
+          "followers": "unverified (Instagram login wall)",
+          "machine_readable": "manual only"
+        }
+      ],
+      "covers": "Tamil first, plus Telugu and Malayalam films; long reviews, interviews ('60 Minutes with Sudhir'), classics",
+      "frequency": "~2 YouTube uploads/week; several X posts/week (many are football)",
+      "why": "Respected South critic (ex-Cinema Express / New Indian Express); The Long Review format on big Tamil releases (Jailer 2) and talks on Dorothy",
+      "machine_readable": "X tool user id 166227445; https://www.youtube.com/feeds/videos.xml?channel_id=UCSHTtPCL2CV5eoj9uMPz_tg ; Instagram manual only. His YouTube About links both instagram.com/sudhir_srinivasan and x.com/sudhirsrinivasn",
+      "verified": true,
+      "aliases": [
+        "Sudhir Srinivasan"
+      ],
+      "rank": 17,
+      "status": "new"
+    },
+    {
+      "id": "india-movie-dekho",
+      "name": "India Movie Dekho (Abhishek Soni, per Muskan)",
+      "flavor": "hidden-gems",
+      "kind": "curator/listicle",
+      "platforms": "Instagram (manual), X, YouTube (dormant)",
+      "platform": "Instagram",
+      "handle": "@indiamoviedekho",
+      "url": "https://www.instagram.com/indiamoviedekho/",
+      "followers": "Instagram unverified; 174 on X; 3.85K YouTube subscribers",
+      "accounts": [
+        {
+          "platform": "Instagram",
+          "handle": "@indiamoviedekho",
+          "url": "https://www.instagram.com/indiamoviedekho/",
+          "followers": "unverified (Instagram login wall)",
+          "machine_readable": "manual only"
+        },
+        {
+          "platform": "X",
+          "handle": "@indiamoviedekho",
+          "url": "https://x.com/indiamoviedekho",
+          "user_id": "1768106043761205248",
+          "followers": "174 (X API, Nov 4 2026)",
+          "note": "Bio 'Movie Suggestions / Movie Recommendations'; last film post Aug 7 2026, recent posts off-topic"
+        },
+        {
+          "platform": "YouTube",
+          "handle": "@indiamoviedekho",
+          "url": "https://www.youtube.com/@indiamoviedekho",
+          "channel_id": "UCmVHY7kn9FSRoOeDsoE-_MA",
+          "feed": "https://www.youtube.com/feeds/videos.xml?channel_id=UCmVHY7kn9FSRoOeDsoE-_MA",
+          "followers": "3.85K subscribers (channel page, Nov 4 2026)",
+          "note": "Channel 'Movie Dekho'; newest upload ~2 years old (dormant)"
+        }
+      ],
+      "covers": "Daily movie and web-series suggestions (Instagram); old Hindi reviews on YouTube",
+      "frequency": "Instagram unknown (login wall); X and YouTube nearly inactive",
+      "why": "Muskan named it for daily recommendations; only Instagram looks active and it can't be read without a login",
+      "machine_readable": "Instagram manual only. X user id 1768106043761205248 and YouTube feed https://www.youtube.com/feeds/videos.xml?channel_id=UCmVHY7kn9FSRoOeDsoE-_MA exist but are near-silent",
+      "verified": "partial",
+      "verification_note": "Handles exist and match the brand, but no profile we could read names Abhishek Soni (the YouTube 'Abhishek soni' @abhisoniii is an unrelated Udaipur lifestyle vlogger), and Instagram follower count is unreadable",
+      "aliases": [
+        "India Movie Dekho",
+        "Movie Dekho",
+        "indiamoviedekho",
+        "Abhishek Soni"
+      ],
+      "rank": 18,
+      "status": "new"
+    },
+    {
+      "id": "karan-mirchandani",
+      "name": "Karan Mirchandani",
+      "flavor": "hidden-gems",
+      "kind": "critic",
+      "platforms": "Instagram (manual)",
+      "platform": "Instagram",
+      "handle": "@karan_mir",
+      "url": "https://www.instagram.com/karan_mir/",
+      "followers": "unverified (Instagram login wall)",
+      "accounts": [
+        {
+          "platform": "Instagram",
+          "handle": "@karan_mir",
+          "url": "https://www.instagram.com/karan_mir/",
+          "followers": "unverified (Instagram login wall)",
+          "machine_readable": "manual only"
+        }
+      ],
+      "covers": "Bollywood comedy and nostalgia reels, film takes (e.g. Billu Barber, War, Dhoom)",
+      "frequency": "unknown (Instagram login wall)",
+      "why": "Muskan's pick for Bollywood analysis and niche film recommendations",
+      "machine_readable": "Instagram manual only. No YouTube or X equivalent found: X @karan_mir is a different person ('Mir Karan', 0 posts) and YouTube @karan_mir is an empty channel, so neither is used",
+      "verified": "partial",
+      "verification_note": "Search-indexed Instagram posts under instagram.com/karan_mir are titled 'Karan Mirchandani' with Bollywood reels, so the handle is his; follower count can't be read",
+      "aliases": [
+        "Karan Mirchandani",
+        "karan_mir"
+      ],
+      "rank": 19,
+      "status": "new"
+    },
+    {
+      "id": "barbell-pitch-meetings",
+      "name": "Barbell Pitch Meetings",
+      "flavor": "south",
+      "kind": "critic",
+      "platforms": "YouTube",
+      "platform": "YouTube",
+      "handle": "@BarbellPitchMeetings",
+      "url": "https://www.youtube.com/@BarbellPitchMeetings",
+      "followers": "359K subscribers (channel page, Nov 4 2026)",
+      "accounts": [
+        {
+          "platform": "YouTube",
+          "handle": "@BarbellPitchMeetings",
+          "url": "https://www.youtube.com/@BarbellPitchMeetings",
+          "channel_id": "UCs55OZ6PkvIjwtyyqEFk8JQ",
+          "feed": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs55OZ6PkvIjwtyyqEFk8JQ",
+          "followers": "359K subscribers (channel page, Nov 4 2026)"
+        }
+      ],
+      "covers": "Telugu and Tamil theatrical releases (#CULT, AK47, Ranabaali, Jailer 2, Baththa), in Telugu/English",
+      "frequency": "~1-2 reviews/week (8 uploads in the ~5 weeks to Nov 1 2026)",
+      "why": "Blunt reviews; r/tollywood threads (Dec 2023, Dec 2025, Jan and Apr 2026) call him candid and 'the most sensible reviewer in TFI', though some find him too negative - useful as a filter against overhyped South films",
+      "machine_readable": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs55OZ6PkvIjwtyyqEFk8JQ",
+      "verified": true,
+      "aliases": [
+        "Barbell",
+        "Barbell Pitch Meetings"
+      ],
+      "rank": 20,
+      "status": "new"
+    },
+    {
+      "id": "thyview",
+      "name": "Thyview",
+      "flavor": "south",
+      "kind": "critic",
+      "platforms": "YouTube, X, Instagram (manual)",
+      "platform": "YouTube",
+      "handle": "@thyview",
+      "url": "https://www.youtube.com/@thyview",
+      "followers": "1.07M YouTube subscribers; 255,629 on X",
+      "accounts": [
+        {
+          "platform": "YouTube",
+          "handle": "@thyview",
+          "url": "https://www.youtube.com/@thyview",
+          "channel_id": "UC-qTldS8DNIGOfIVc0G8t-w",
+          "feed": "https://www.youtube.com/feeds/videos.xml?channel_id=UC-qTldS8DNIGOfIVc0G8t-w",
+          "followers": "1.07M subscribers (channel page, Nov 4 2026)"
+        },
+        {
+          "platform": "X",
+          "handle": "@Thyview",
+          "url": "https://x.com/Thyview",
+          "user_id": "1596642901",
+          "followers": "255,629 (X API, Nov 4 2026)"
+        },
+        {
+          "platform": "Instagram",
+          "handle": "@thyview",
+          "url": "https://www.instagram.com/thyview/",
+          "followers": "unverified (Instagram login wall)",
+          "machine_readable": "manual only"
+        }
+      ],
+      "covers": "Telugu first, broader South (Tamil/Malayalam) reviews, breakdowns, trailer reviews, industry updates",
+      "frequency": "~1 video/day (8 uploads Oct 25 - Nov 3 2026)",
+      "why": "Biggest Telugu film community channel; hidden-detail breakdowns (Baththa, Dorothy) and Malayalam picks - comment sections surface underrated South thrillers",
+      "machine_readable": "https://www.youtube.com/feeds/videos.xml?channel_id=UC-qTldS8DNIGOfIVc0G8t-w ; X tool user id 1596642901 (exclude=replies,retweets; many posts are star updates); Instagram manual only. The YouTube About page links x.com/thyview and instagram.com/thyview",
+      "verified": true,
+      "aliases": [
+        "Thyview",
+        "THYVIEW"
+      ],
+      "rank": 21,
+      "status": "new"
+    },
+    {
+      "id": "filmy-geeks",
+      "name": "Filmy Geeks",
+      "flavor": "south",
+      "kind": "critic",
+      "platforms": "YouTube",
+      "platform": "YouTube",
+      "handle": "@FilmyGeeks",
+      "url": "https://www.youtube.com/@FilmyGeeks",
+      "followers": "415K subscribers (channel page, Nov 4 2026)",
+      "accounts": [
+        {
+          "platform": "YouTube",
+          "handle": "@FilmyGeeks",
+          "url": "https://www.youtube.com/@FilmyGeeks",
+          "channel_id": "UCqkQzjePM64LtMOWzShh_SQ",
+          "feed": "https://www.youtube.com/feeds/videos.xml?channel_id=UCqkQzjePM64LtMOWzShh_SQ",
+          "followers": "415K subscribers (channel page, Nov 4 2026)"
+        }
+      ],
+      "covers": "Telugu and Tamil film analysis, reviews, plus 'Top 10 recent OTT films & series' lists",
+      "frequency": "~2-3 videos/week (8 uploads Oct 21 - Nov 4 2026)",
+      "why": "Film-appreciation channel (Telugu Geeks Media) that Reddit recommends for thoughtful analysis; its OTT top-10s mix Indian series and films",
+      "machine_readable": "https://www.youtube.com/feeds/videos.xml?channel_id=UCqkQzjePM64LtMOWzShh_SQ (no X account found: @FilmyGeeks does not exist on X)",
+      "verified": true,
+      "aliases": [
+        "Filmy Geeks"
+      ],
+      "rank": 22,
+      "status": "new"
+    },
+    {
+      "id": "factcityindia",
+      "name": "FACT CITY INDIA",
+      "flavor": "listicle",
+      "kind": "curator/listicle",
+      "platforms": "YouTube",
+      "platform": "YouTube",
+      "handle": "@FACTCITYINDIA",
+      "url": "https://www.youtube.com/@FACTCITYINDIA",
+      "followers": "190K subscribers (channel page, Nov 4 2026)",
+      "accounts": [
+        {
+          "platform": "YouTube",
+          "handle": "@FACTCITYINDIA",
+          "url": "https://www.youtube.com/@FACTCITYINDIA",
+          "channel_id": "UCGwsN9G-846HFqhYuLTeZ4w",
+          "feed": "https://www.youtube.com/feeds/videos.xml?channel_id=UCGwsN9G-846HFqhYuLTeZ4w",
+          "followers": "190K subscribers (channel page, Nov 4 2026)"
+        }
+      ],
+      "covers": "'Top 7 South Indian suspense / crime / murder-mystery thrillers in Hindi' lists (Hindi-dubbed South)",
+      "frequency": "~2-3 lists/month (8 uploads Aug - Oct 2026)",
+      "why": "Exactly the hidden-gem Hindi-dubbed South thriller niche; lists name several titles at once, so each title must still pass IMDb 6+ and the no-horror rule",
+      "machine_readable": "https://www.youtube.com/feeds/videos.xml?channel_id=UCGwsN9G-846HFqhYuLTeZ4w (no X account found)",
+      "verified": true,
+      "aliases": [
+        "FACTCITYINDIA",
+        "Fact City India"
+      ],
+      "rank": 23,
+      "status": "new"
+    },
+    {
+      "id": "filmxpro",
+      "name": "FilmXPro",
+      "flavor": "listicle",
+      "kind": "curator/listicle",
+      "platforms": "YouTube, Instagram (manual), X (near-empty)",
+      "platform": "YouTube",
+      "handle": "@FilmXPro",
+      "url": "https://www.youtube.com/@FilmXPro",
+      "followers": "601K YouTube subscribers; 50 on X",
+      "accounts": [
+        {
+          "platform": "YouTube",
+          "handle": "@FilmXPro",
+          "url": "https://www.youtube.com/@FilmXPro",
+          "channel_id": "UCOXV2tchaz7QZmia3aAQj3g",
+          "feed": "https://www.youtube.com/feeds/videos.xml?channel_id=UCOXV2tchaz7QZmia3aAQj3g",
+          "followers": "601K subscribers (channel page, Nov 4 2026)"
+        },
+        {
+          "platform": "X",
+          "handle": "@filmxpro_",
+          "url": "https://x.com/filmxpro_",
+          "user_id": "1573642515345186816",
+          "followers": "50 (X API, Nov 4 2026)",
+          "note": "5 posts total; not worth polling"
+        },
+        {
+          "platform": "Instagram",
+          "handle": "@filmxpro",
+          "url": "https://www.instagram.com/filmxpro/",
+          "followers": "unverified (Instagram login wall)",
+          "machine_readable": "manual only"
+        }
+      ],
+      "covers": "Hindi reviews and 'Top 5/Top 10' thriller lists: Indian web series, Netflix/Prime crime thrillers, some Hollywood and Hindi-dubbed South",
+      "frequency": "~1 video/day (8 uploads Oct 25 - Nov 3 2026)",
+      "why": "Listicles like 'Top 10 Highest Rated Indian Thriller Web Series of 2026' and reviews of AKKA and Baththa (Hindi dub); Muskan named it with Filmy Reminder",
+      "machine_readable": "https://www.youtube.com/feeds/videos.xml?channel_id=UCOXV2tchaz7QZmia3aAQj3g",
+      "verified": true,
+      "aliases": [
+        "FilmXPro",
+        "FilmXPro / Filmy Reminder"
+      ],
+      "split_note": "Muskan listed 'FilmXPro / Filmy Reminder' as one; they are two separate channels, so they are two source ids (filmxpro, filmy-reminder)",
+      "rank": 24,
+      "status": "new"
+    },
+    {
+      "id": "filmy-reminder",
+      "name": "Filmy Reminder",
+      "flavor": "listicle",
+      "kind": "curator/listicle",
+      "platforms": "YouTube",
+      "platform": "YouTube",
+      "handle": "@filmyReminder1",
+      "url": "https://www.youtube.com/@filmyReminder1",
+      "followers": "6.68K subscribers (channel page, Nov 4 2026)",
+      "accounts": [
+        {
+          "platform": "YouTube",
+          "handle": "@filmyReminder1",
+          "url": "https://www.youtube.com/@filmyReminder1",
+          "channel_id": "UChqo4ZmXl2pJDtgIPW66k4w",
+          "feed": "https://www.youtube.com/feeds/videos.xml?channel_id=UChqo4ZmXl2pJDtgIPW66k4w",
+          "followers": "6.68K subscribers (channel page, Nov 4 2026)"
+        }
+      ],
+      "covers": "Hindi 'Top 5/7' OTT crime-thriller lists, Hindi-dubbed South explainers (Baththa), series reviews (Hunkkaar, Mirzapur the Movie)",
+      "frequency": "~1 video/week (8 uploads Sep - Oct 2026)",
+      "why": "Small channel in the same underrated-thriller-list niche; Muskan paired it with FilmXPro. Some lists are 'watch alone' adult picks - those titles need the usual filters",
+      "machine_readable": "https://www.youtube.com/feeds/videos.xml?channel_id=UChqo4ZmXl2pJDtgIPW66k4w (handle @FilmyReminder does not exist; the real one is @filmyReminder1, found via its videos' oEmbed author)",
+      "verified": true,
+      "aliases": [
+        "Filmy Reminder"
+      ],
+      "rank": 25,
+      "status": "new"
+    }
+  ],
+  "review_sites": [
+    {
+      "rank": 1,
+      "name": "Film Critics Guild Reviews",
+      "url": "https://www.fcgreviews.com/",
+      "feed": "none (HTML homepage, public)",
+      "notes": "Best aggregator; see social rank 2 (same source id as social 'fcg'; one bandit arm)",
+      "id": "fcg",
+      "flavor": "critic",
+      "kind": "critic",
+      "status": "established",
+      "aliases": []
+    },
+    {
+      "rank": 2,
+      "name": "The Indian Express - Movie Reviews",
+      "url": "https://indianexpress.com/section/entertainment/movie-review/",
+      "feed": "https://indianexpress.com/section/entertainment/movie-review/feed/",
+      "notes": "RSS works (200 items); Shubhra Gupta (Hindi), Shalini Langer (Hollywood), Telugu reviews",
+      "id": "indian-express-reviews",
+      "flavor": "critic",
+      "kind": "critic",
+      "status": "established",
+      "aliases": [
+        "The Indian Express",
+        "Indian Express"
+      ]
+    },
+    {
+      "rank": 3,
+      "name": "Rediff Movies (Sukanya Verma, others)",
+      "url": "https://www.rediff.com/movies",
+      "feed": "https://www.rediff.com/rss/moviesrss.xml",
+      "notes": "RSS works (~50 items, all movie news); keep links containing /movies/review/",
+      "id": "rediff-movies",
+      "flavor": "critic",
+      "kind": "critic",
+      "status": "established",
+      "aliases": [
+        "Rediff",
+        "Rediff Movies"
+      ]
+    },
+    {
+      "rank": 4,
+      "name": "The Hindu - Reviews",
+      "url": "https://www.thehindu.com/entertainment/reviews/",
+      "feed": "https://www.thehindu.com/entertainment/reviews/feeder/default.rss",
+      "notes": "RSS works (60 items); strongest for Tamil/Telugu/Malayalam films and series (Anuj Kumar for Hindi)",
+      "id": "the-hindu-reviews",
+      "flavor": "south",
+      "kind": "critic",
+      "status": "established",
+      "aliases": [
+        "The Hindu"
+      ]
+    },
+    {
+      "rank": 5,
+      "name": "The Hollywood Reporter India - Reviews",
+      "url": "https://www.hollywoodreporterindia.com/reviews",
+      "feed": "https://www.hollywoodreporterindia.com/stories.rss (returns only 1 item; scrape /reviews or /author/rahul-desai HTML instead)",
+      "notes": "Rahul Desai and Suchin Mehrotra reviews of Hindi OTT series",
+      "id": "thr-india-reviews",
+      "flavor": "critic",
+      "kind": "critic",
+      "status": "established",
+      "aliases": [
+        "THR India",
+        "The Hollywood Reporter India - Reviews"
+      ]
+    }
+  ],
+  "showtime_sources": [
+    {
+      "name": "Cinemark Century at Pacific Commons and XD (Fremont)",
+      "address": "43917 Pacific Commons Blvd, Fremont, CA 94538",
+      "url": "https://www.cinemark.com/theatres/ca-fremont/cinemark-century-at-pacific-commons-and-xd",
+      "machine_readable_alt": "https://www.bigscreen.com/Marquee.php?theater=29354&view=sched (plain HTML with 'Hindi Language'/'Telugu Language'/'Tamil Language' tags); https://www.showtimes.com/movie-theaters/cinemark-century-at-pacific-commons-and-xd-8678/",
+      "indian_languages": "Yes - Nov 4 2026: Hindi (Ramayana, Udta Teer), Telugu (#CULT, Aadarsha Kutumbam AK47), Tamil (Jailer 2)"
+    },
+    {
+      "name": "Cinemark Century Union Landing 25 and XD (Union City)",
+      "address": "32100 Union Landing, Union City, CA 94587",
+      "url": "https://www.cinemark.com/theatres/ca-union-city/cinemark-century-union-landing-25-and-xd",
+      "machine_readable_alt": "https://www.bigscreen.com/Marquee.php?theater=5994&view=sched ; https://www.showtimes.com/movie-theaters/cinemark-century-union-landing-25-and-xd-8795/",
+      "indian_languages": "Yes - Hindi (Ramayana), Telugu + Tamil (Jailer 2, AK47, #CULT), also Kannada, Bengali, Punjabi"
+    },
+    {
+      "name": "Fandango - Fremont 94538 movie times",
+      "address": "ZIP-wide",
+      "url": "https://www.fandango.com/94538_movietimes",
+      "machine_readable_alt": "JS-heavy; better for booking than parsing",
+      "indian_languages": "Lists the Cinemark Indian-language shows above; language shows in the format tags"
+    }
+  ],
+  "ingestion": {
+    "YouTube": "Poll each channel's RSS (https://www.youtube.com/feeds/videos.xml?channel_id=ID) weekly; no login or API key; returns the last 15 uploads. Drop #shorts and filter titles for Review/Series/Hindi Dubbed. NOTE 2026-11-04 17:30 PT: the RSS endpoint returned HTTP 404 for every channel (also for channels whose feed worked earlier today), so the weekly build falls back to yt_channel.py, which reads https://www.youtube.com/@HANDLE/videos.",
+    "X": "Built-in public X reads: get_users_posts(id, start_time=7 days ago, exclude=retweets,replies). The IDs are saved in the JSON; at ~20 posts per account per week this fits easily within rate limits (1000 reads/day).",
+    "Instagram": "Not reliably machine-readable without a login. Treat as a manual/optional source, or skip. Ormax charts are also on its website. Instagram-only sources (karan-mirchandani, india-movie-dekho) stay in the bandit but only get votes when a title is added by hand.",
+    "Facebook": "Same: login-walled for feeds; page title and follower count load, posts don't. Use the equivalent X/website/YouTube feeds.",
+    "Websites": "RSS for Indian Express, The Hindu, Rediff (filter /review/); HTML scrape for fcgreviews.com homepage and THR India /reviews.",
+    "Showtimes": "Fetch bigscreen.com Marquee pages (theater=29354 Fremont, 5994 Union City) weekly (Thu/Fri) and grep for Hindi/Telugu/Tamil Language tags; book through Cinemark/Fandango."
+  },
+  "dropped_or_unverified": [
+    "Film Companion (YouTube @FilmCompanion 404; site shut down July 2024; Film Companion South last upload Aug 2024)",
+    "Cinema Beyond Entertainment (last upload Jan 2023)",
+    "@ThatSketchyGuy on X (suspended)",
+    "The Shiro Bro / Filmi Indian / PJ Explained (active, but mostly Hollywood or mainstream gossip; poor taste fit)",
+    "Sucharita Tyagi on X: found on 2026-11-04 as @Su4ita (user id 350728896) and merged into sucharita-tyagi",
+    "X @karan_mir is a different person ('Mir Karan', 0 posts); YouTube @karan_mir and @KaranMirchandani are empty channels - not used for karan-mirchandani",
+    "YouTube 'Abhishek soni' @abhisoniii (442K) is an Udaipur lifestyle vlogger, not India Movie Dekho - not used",
+    "X @Deepsbhurani (12 followers, 24 posts) is a dormant personal account; Deepak's film X is @deepak_bhurani"
+  ],
+  "source_count": {
+    "established": 19,
+    "new": 10,
+    "note": "15 social + 4 review sites (fcg shares one id) are established; Muskan's 12 became 10 new ids + 3 merges into existing ones (FilmXPro/Filmy Reminder split in two)"
+  },
+  "tag_vocab": {
+    "kind": {
+      "critic": "reviews titles; full taste vote",
+      "curator/listicle": "lists many titles; 0.8 vote",
+      "chart": "viewership chart; 0.2 vote",
+      "release-calendar": "what's releasing; no taste vote"
+    },
+    "flavor": [
+      "critic",
+      "hindi-youtube",
+      "south",
+      "hidden-gems",
+      "listicle",
+      "ott-charts",
+      "mainstream-calendar"
+    ],
+    "status": {
+      "established": "on file before 2026-11-04",
+      "new": "added from Muskan's 2026-11-04 list"
+    }
+  }
+}
