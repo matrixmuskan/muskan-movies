@@ -31,25 +31,25 @@
     "kid_safe_default": "conservative (false unless family/PG)"
   },
   "language_weights": {
-    "Hindi": 1.0,
+    "Hindi": 0.95,
     "Tamil (Hindi dub)": 0.75,
     "Telugu (Hindi dub)": 0.75,
     "Malayalam (Hindi dub)": 0.75,
     "Kannada (Hindi dub)": 0.7,
-    "English (Hollywood)": 0.3,
+    "English (Hollywood)": 0.1,
     "Other": 0.1
   },
   "genre_weights": {
-    "comedy": 0.9,
-    "thriller": 0.85,
+    "comedy": 0.84,
+    "thriller": 0.89,
     "suspense/mystery": 0.85,
-    "crime": 0.8,
-    "slice-of-life": 0.9,
-    "drama": 0.6,
+    "crime": 0.88,
+    "slice-of-life": 0.94,
+    "drama": 0.63,
     "courtroom/legal": 0.8,
     "biopic": 0.6,
     "family/kids": 0.75,
-    "animation (family)": 0.5,
+    "animation (family)": 0.4,
     "action": 0.45,
     "romance": 0.35,
     "mythology/epic": 0.5,
@@ -57,18 +57,18 @@
     "heavy horror": 0.0
   },
   "theme_weights": {
-    "rustic/small-town (TVF, Panchayat-style)": 0.95,
-    "scam/fraud ring/pills/smuggling": 0.9,
-    "study/college/coaching life": 0.9,
+    "rustic/small-town (TVF, Panchayat-style)": 0.99,
+    "scam/fraud ring/pills/smuggling": 0.98,
+    "study/college/coaching life": 0.89,
     "medical": 0.8,
     "legal/courtroom": 0.8,
     "victim-side justice": 0.8,
     "stories with kids": 0.8,
     "father-daughter/family warmth": 0.7,
-    "cop/investigation": 0.7,
+    "cop/investigation": 0.74,
     "gangster violence": 0.45,
     "Excel Entertainment Prime shows": 0.8,
-    "TVF production": 0.9
+    "TVF production": 0.94
   },
   "producer_weights": {
     "TVF": 0.9,
@@ -82,10 +82,17 @@
     "Yeh Meri Family",
     "Kota Factory",
     "Half CA",
-    "Parking"
+    "Parking",
+    "Hello Bachhon",
+    "Taskaree: The Smuggler's Web",
+    "Dupahiya (Season 2)",
+    "Matka King"
   ],
   "disliked_examples": [
-    "heavy horror (any)"
+    "heavy horror (any)",
+    "Adarsh Baal Vidyalaya",
+    "Shaun the Sheep: The Beast of Mossy Bottom",
+    "Forgotten Island"
   ],
   "reviewer_trust_weights": {
     "Rahul Desai (The Hollywood Reporter India critic)": 0.5,
@@ -131,8 +138,78 @@
     "12th Fail",
     "Parking",
     "Half CA",
-    "top all-time Bollywood grossers (e.g. Dangal, Pathaan, Jawan, Animal, Stree 2, Gadar 2, Baahubali 2, KGF 2, RRR, Pushpa 2)"
+    "top all-time Bollywood grossers (e.g. Dangal, Pathaan, Jawan, Animal, Stree 2, Gadar 2, Baahubali 2, KGF 2, RRR, Pushpa 2)",
+    "Hello Bachhon",
+    "Taskaree: The Smuggler's Web",
+    "Dupahiya (Season 2)",
+    "Matka King",
+    "Gram Chikitsalay (Season 2)",
+    "Adarsh Baal Vidyalaya",
+    "Shaun the Sheep: The Beast of Mossy Bottom",
+    "Forgotten Island"
   ],
-  "seen_or_rejected": [],
-  "feedback_log": []
+  "seen_or_rejected": [
+    "Adarsh Baal Vidyalaya",
+    "Shaun the Sheep: The Beast of Mossy Bottom",
+    "Forgotten Island"
+  ],
+  "feedback_log": [
+    {
+      "id": "hello-bachhon",
+      "action": "rate",
+      "stars": 4,
+      "delta": 0.04,
+      "date": "2026-11-04"
+    },
+    {
+      "id": "taskaree",
+      "action": "rate",
+      "stars": 4,
+      "delta": 0.04,
+      "date": "2026-11-04"
+    },
+    {
+      "id": "dupahiya-season-2",
+      "action": "rate",
+      "stars": 4,
+      "delta": 0.04,
+      "date": "2026-11-04"
+    },
+    {
+      "id": "matka-king",
+      "action": "rate",
+      "stars": 4,
+      "delta": 0.04,
+      "date": "2026-11-04"
+    },
+    {
+      "id": "gram-chikitsalay-season-2",
+      "action": "rate",
+      "stars": 3,
+      "delta": 0.0,
+      "date": "2026-11-05"
+    },
+    {
+      "id": "adarsh-baal-vidyalaya",
+      "action": "discard",
+      "stars": null,
+      "delta": -0.05,
+      "date": "2026-11-06"
+    },
+    {
+      "id": "shaun-the-sheep-beast-of-mossy-bottom",
+      "action": "discard",
+      "stars": null,
+      "delta": -0.05,
+      "date": "2026-11-04"
+    },
+    {
+      "id": "forgotten-island",
+      "action": "discard",
+      "stars": null,
+      "delta": -0.05,
+      "date": "2026-11-04"
+    }
+  ],
+  "updated": "2026-11-06"
 }

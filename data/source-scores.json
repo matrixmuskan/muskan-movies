@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-04",
+  "updated": "2026-11-06",
   "method": "Beta-Bernoulli bandit per source, Thompson sampling for exploration; state rebuilt from the prior on every update",
   "prior": {
     "alpha": 2.0,
@@ -895,8 +895,12 @@
       "votes": {},
       "votes_recorded": "backfill (prior trust 0.50)",
       "score": null,
-      "feedback": null,
-      "reward": null
+      "feedback": {
+        "action": "rate",
+        "rating": 3,
+        "timestamp": "2026-11-05T02:42:30.559Z"
+      },
+      "reward": 0.5
     },
     {
       "id": "shaun-the-sheep-beast-of-mossy-bottom",
@@ -960,8 +964,12 @@
       "votes": {},
       "votes_recorded": "backfill (prior trust 0.50)",
       "score": null,
-      "feedback": null,
-      "reward": null
+      "feedback": {
+        "action": "discard",
+        "rating": null,
+        "timestamp": "2026-11-06T05:58:41.403Z"
+      },
+      "reward": 0.0
     },
     {
       "id": "tenzing",

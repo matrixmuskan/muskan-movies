@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-04",
+  "updated": "2026-11-06",
   "source": "matrixmuskan/muskan-movies-feedback/feedback/",
   "rules": {
     "loved": "4-5 stars or keep",
@@ -83,8 +83,51 @@
       "lesson": "Period crime about gambling rackets lands even when critics are mixed; trust the theme over the review."
     }
   ],
-  "neutral": [],
+  "neutral": [
+    {
+      "title": "Gram Chikitsalay (Season 2)",
+      "id": "gram-chikitsalay-season-2",
+      "type": "series",
+      "language": "Hindi",
+      "genres": [
+        "comedy",
+        "slice-of-life",
+        "medical",
+        "rustic/small-town (TVF, Panchayat-style)",
+        "TVF production"
+      ],
+      "action": "rate",
+      "stars": 3,
+      "date": "2026-11-05T02:42:30.559Z",
+      "endorsers": [
+        "Abhishek Srivastava (Times of India)",
+        "Deepa Gahlot (Scroll)",
+        "Devesh Sharma (Filmfare)",
+        "Shweta Keshri (India Today)"
+      ],
+      "lesson": "TVF village medical comedy is fine but not a standout (3 stars); keep rustic/medical in the mix without raising further."
+    }
+  ],
   "disliked": [
+    {
+      "title": "Adarsh Baal Vidyalaya",
+      "id": "adarsh-baal-vidyalaya",
+      "type": "series",
+      "language": "Hindi",
+      "genres": [
+        "comedy",
+        "drama",
+        "study/college/coaching life"
+      ],
+      "action": "discard",
+      "stars": null,
+      "date": "2026-11-06T05:58:41.403Z",
+      "endorsers": [
+        "Kartik Bhardwaj (Cinema Express)",
+        "Titas Chowdhury (News18)"
+      ],
+      "lesson": "School satire with a star headmaster was discarded; do not lean harder into school/education comedy just because of the theme."
+    },
     {
       "title": "Shaun the Sheep: The Beast of Mossy Bottom",
       "id": "shaun-the-sheep-beast-of-mossy-bottom",
