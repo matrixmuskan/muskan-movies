@@ -1,0 +1,288 @@
+[
+ {
+  "id": "ramayana-part-1",
+  "title": "Ramayana: Rise of a Legend (Part 1)",
+  "year": 2026,
+  "type": "movie",
+  "language": "Hindi",
+  "imdb_id": "tt27988879",
+  "imdb_rating": 8.3,
+  "genres": [
+   "mythology/epic",
+   "action",
+   "drama"
+  ],
+  "themes": [],
+  "producer": null,
+  "where_to_watch": "In theaters: Cinemark Pacific Commons (Fremont) and Cinemark Union Landing (Union City), Hindi and 3D shows",
+  "theater": true,
+  "hollywood": false,
+  "animated": false,
+  "cgi_live_action": true,
+  "kid_safe": false,
+  "endorsements": [
+   {
+    "name": "Yogi Bolta Hai",
+    "source_id": "yogi-bolta-hai",
+    "url": "https://www.youtube.com/watch?v=SNZJiuImnks",
+    "verdict": "positive review",
+    "note": "Gives it 4.5/5 (transcript)"
+   },
+   {
+    "name": "ABHI KA REVIEW",
+    "source_id": "abhi-ka-review",
+    "url": "https://www.youtube.com/watch?v=i852jqD9zj0",
+    "verdict": "positive review",
+    "note": "Positives+negatives review, overall positive; defends film (transcript)"
+   },
+   {
+    "name": "Shan Prasher",
+    "source_id": "shan-prasher",
+    "url": "https://www.youtube.com/watch?v=aSjWglM7rBg",
+    "verdict": "positive review",
+    "note": "\"Go and watch it\" (transcript)"
+   },
+   {
+    "name": "Tried & Refused Productions",
+    "source_id": "tried-and-refused",
+    "url": "https://www.youtube.com/watch?v=jYMFOs5wCoE",
+    "verdict": "positive review",
+    "note": "Says Nitesh Tiwari delivered (transcript)"
+   },
+   {
+    "name": "Suraj Kumar Review",
+    "source_id": "suraj-kumar-review",
+    "url": "https://www.youtube.com/watch?v=2X8gfWBEDMU",
+    "verdict": "positive review",
+    "note": "About 4/5 (transcript)"
+   },
+   {
+    "name": "Filmy Geeks",
+    "source_id": "filmy-geeks",
+    "url": "https://www.youtube.com/watch?v=tN7bwvdR0qg",
+    "verdict": "positive review",
+    "note": "Satisfying, waiting for Part 2 (transcript)"
+   },
+   {
+    "name": "The Hollywood Reporter India (Anupama Chopra)",
+    "source_id": "thr-india",
+    "url": "https://www.youtube.com/watch?v=dRS1dx8WKKA",
+    "verdict": "positive review",
+    "note": "Ambitious and impressive (transcript)"
+   },
+   {
+    "name": "The Indian Express",
+    "source_id": "indian-express-reviews",
+    "url": "https://indianexpress.com/article/entertainment/movie-review/ramayana-part-1-movie-review-ranbir-kapoor-namit-malhotra-perfect-epic-for-kalyuga-10951499/",
+    "verdict": "positive review",
+    "note": "Headline: perfect epic for Kalyuga"
+   },
+   {
+    "name": "The Hindu",
+    "source_id": "the-hindu-reviews",
+    "url": "https://www.thehindu.com/entertainment/movies/ramayana-part-1-movie-review-ranbir-kapoor-and-yash-excel-as-ravana-outshines-rama-on-screen/article71669057.ece",
+    "verdict": "positive review",
+    "note": "Headline: Ranbir and Yash excel"
+   }
+  ],
+  "mixed_or_not_counted": [
+   "Rahul Desai (THR India, X): \"anxious adaptation\" - mixed, not counted",
+   "Sudhir Srinivasan (X): credit for scale, mixed - not counted",
+   "Sucharita Tyagi (YouTube): reviewed, verdict unclear - not counted"
+  ]
+ },
+ {
+  "id": "scene-2026",
+  "title": "Scene",
+  "year": 2026,
+  "type": "movie",
+  "language": "Tamil (Hindi dub on Netflix, expected)",
+  "imdb_id": "tt38192494",
+  "imdb_rating": 8.2,
+  "genres": [
+   "comedy",
+   "crime",
+   "thriller"
+  ],
+  "themes": [],
+  "producer": null,
+  "where_to_watch": "In theaters: Cinemark Pacific Commons (Fremont) and Cinemark Union Landing (Union City), Tamil and Telugu shows with English subtitles",
+  "theater": true,
+  "hollywood": false,
+  "animated": false,
+  "kid_safe": false,
+  "endorsements": [
+   {
+    "name": "Sudhir Srinivasan",
+    "source_id": "sudhir-srinivasan",
+    "url": "https://x.com/sudhirsrinivasn/status/2118675947159486640",
+    "verdict": "positive review",
+    "note": "Positive X thread: reassuring star who lets us laugh at him"
+   },
+   {
+    "name": "Tried & Refused Productions",
+    "source_id": "tried-and-refused",
+    "url": "https://www.youtube.com/watch?v=vr1oDt8pvsk",
+    "verdict": "positive review",
+    "note": "Suriya's most enjoyed film of 2026 (transcript)"
+   },
+   {
+    "name": "Suraj Kumar Review",
+    "source_id": "suraj-kumar-review",
+    "url": "https://www.youtube.com/watch?v=I50FdNHwK9A",
+    "verdict": "positive review",
+    "note": "Do not miss it (transcript)"
+   },
+   {
+    "name": "Filmy Geeks",
+    "source_id": "filmy-geeks",
+    "url": "https://www.youtube.com/watch?v=4_-YVZsDEXA",
+    "verdict": "positive review",
+    "note": "No negatives to mention (transcript)"
+   },
+   {
+    "name": "Barbell Pitch Meetings",
+    "source_id": "barbell-pitch-meetings",
+    "url": "https://www.youtube.com/watch?v=n90jH8jpYiY",
+    "verdict": "positive review",
+    "note": "Positive: Suriya did well, generates fun (Telugu transcript)"
+   },
+   {
+    "name": "The Indian Express",
+    "source_id": "indian-express-reviews",
+    "url": "https://indianexpress.com/article/entertainment/movie-review/scene-movie-review-suriya-wild-funny-dark-roller-coaster-10953104/",
+    "verdict": "positive review",
+    "note": "Headline: wild, funny, dark roller-coaster"
+   },
+   {
+    "name": "The Hindu",
+    "source_id": "the-hindu-reviews",
+    "url": "https://www.thehindu.com/entertainment/movies/scene-movie-review-suriya-jithu-madhavan-naslen-nazriya-nazim-sushin-shyam/article71673522.ece",
+    "verdict": "positive review",
+    "note": "Headline: Suriya redefines mass"
+   },
+   {
+    "name": "Rediff Movies",
+    "source_id": "rediff-movies",
+    "url": "https://www.rediff.com/movies/review/suriyas-scene-review-jithu-madhavan-delivers-engaging-investigative-thriller/20261106.htm",
+    "verdict": "positive review",
+    "note": "Headline: engaging investigative thriller"
+   }
+  ]
+ },
+ {
+  "id": "family-kirana-store-season-3",
+  "title": "Family Kirana Store (Season 3)",
+  "year": 2026,
+  "type": "series",
+  "language": "Hindi",
+  "imdb_id": "tt39632118",
+  "imdb_rating": 8.4,
+  "genres": [
+   "comedy",
+   "slice-of-life"
+  ],
+  "themes": [
+   "rustic/small-town (TVF, Panchayat-style)",
+   "TVF production"
+  ],
+  "producer": "TVF",
+  "where_to_watch": "YouTube (free, The Viral Fever channel); Season 3 started Nov 13",
+  "theater": false,
+  "hollywood": false,
+  "animated": false,
+  "kid_safe": true,
+  "endorsements": [],
+  "notes": "No listed-source review of S3 found (S3 dropped today). IMDb 8.4 is for the show (S1-S2). Supporting coverage: Bollywood Hungama and Jagran news (not endorsements)."
+ },
+ {
+  "id": "jailer-2",
+  "title": "Jailer 2",
+  "year": 2026,
+  "type": "movie",
+  "language": "Tamil (Hindi audio on Prime Video)",
+  "imdb_id": "tt33318732",
+  "imdb_rating": 7.9,
+  "genres": [
+   "action",
+   "comedy",
+   "crime"
+  ],
+  "themes": [],
+  "producer": null,
+  "where_to_watch": "Prime Video (US, from Nov 12; Hindi audio among 5 languages)",
+  "theater": false,
+  "hollywood": false,
+  "animated": false,
+  "kid_safe": false,
+  "endorsements": [
+   {
+    "name": "The Hindu",
+    "source_id": "the-hindu-reviews",
+    "url": "https://www.thehindu.com/entertainment/movies/jailer-2-movie-review-superstar-rajinikanth-nelson-shivarajkumar-mohanlal-anirudh-ravichander/article71587540.ece",
+    "verdict": "positive review",
+    "note": "Headline: flourishes elevate rousing herogasm"
+   },
+   {
+    "name": "The Indian Express",
+    "source_id": "indian-express-reviews",
+    "url": "https://indianexpress.com/article/entertainment/movie-review/jailer-2-movie-review-rajinikanth-supreme-aura-carries-nelsons-uneven-action-thriller-10922256/",
+    "verdict": "mixed-positive review",
+    "note": "Mixed-positive: aura carries uneven thriller; Hrithik high"
+   }
+  ]
+ },
+ {
+  "id": "daayra",
+  "title": "Daayra",
+  "year": 2026,
+  "type": "movie",
+  "language": "Hindi",
+  "imdb_id": "tt32634611",
+  "imdb_rating": 7.0,
+  "genres": [
+   "crime",
+   "thriller",
+   "suspense/mystery"
+  ],
+  "themes": [
+   "legal/courtroom",
+   "victim-side justice",
+   "cop/investigation"
+  ],
+  "where_to_watch": "Netflix (from Nov 13)",
+  "theater": false,
+  "hollywood": false,
+  "animated": false,
+  "kid_safe": false,
+  "endorsements": [
+   {
+    "name": "The Hindu",
+    "source_id": "the-hindu-reviews",
+    "url": "https://www.thehindu.com/entertainment/movies/daayra-movie-review-meghna-gulzar-challenges-the-circle-of-public-conscience/article71480773.ece",
+    "verdict": "mixed review",
+    "note": "Respectful but overall critics ~3/5"
+   }
+  ]
+ },
+ {
+  "id": "akka",
+  "title": "Akka",
+  "year": 2026,
+  "type": "series",
+  "language": "Hindi",
+  "imdb_id": null,
+  "imdb_rating": null,
+  "genres": [
+   "crime",
+   "drama"
+  ],
+  "themes": [],
+  "where_to_watch": "Netflix",
+  "theater": false,
+  "hollywood": false,
+  "animated": false,
+  "kid_safe": false,
+  "endorsements": []
+ }
+]

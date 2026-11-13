@@ -475,6 +475,8 @@ def record_selection(state: dict, selection: list[dict]) -> dict:
 def backfill_picks(picks: list[dict], resolve: Resolver) -> int:
     changed = 0
     for p in picks:
+        if p.get("preview"):
+            continue   # labeled previews are not fresh picks: no slot, no bandit credit
         if "sources" not in p:
             p["sources"] = pick_sources(p, resolve)
             changed += 1

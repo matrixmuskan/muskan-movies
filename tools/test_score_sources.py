@@ -271,6 +271,14 @@ class BackfillAndReportTests(unittest.TestCase):
         self.assertEqual(picks[1]["slot"], "explore")
         self.assertEqual(n, 2)
 
+    def test_backfill_skips_previews(self):
+        picks = [pick("pv", []), pick("p1", ["Critic A"])]
+        picks[0]["preview"] = True
+        ss.backfill_picks(picks, ss.Resolver(SOURCES))
+        self.assertNotIn("slot", picks[0])
+        self.assertNotIn("sources", picks[0])
+        self.assertEqual(picks[1]["slot"], "exploit")
+
     def test_report(self):
         picks = [pick("p1", ["Critic A"]), pick("p2", ["Gems Y"])]
         fb = [{"id": "p1", "action": "rate", "rating": 5, "timestamp": "t"}, {"id": "p2", "action": "discard", "rating": None, "timestamp": "t"}]

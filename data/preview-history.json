@@ -1,0 +1,77 @@
+[
+  {
+    "id": "the-hunger-games-sunrise-on-the-reaping",
+    "title": "The Hunger Games: Sunrise on the Reaping",
+    "release_date": "2026-11-20",
+    "imdb": "not yet rated",
+    "versions": [
+      {
+        "version": 1,
+        "checked": "2026-11-13",
+        "status": "preview",
+        "note": "Trailer buzz only; no reviews yet.",
+        "where": "In theaters Nov 20. Advance tickets on sale; Cinemark Pacific Commons and Union Landing showtimes not listed yet (checked Nov 13)."
+      }
+    ]
+  },
+  {
+    "id": "om-chapter-1-udhiram-the-blood-wood",
+    "title": "OM Chapter 1: Udhiram - The Blood Wood",
+    "release_date": "2026-11-20",
+    "imdb": "not yet rated",
+    "versions": [
+      {
+        "version": 1,
+        "checked": "2026-11-13",
+        "status": "preview",
+        "note": "Trailer and release buzz only; no reviews yet.",
+        "where": "In theaters Nov 20 (US and Canada release reported). Local Cinemark showtimes not listed yet (checked Nov 13)."
+      }
+    ]
+  },
+  {
+    "id": "maatrubhumi",
+    "title": "Maatrubhumi",
+    "release_date": "2026-12-04",
+    "imdb": "not yet rated",
+    "versions": [
+      {
+        "version": 1,
+        "checked": "2026-11-13",
+        "status": "preview",
+        "note": "Trailer buzz only; mixed reactions; no reviews yet.",
+        "where": "In theaters Dec 4 (worldwide release announced). US bookings and local showtimes not reported yet (checked Nov 13)."
+      }
+    ]
+  },
+  {
+    "id": "avengers-doomsday",
+    "title": "Avengers: Doomsday",
+    "release_date": "2026-12-18",
+    "imdb": "not yet rated",
+    "versions": [
+      {
+        "version": 1,
+        "checked": "2026-11-13",
+        "status": "preview",
+        "note": "Pre-release buzz only; no reviews yet.",
+        "where": "In theaters Dec 18. Local Cinemark showtimes not verified yet (checked Nov 13)."
+      }
+    ]
+  },
+  {
+    "id": "dune-part-three",
+    "title": "Dune: Part Three",
+    "release_date": "2026-12-18",
+    "imdb": "not yet rated",
+    "versions": [
+      {
+        "version": 1,
+        "checked": "2026-11-13",
+        "status": "preview",
+        "note": "Pre-release buzz only; no reviews yet.",
+        "where": "In theaters Dec 18. Local Cinemark showtimes not verified yet (checked Nov 13)."
+      }
+    ]
+  }
+]

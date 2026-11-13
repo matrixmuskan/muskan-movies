@@ -1,0 +1,111 @@
+{
+  "week": "2026-11-13",
+  "version": 1,
+  "discovery_started": "2026-11-13T13:52:00-08:00",
+  "built_by": "weekly build (additive; build.py not used)",
+  "sources_checked": {
+    "youtube_rss_7d": "all youtube sources in data/sources.json (RSS first, transcripts via youtube_transcript_api where needed)",
+    "x_public_posts": [
+      "taran-adarsh",
+      "rahul-desai",
+      "sudhir-srinivasan",
+      "baradwaj-rangan",
+      "shubhra-gupta",
+      "sucharita-tyagi",
+      "deepak-bhurani (empty)",
+      "ottplay (empty)"
+    ],
+    "review_site_rss": [
+      "indian-express-reviews",
+      "the-hindu-reviews",
+      "rediff-movies",
+      "thr-india-reviews",
+      "fcgreviews.com"
+    ],
+    "local_theaters": [
+      "Cinemark Pacific Commons Fremont",
+      "Cinemark Union Landing Union City (bigscreen.com listings, Nov 13)"
+    ],
+    "imdb": "via r.jina.ai proxy and the IMDb suggestion API",
+    "availability": "web search for US OTT availability"
+  },
+  "coverage_gaps": [
+    "Instagram sources skipped by design",
+    "X posts for OTTplay and Deepak Bhurani returned nothing",
+    "no US/local listing yet for Gondhal, I Play Rocky or Prahaar"
+  ],
+  "candidates_file": "data/runs/candidates-2026-11-13.json",
+  "selected": [
+    {
+      "id": "ramayana-part-1",
+      "slot": "exploit",
+      "platform": "theaters (Fremont, Union City)"
+    },
+    {
+      "id": "scene-2026",
+      "slot": "exploit",
+      "platform": "theaters (Fremont, Union City)"
+    },
+    {
+      "id": "family-kirana-store-season-3",
+      "slot": "exploit",
+      "platform": "YouTube"
+    },
+    {
+      "id": "jailer-2",
+      "slot": "exploit",
+      "platform": "Prime Video"
+    },
+    {
+      "id": "daayra",
+      "slot": "explore",
+      "platform": "Netflix"
+    }
+  ],
+  "mix": {
+    "off_netflix_prime": 3,
+    "netflix_prime": 2,
+    "hollywood": 0,
+    "exploit": 4,
+    "explore": 1
+  },
+  "excluded": [
+    {
+      "title": "Court Kacheri",
+      "reason": "Strong reviews but not available in the US"
+    },
+    {
+      "title": "Gondhal / I Play Rocky / Prahaar",
+      "reason": "Not bookable locally or available in the US"
+    },
+    {
+      "title": "Akka",
+      "reason": "Netflix series with no IMDb rating found and no listed-source endorsement"
+    },
+    {
+      "title": "Hunger Games, OM Chapter 1, Maatrubhumi, Avengers: Doomsday, Dune: Part Three",
+      "reason": "Unreleased: published as labeled previews, not fresh picks"
+    }
+  ],
+  "notes": [
+    "Ramayana: release verified fresh (in theaters Fremont and Union City Nov 13, IMDb 8.3, live-action CGI, not animation). Mixed takes (Rahul Desai, Sudhir Srinivasan) are logged but not counted as endorsements.",
+    "Scene: theatrical now; a Netflix streaming date of about Dec 4 is a report, not confirmed.",
+    "Daayra reviews are mixed; chosen as the explore pick, with no 'Recommended by' links."
+  ],
+  "older_picks_recheck": {
+    "removals": [],
+    "note": "All older active picks were rechecked for IMDb and review sentiment; none downtrended. Kept and rated titles are never removed."
+  },
+  "feedback": {
+    "files_read": 12,
+    "newest": "2026-11-06",
+    "new_since_last_build": 0,
+    "sources_with_feedback": 2
+  },
+  "changes": [
+    "Appended 5 picks and 5 labeled previews to data/picks.json (earlier weeks untouched)",
+    "Added preview/release_date/preview_note fields to validate.py and a 'Coming Up' section to the site",
+    "Backfill now skips previews",
+    "Rebuilt data/source-scores.json"
+  ]
+}

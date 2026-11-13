@@ -60,6 +60,9 @@ The file is a JSON array. A bot appends the next Friday's objects to that array.
 | `endorsements` | array | yes | Reviewers and influencers who recommended the title: `[{ "name": "Rahul Desai", "url": "https://x.com/..." }]`. Each `url` must go to that person's own video, post, or review of this title, and must be opened and checked before it is added. Never guess a link. Use `[]` when none is verified; the site then hides the line. Shown as "Recommended by" on the tile and in the hero. |
 | `status` | string | yes | `new`, `kept`, `discarded`, `seen`, or `removed`. A new drop uses `new`. `removed` takes a pick out of every row for good, even if feedback says otherwise, and shows it in History. |
 | `removed_reason` | string | with `removed` | Short reason, shown in small text in History. Required when `status` is `removed`; not allowed otherwise. |
+| `preview` | boolean | no | `true` for an unreleased major title. It shows in "Coming Up", never in the hero, with "IMDb not yet rated". Requires `release_date` (YYYY-MM-DD) and `preview_note`. Previews get no `slot` or `sources`. Refresh a preview on the same entry and log versions in `data/preview-history.json`. |
+| `release_date` | string | with `preview` | Verified release date. |
+| `preview_note` | string | with `preview` | What is known so far, e.g. trailer buzz only. |
 | `example` | boolean | no | Optional. Current picks are real and do not set this. |
 
 `status` in this file is the editorial starting point. A newer feedback file for the same `id` overrides it. The site does not need the bot to edit `status` after the viewer acts.
