@@ -803,5 +803,320 @@
     "removed_reason": "Animated film. Strong reviews, but it underperformed at the box office (about $75M worldwide on an $80M budget), not an Inside Out-level blockbuster.",
     "sources": [],
     "slot": "exploit"
+  },
+  {
+    "id": "ramayana-part-1",
+    "title": "Ramayana: Rise of a Legend (Part 1)",
+    "year": 2026,
+    "type": "movie",
+    "language": "Hindi",
+    "imdb_rating": 8.3,
+    "imdb_id": "tt27988879",
+    "imdb_url": "https://www.imdb.com/title/tt27988879/",
+    "hook": "Nitesh Tiwari's Part 1 epic: Ranbir Kapoor as Ram, Yash as Ravan, Sai Pallavi as Sita. CGI-heavy live action, PG-13; most listed reviewers cheer the scale.",
+    "where_to_watch": "In theaters: Cinemark Pacific Commons (Fremont) and Cinemark Union Landing (Union City); Hindi shows, also 3D",
+    "trailer_url": "https://www.youtube.com/watch?v=llLHwxkZ02k",
+    "poster_url": "https://m.media-amazon.com/images/M/MV5BYWE4NWVmZjItN2Y0ZC00YmMzLThhNWEtM2VkZjA3MmFlNjdmXkEyXkFqcGc@._V1_UX600_.jpg",
+    "kid_safe": false,
+    "week": "2026-11-13",
+    "source": "Local theater listings (bigscreen.com, Nov 13) plus 9 verified positive reviewer takes (Yogi Bolta Hai, ABHI KA REVIEW, Shan Prasher, Tried & Refused, Suraj Kumar, Filmy Geeks, THR India, Indian Express, The Hindu)",
+    "status": "new",
+    "endorsements": [
+      {
+        "name": "Yogi Bolta Hai",
+        "url": "https://www.youtube.com/watch?v=SNZJiuImnks"
+      },
+      {
+        "name": "ABHI KA REVIEW",
+        "url": "https://www.youtube.com/watch?v=i852jqD9zj0"
+      },
+      {
+        "name": "Shan Prasher",
+        "url": "https://www.youtube.com/watch?v=aSjWglM7rBg"
+      },
+      {
+        "name": "Tried & Refused Productions",
+        "url": "https://www.youtube.com/watch?v=jYMFOs5wCoE"
+      },
+      {
+        "name": "Suraj Kumar Review",
+        "url": "https://www.youtube.com/watch?v=2X8gfWBEDMU"
+      },
+      {
+        "name": "Filmy Geeks",
+        "url": "https://www.youtube.com/watch?v=tN7bwvdR0qg"
+      },
+      {
+        "name": "The Hollywood Reporter India (Anupama Chopra)",
+        "url": "https://www.youtube.com/watch?v=dRS1dx8WKKA"
+      },
+      {
+        "name": "The Indian Express",
+        "url": "https://indianexpress.com/article/entertainment/movie-review/ramayana-part-1-movie-review-ranbir-kapoor-namit-malhotra-perfect-epic-for-kalyuga-10951499/"
+      },
+      {
+        "name": "The Hindu",
+        "url": "https://www.thehindu.com/entertainment/movies/ramayana-part-1-movie-review-ranbir-kapoor-and-yash-excel-as-ravana-outshines-rama-on-screen/article71669057.ece"
+      }
+    ],
+    "slot": "exploit",
+    "sources": [
+      "yogi-bolta-hai",
+      "abhi-ka-review",
+      "shan-prasher",
+      "tried-and-refused",
+      "suraj-kumar-review",
+      "filmy-geeks",
+      "thr-india",
+      "indian-express-reviews",
+      "the-hindu-reviews"
+    ]
+  },
+  {
+    "id": "scene-2026",
+    "title": "Scene",
+    "year": 2026,
+    "type": "movie",
+    "language": "Tamil (Hindi dub expected on Netflix)",
+    "imdb_rating": 8.2,
+    "imdb_id": "tt38192494",
+    "imdb_url": "https://www.imdb.com/title/tt38192494/",
+    "hook": "Suriya laughs at his own star image in Jithu Madhavan's (Aavesham) wild dark-comedy investigative thriller, with Nazriya Nazim and Naslen.",
+    "where_to_watch": "In theaters: Cinemark Pacific Commons (Fremont) and Cinemark Union Landing (Union City), Tamil and Telugu shows with English subtitles. Netflix (with Hindi) is only a report for about Dec 4.",
+    "trailer_url": "https://www.youtube.com/watch?v=Be3e0-3-Stg",
+    "poster_url": "https://m.media-amazon.com/images/M/MV5BOGExMjg5N2ItYmQ2NC00YjhjLTk3MWQtYTI5MDE5NWNkZjE1XkEyXkFqcGc@._V1_UX600_.jpg",
+    "kid_safe": false,
+    "week": "2026-11-13",
+    "source": "Local theater listings (bigscreen.com, Nov 13) plus 8 verified positive reviewer takes (Sudhir Srinivasan, Tried & Refused, Suraj Kumar, Filmy Geeks, Barbell, Indian Express, The Hindu, Rediff)",
+    "status": "new",
+    "endorsements": [
+      {
+        "name": "Sudhir Srinivasan",
+        "url": "https://x.com/sudhirsrinivasn/status/2118675947159486640"
+      },
+      {
+        "name": "Tried & Refused Productions",
+        "url": "https://www.youtube.com/watch?v=vr1oDt8pvsk"
+      },
+      {
+        "name": "Suraj Kumar Review",
+        "url": "https://www.youtube.com/watch?v=I50FdNHwK9A"
+      },
+      {
+        "name": "Filmy Geeks",
+        "url": "https://www.youtube.com/watch?v=4_-YVZsDEXA"
+      },
+      {
+        "name": "Barbell Pitch Meetings",
+        "url": "https://www.youtube.com/watch?v=n90jH8jpYiY"
+      },
+      {
+        "name": "The Indian Express",
+        "url": "https://indianexpress.com/article/entertainment/movie-review/scene-movie-review-suriya-wild-funny-dark-roller-coaster-10953104/"
+      },
+      {
+        "name": "The Hindu",
+        "url": "https://www.thehindu.com/entertainment/movies/scene-movie-review-suriya-jithu-madhavan-naslen-nazriya-nazim-sushin-shyam/article71673522.ece"
+      },
+      {
+        "name": "Rediff Movies",
+        "url": "https://www.rediff.com/movies/review/suriyas-scene-review-jithu-madhavan-delivers-engaging-investigative-thriller/20261106.htm"
+      }
+    ],
+    "slot": "exploit",
+    "sources": [
+      "sudhir-srinivasan",
+      "tried-and-refused",
+      "suraj-kumar-review",
+      "filmy-geeks",
+      "barbell-pitch-meetings",
+      "indian-express-reviews",
+      "the-hindu-reviews",
+      "rediff-movies"
+    ]
+  },
+  {
+    "id": "family-kirana-store-season-3",
+    "title": "Family Kirana Store (Season 3)",
+    "year": 2026,
+    "type": "series",
+    "language": "Hindi",
+    "imdb_rating": 8.4,
+    "imdb_id": "tt39632118",
+    "imdb_url": "https://www.imdb.com/title/tt39632118/",
+    "hook": "Gajju Bhaiya's neighbourhood grocery store is back for a third season, Episode 1 out today: TVF's warm small-town family sitcom.",
+    "where_to_watch": "YouTube (free, The Viral Fever channel)",
+    "trailer_url": "https://www.youtube.com/watch?v=UITiWiETSKw",
+    "poster_url": "https://m.media-amazon.com/images/M/MV5BMmU1MDFmNDgtOTc0ZC00NDQ4LWE2OTktZGViYTE4ZWRhYzg3XkEyXkFqcGc@._V1_UX600_.jpg",
+    "kid_safe": false,
+    "week": "2026-11-13",
+    "source": "TVF release (Bollywood Hungama and Jagran coverage, Nov 13). IMDb 8.4 is for the show so far; no listed reviewer has reviewed Season 3 yet.",
+    "status": "new",
+    "endorsements": [],
+    "slot": "exploit",
+    "sources": []
+  },
+  {
+    "id": "jailer-2",
+    "title": "Jailer 2",
+    "year": 2026,
+    "type": "movie",
+    "language": "Tamil (Hindi audio on Prime Video)",
+    "imdb_rating": 7.9,
+    "imdb_id": "tt33318732",
+    "imdb_url": "https://www.imdb.com/title/tt33318732/",
+    "hook": "Retired jailer Tiger Muthuvel Pandian is dragged back when an idol-smuggling gang threatens his family. Rajinikanth action-comedy with Hrithik Roshan and Mohanlal.",
+    "where_to_watch": "Prime Video (US, from Nov 12; Hindi among 5 audio languages)",
+    "trailer_url": "https://www.youtube.com/watch?v=PWuJ5-WiEgY",
+    "poster_url": "https://m.media-amazon.com/images/M/MV5BYmJiYzc1ODctZjQzZS00NzEzLWI0NDEtZGVkNjI4YzEzNGRjXkEyXkFqcGc@._V1_UX600_.jpg",
+    "kid_safe": false,
+    "week": "2026-11-13",
+    "source": "Prime Video US premiere (Variety, Filmverse). The Hindu positive; The Indian Express mixed-positive.",
+    "status": "new",
+    "endorsements": [
+      {
+        "name": "The Hindu",
+        "url": "https://www.thehindu.com/entertainment/movies/jailer-2-movie-review-superstar-rajinikanth-nelson-shivarajkumar-mohanlal-anirudh-ravichander/article71587540.ece"
+      }
+    ],
+    "slot": "exploit",
+    "sources": [
+      "the-hindu-reviews",
+      "indian-express-reviews"
+    ]
+  },
+  {
+    "id": "daayra",
+    "title": "Daayra",
+    "year": 2026,
+    "type": "movie",
+    "language": "Hindi",
+    "imdb_rating": 7.0,
+    "imdb_id": "tt32634611",
+    "imdb_url": "https://www.imdb.com/title/tt32634611/",
+    "hook": "Meghna Gulzar's cop drama: after four rape-case suspects die in a disputed encounter, a vigilance officer (Kareena Kapoor) asks if it was staged. Reviews are mixed.",
+    "where_to_watch": "Netflix (from Nov 13)",
+    "trailer_url": "https://www.youtube.com/watch?v=nb4Qb89zgmU",
+    "poster_url": "https://m.media-amazon.com/images/M/MV5BYzI4Y2Y0OGMtMTA3Mi00ZTFkLWFjZjAtNGJmMTY3NDMxZGZmXkEyXkFqcGc@._V1_UX600_.jpg",
+    "kid_safe": false,
+    "week": "2026-11-13",
+    "source": "Netflix premiere Nov 13 (Pinkvilla, Filmverse). The Hindu review is mixed; no listed source is clearly positive. Explore pick on legal/victim-side theme.",
+    "status": "new",
+    "endorsements": [],
+    "slot": "explore",
+    "sources": [
+      "the-hindu-reviews"
+    ]
+  },
+  {
+    "id": "the-hunger-games-sunrise-on-the-reaping",
+    "title": "The Hunger Games: Sunrise on the Reaping",
+    "year": 2026,
+    "type": "movie",
+    "language": "English",
+    "imdb_rating": null,
+    "imdb_id": "tt32558705",
+    "imdb_url": "https://www.imdb.com/title/tt32558705/",
+    "hook": "Preview, not yet reviewed: Haymitch Abernathy at the 50th Hunger Games (Joseph Zada, Mckenna Grace). PG-13 dystopian violence, not for a 9-year-old.",
+    "where_to_watch": "In theaters Nov 20. Advance tickets on sale; Cinemark Pacific Commons and Union Landing showtimes not listed yet (checked Nov 13).",
+    "trailer_url": "https://www.youtube.com/watch?v=lYXtL5TreOE",
+    "poster_url": "https://m.media-amazon.com/images/M/MV5BNjEzYTE2ODEtNzY5Zi00ZmVmLWEyYzEtYjdlZWU2NjcyYzMzXkEyXkFqcGc@._V1_UX600_.jpg",
+    "kid_safe": false,
+    "week": "2026-11-13",
+    "source": "Major-release preview (Lionsgate; Tom's Guide holiday guide, Nov 13). No reviews yet.",
+    "status": "new",
+    "endorsements": [],
+    "preview": true,
+    "release_date": "2026-11-20",
+    "preview_note": "Trailer buzz only; no reviews yet."
+  },
+  {
+    "id": "om-chapter-1-udhiram-the-blood-wood",
+    "title": "OM Chapter 1: Udhiram - The Blood Wood",
+    "year": 2026,
+    "type": "movie",
+    "language": "Tamil",
+    "imdb_rating": null,
+    "imdb_id": "tt34515768",
+    "imdb_url": "https://www.imdb.com/title/tt34515768/",
+    "hook": "Preview, not yet reviewed: Dhanush and Mammootty team up in Rajkumar Periasamy's action thriller, with Sai Pallavi.",
+    "where_to_watch": "In theaters Nov 20 (US and Canada release reported). Local Cinemark showtimes not listed yet (checked Nov 13).",
+    "trailer_url": "https://www.youtube.com/watch?v=aGSOpb_6kv8",
+    "trailer_lang": "Tamil (original; Hindi trailer not verified)",
+    "poster_url": "https://m.media-amazon.com/images/M/MV5BNjQ5YzNiNjYtNjEyOS00ZjcxLWJiZWQtNjlhNmYzNThlZmIyXkEyXkFqcGc@._V1_UX600_.jpg",
+    "kid_safe": false,
+    "week": "2026-11-13",
+    "source": "Major-release preview (Variety India date report; Taran Adarsh X post of Nov 11 on North India distribution). No reviews yet.",
+    "status": "new",
+    "endorsements": [],
+    "preview": true,
+    "release_date": "2026-11-20",
+    "preview_note": "Trailer and release buzz only; no reviews yet."
+  },
+  {
+    "id": "maatrubhumi",
+    "title": "Maatrubhumi",
+    "year": 2026,
+    "type": "movie",
+    "language": "Hindi",
+    "imdb_rating": null,
+    "imdb_id": "tt27610832",
+    "imdb_url": "https://www.imdb.com/title/tt27610832/",
+    "hook": "Preview, not yet reviewed: Salman Khan in a Galwan-inspired war drama. Trailer reactions are split on length and AI-looking visuals.",
+    "where_to_watch": "In theaters Dec 4 (worldwide release announced). US bookings and local showtimes not reported yet (checked Nov 13).",
+    "trailer_url": "https://www.youtube.com/watch?v=fA8-gXDoAk8",
+    "poster_url": "https://m.media-amazon.com/images/M/MV5BMjczZGRmNjEtYzI5Ni00MjdiLWE5OWUtNzRjYWZkNzQ5ODhhXkEyXkFqcGc@._V1_UX600_.jpg",
+    "kid_safe": false,
+    "week": "2026-11-13",
+    "source": "Major-release preview (Taran Adarsh X post Nov 10; NDTV Profit and India Today trailer reaction roundups). Trailer reviews from Yogi Bolta Hai, Deepak Bhurani, Suraj Kumar and Shan Prasher are reactions, not film reviews.",
+    "status": "new",
+    "endorsements": [],
+    "preview": true,
+    "release_date": "2026-12-04",
+    "preview_note": "Trailer buzz only; mixed reactions; no reviews yet."
+  },
+  {
+    "id": "avengers-doomsday",
+    "title": "Avengers: Doomsday",
+    "year": 2026,
+    "type": "movie",
+    "language": "English",
+    "imdb_rating": null,
+    "imdb_id": "tt21357150",
+    "imdb_url": "https://www.imdb.com/title/tt21357150/",
+    "hook": "Preview, not yet reviewed: the Avengers, Fantastic Four and X-Men face Doctor Doom (Robert Downey Jr.). CGI-heavy live action, PG-13.",
+    "where_to_watch": "In theaters Dec 18. Local Cinemark showtimes not verified yet (checked Nov 13).",
+    "trailer_url": "https://www.youtube.com/watch?v=irVNGjRFZGk",
+    "poster_url": "https://m.media-amazon.com/images/M/MV5BNGEwYWZkN2UtOTQ5Mi00MGQzLWEzNjYtMWMyNDBkMTkzMWNkXkEyXkFqcGc@._V1_UX600_.jpg",
+    "kid_safe": false,
+    "week": "2026-11-13",
+    "source": "Major-release preview (Marvel; Tom's Guide holiday guide, Nov 13). No reviews yet.",
+    "status": "new",
+    "endorsements": [],
+    "preview": true,
+    "release_date": "2026-12-18",
+    "preview_note": "Pre-release buzz only; no reviews yet."
+  },
+  {
+    "id": "dune-part-three",
+    "title": "Dune: Part Three",
+    "year": 2026,
+    "type": "movie",
+    "language": "English",
+    "imdb_rating": null,
+    "imdb_id": "tt31378509",
+    "imdb_url": "https://www.imdb.com/title/tt31378509/",
+    "hook": "Preview, not yet reviewed: Paul Atreides faces plots and a galaxy-wide holy war (Timothee Chalamet, Zendaya). CGI-heavy live action, PG-13.",
+    "where_to_watch": "In theaters Dec 18. Local Cinemark showtimes not verified yet (checked Nov 13).",
+    "trailer_url": "https://www.youtube.com/watch?v=uJqaGLmZpGo",
+    "poster_url": "https://m.media-amazon.com/images/M/MV5BNDhiOTAwMjktZDc0ZS00MzVmLWFkNzktOGEzZTdlNzcyNDAxXkEyXkFqcGc@._V1_UX600_.jpg",
+    "kid_safe": false,
+    "week": "2026-11-13",
+    "source": "Major-release preview (Warner Bros.; Tom's Guide holiday guide, Nov 13). No reviews yet.",
+    "status": "new",
+    "endorsements": [],
+    "preview": true,
+    "release_date": "2026-12-18",
+    "preview_note": "Pre-release buzz only; no reviews yet."
   }
 ]

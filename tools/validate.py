@@ -34,6 +34,9 @@ PICK_FIELDS = {
     "removed_reason",
     "slot",
     "sources",
+    "preview",
+    "release_date",
+    "preview_note",
 }
 SLOTS = {"exploit", "explore"}
 STATUSES = {"new", "kept", "discarded", "seen", "removed"}
@@ -149,6 +152,22 @@ def check_pick(index: int, pick: object, seen_ids: set[str]) -> None:
             if item["url"] in seen_urls:
                 error(f"{e_label}.url is duplicated")
             seen_urls.add(item["url"])
+    if "preview" in pick:
+        if pick["preview"] is not True:
+            error(f"{label}.preview must be true when present")
+        rd = pick.get("release_date")
+        try:
+            if not isinstance(rd, str) or date.fromisoformat(rd).isoformat() != rd:
+                raise ValueError
+        except ValueError:
+            error(f"{label}.release_date is required for previews (YYYY-MM-DD)")
+        if not isinstance(pick.get("preview_note"), str) or not pick["preview_note"].strip():
+            error(f"{label}.preview_note is required for previews")
+    else:
+        if "release_date" in pick or "preview_note" in pick:
+            error(f"{label}.release_date and preview_note are only for previews")
+        if pick.get("imdb_rating") is None and not pick.get("example") and pick.get("status") != "removed" and pick.get("week", "") >= "2026-11-13":
+            error(f"{label} needs an IMDb rating unless it is a labeled preview")
     if "slot" in pick and pick["slot"] not in SLOTS:
         error(f"{label}.slot must be exploit or explore")
     if "sources" in pick:

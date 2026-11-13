@@ -350,13 +350,13 @@
     return WEEK_FORMAT.format(new Date(iso + "T00:00:00Z"));
   }
 
-  function formatRating(value) {
-    if (typeof value !== "number") return "IMDb —";
+  function formatRating(value, preview) {
+    if (typeof value !== "number") return preview ? "IMDb not yet rated" : "IMDb —";
     return "IMDb " + value.toFixed(1);
   }
 
   function ratingNode(pick) {
-    var text = formatRating(pick.imdb_rating);
+    var text = formatRating(pick.imdb_rating, pick.preview);
     var href = safeHttps(pick.imdb_url);
     if (!href) return document.createTextNode(text);
     var link = document.createElement("a");
@@ -590,6 +590,7 @@
     var note = trailerNote(pick);
     if (note) body.appendChild(note);
     if (pick.kid_safe) body.appendChild(el("p", "badge", "Kid-safe"));
+    if (pick.preview && pick.release_date) body.appendChild(el("p", "placement", "Preview · releases " + formatWeek(pick.release_date)));
     if (kind === "kept") body.appendChild(el("p", "placement", "Kept"));
     if (kind === "history") body.appendChild(el("p", "placement", historyKind(pick, latestById(state.entries)[pick.id])));
     if (kind === "history" && pick.status === "removed" && pick.removed_reason) {
@@ -660,7 +661,8 @@
     history.sort(byRecent);
 
     var newest = state.picks.map(function (pick) { return pick.week; }).sort().pop() || "";
-    var thisWeek = active.filter(function (pick) { return pick.week === newest; });
+    var thisWeek = active.filter(function (pick) { return pick.week === newest && !pick.preview; });
+    var previews = active.filter(function (pick) { return pick.preview; });
     var olderWeeks = active.map(function (pick) { return pick.week; }).filter(function (week, index, all) {
       return week !== newest && all.indexOf(week) === index;
     }).sort().reverse();
@@ -670,8 +672,9 @@
 
     var sections = el("div", "sections");
     sections.appendChild(section("This Week", newest ? formatWeek(newest) : "", thisWeek, "week"));
+    if (previews.length) sections.appendChild(section("Coming Up", "Previews, not yet reviewed", previews, "week"));
     olderWeeks.forEach(function (week) {
-      var picks = active.filter(function (pick) { return pick.week === week; });
+      var picks = active.filter(function (pick) { return pick.week === week && !pick.preview; });
       sections.appendChild(section("Week of " + formatWeek(week), "", picks, "week"));
     });
     sections.appendChild(section("Kept", "", kept, "kept"));
