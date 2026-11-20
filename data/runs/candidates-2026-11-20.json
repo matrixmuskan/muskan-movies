@@ -1,0 +1,352 @@
+[
+ {
+  "id": "ene-repeat",
+  "title": "ENE Repeat",
+  "year": 2026,
+  "type": "movie",
+  "language": "Telugu",
+  "imdb_id": "tt37501891",
+  "imdb_rating": 7.4,
+  "where_to_watch": "In theaters: Cinemark Pacific Commons (Fremont) and Cinemark Union Landing (Union City), Telugu with English subtitles",
+  "genres": [
+   "comedy",
+   "drama"
+  ],
+  "themes": [
+   "study/college/coaching life"
+  ],
+  "producer": null,
+  "theater": true,
+  "hollywood": false,
+  "animated": false,
+  "kid_safe": false,
+  "endorsements": [
+   {
+    "name": "The Hindu",
+    "source_id": "the-hindu-reviews",
+    "url": "https://www.thehindu.com/entertainment/movies/ene-repeat-movie-review-tharun-bhasckers-entertaining-love-letter-to-friendship-and-cinema/article71715698.ece",
+    "verdict": "positive review",
+    "note": "Sangeetha Devi Dundoo: entertaining love letter to friendship and cinema"
+   },
+   {
+    "name": "THYVIEW",
+    "source_id": "thyview",
+    "url": "https://www.youtube.com/watch?v=OG8cKSJ7PrI",
+    "verdict": "positive review",
+    "note": "Transcript: \"I liked this movie\" (Telugu)"
+   },
+   {
+    "name": "Barbell Pitch Meetings",
+    "source_id": "barbell-pitch-meetings",
+    "url": "https://www.youtube.com/watch?v=YGk6lKq91Dc",
+    "verdict": "positive review",
+    "note": "Transcript: you will be entertained and enjoy it, go watch; some bits overdone (Telugu)"
+   }
+  ],
+  "not_counted_reviews": [
+   {
+    "name": "The Indian Express",
+    "url": "https://indianexpress.com/article/entertainment/movie-review/ene-repeat-review-vishwak-sen-gang-cant-recreate-magic-of-original-10969106/",
+    "verdict": "negative: cannot recreate the magic of the original"
+   },
+   {
+    "name": "Filmy Geeks",
+    "url": "https://www.youtube.com/watch?v=pTp6zZ6cgYM",
+    "verdict": "mixed-positive: good theatrical craft, some drawbacks"
+   }
+  ],
+  "outcome": "selected"
+ },
+ {
+  "id": "dhindora-season-2",
+  "title": "Dhindora (Season 2)",
+  "year": 2026,
+  "type": "series",
+  "language": "Hindi",
+  "imdb_id": "tt14650074",
+  "imdb_rating": 8.7,
+  "where_to_watch": "Netflix (US, all 8 episodes from Nov 20)",
+  "genres": [
+   "comedy",
+   "slice-of-life"
+  ],
+  "themes": [],
+  "producer": null,
+  "theater": false,
+  "hollywood": false,
+  "animated": false,
+  "kid_safe": false,
+  "endorsements": [
+   {
+    "name": "ABHI KA REVIEW",
+    "source_id": "abhi-ka-review",
+    "url": "https://www.youtube.com/watch?v=2TtHbOwsbN8",
+    "verdict": "positive review",
+    "note": "Transcript: 8.5/10; punchlines in every scene; heavy double-meaning jokes, no nudity"
+   },
+   {
+    "name": "Deepak Bhurani",
+    "source_id": "deepak-bhurani",
+    "url": "https://www.youtube.com/watch?v=MeSD5UsugL0",
+    "verdict": "positive review",
+    "note": "Transcript: 7.5/10; weird, loud, over the top; lots of abuse language, no adult scenes"
+   }
+  ],
+  "not_counted_reviews": [
+   {
+    "name": "Yogi Bolta Hai",
+    "url": "https://www.youtube.com/watch?v=y8ryM7bEmgc",
+    "verdict": "review exists; transcript unavailable so verdict not verified"
+   }
+  ],
+  "outcome": "selected"
+ },
+ {
+  "id": "saas-bahu-achaar-pvt-ltd",
+  "title": "Saas Bahu Achaar Pvt. Ltd.",
+  "year": 2022,
+  "type": "series",
+  "language": "Hindi",
+  "imdb_id": "tt20753964",
+  "imdb_rating": 8.2,
+  "where_to_watch": "YouTube (free, The Viral Fever channel, episodes releasing weekly)",
+  "genres": [
+   "drama",
+   "slice-of-life"
+  ],
+  "themes": [
+   "father-daughter/family warmth"
+  ],
+  "producer": "TVF",
+  "theater": false,
+  "hollywood": false,
+  "animated": false,
+  "kid_safe": false,
+  "endorsements": [
+   {
+    "name": "The Indian Express (Shubhra Gupta)",
+    "source_id": "indian-express-reviews",
+    "url": "https://indianexpress.com/article/entertainment/web-series/saas-bahu-achaar-pvt-ltd-review-a-flavourful-series-amruta-subhash-8017424/",
+    "verdict": "mixed-positive review (2022)",
+    "note": "Flavourful; performances push it when it feels dull and contrived"
+   }
+  ],
+  "not_counted_reviews": [],
+  "outcome": "selected"
+ },
+ {
+  "id": "mitronpolitan-life-in-20s",
+  "title": "MitronPolitan: Life in 20s",
+  "year": 2025,
+  "type": "series",
+  "language": "Hindi",
+  "imdb_id": "tt35288556",
+  "imdb_rating": 8.0,
+  "where_to_watch": "YouTube (free, The Screen Patti channel; new episode weekly, EP7 out Nov 20)",
+  "genres": [
+   "comedy",
+   "slice-of-life"
+  ],
+  "themes": [],
+  "producer": "TVF",
+  "theater": false,
+  "hollywood": false,
+  "animated": false,
+  "kid_safe": false,
+  "endorsements": [],
+  "not_counted_reviews": [],
+  "outcome": "selected"
+ },
+ {
+  "id": "rautu-ka-raaz",
+  "title": "Rautu Ka Raaz",
+  "year": 2024,
+  "type": "movie",
+  "language": "Hindi",
+  "imdb_id": "tt32607174",
+  "imdb_rating": 6.3,
+  "where_to_watch": "ZEE5 (US, Hindi with English subtitles)",
+  "genres": [
+   "crime",
+   "suspense/mystery"
+  ],
+  "themes": [
+   "cop/investigation",
+   "rustic/small-town (TVF, Panchayat-style)"
+  ],
+  "producer": null,
+  "theater": false,
+  "hollywood": false,
+  "animated": false,
+  "kid_safe": false,
+  "endorsements": [],
+  "not_counted_reviews": [
+   {
+    "name": "The Hindu",
+    "url": "https://www.thehindu.com/entertainment/movies/rautu-ka-raaz-movie-review-nawazuddin-siddiqui-does-the-heavy-lifting-in-this-mild-murder-mystery/article68344008.ece",
+    "verdict": "mixed: mild murder mystery, Nawazuddin does the heavy lifting"
+   }
+  ],
+  "outcome": "ranked, not selected",
+  "reason": "Ranked below the five chosen by tools/score_sources.py (lowest score, no listed-source endorsement); considered a runner-up."
+ },
+ {
+  "id": "premada-oorali",
+  "title": "Premada Oorali",
+  "year": 2026,
+  "type": "movie",
+  "language": "Kannada (Hindi dub on Prime Video in India; US audio tracks not confirmed)",
+  "imdb_id": "tt33381528",
+  "imdb_rating": 7.5,
+  "where_to_watch": "Prime Video (US listing per JustWatch; Hindi dub confirmed for India only)",
+  "genres": [
+   "drama",
+   "family/kids"
+  ],
+  "themes": [
+   "rustic/small-town (TVF, Panchayat-style)",
+   "father-daughter/family warmth"
+  ],
+  "producer": null,
+  "theater": false,
+  "hollywood": false,
+  "animated": false,
+  "kid_safe": false,
+  "endorsements": [
+   {
+    "name": "Deepak Bhurani",
+    "source_id": "deepak-bhurani",
+    "url": "https://www.youtube.com/watch?v=Ky-M22NI9rQ",
+    "verdict": "positive review",
+    "note": "Transcript: \"I liked the movie\", emotional rural father-son drama, not perfect; no vulgar scenes"
+   }
+  ],
+  "not_counted_reviews": [],
+  "outcome": "selected"
+ },
+ {
+  "title": "Aakasamlo Oka Tara",
+  "outcome": "excluded",
+  "reason": "Telugu, in theaters at Union City; strong reviews (The Hindu, Indian Express, India Today, THYVIEW) but IMDb shows no rating yet (tt33044571), so it fails the IMDb >= 6.0 rule for a reviewed pick. Re-check next week."
+ },
+ {
+  "title": "Parivarik ManuRanjan",
+  "outcome": "excluded",
+  "reason": "SonyLIV Hindi rom-com (IMDb 6.6). Rahul Desai negative, The Hindu mixed (undercooked), Indian Express \"lost opportunity\", FCG listing only. No favourable listed source."
+ },
+ {
+  "title": "Teen Tigada",
+  "outcome": "excluded",
+  "reason": "ZEE5 Hindi drama; Rahul Desai negative (television-soap aesthetic); heavy theme (unplanned pregnancy); not kid-appropriate."
+ },
+ {
+  "title": "Student of the Year: After Dark",
+  "outcome": "excluded",
+  "reason": "JioHotstar (US not available); Rahul Desai, Shan Prasher, Tried & Refused negative."
+ },
+ {
+  "title": "Blind Game",
+  "outcome": "excluded",
+  "reason": "ZEE5 thriller; Rahul Desai negative, The Hindu: swag cannot save it; only Taran Adarsh (release calendar, no vote) cheers it."
+ },
+ {
+  "title": "Campus Diaries Season 2",
+  "outcome": "excluded",
+  "reason": "Hindi college comedy, MX Player / Prime Video India only; US Prime listing says unavailable. Cannot verify US availability."
+ },
+ {
+  "title": "The Hunger Games: Sunrise on the Reaping",
+  "outcome": "excluded",
+  "reason": "Existing preview: updated on the same entry (released Nov 20), not a new pick; PG-13 and lukewarm reviews."
+ },
+ {
+  "title": "O.M: Operation Mole (OM Chapter 1: Udhiram)",
+  "outcome": "excluded",
+  "reason": "Existing preview: updated on the same entry (released Nov 20); IMDb not yet rated; reviews mixed. Not a new pick."
+ },
+ {
+  "title": "Godzilla Minus Zero",
+  "outcome": "excluded",
+  "reason": "Rated R, monster violence; Hollywood; not 9-year-old safe."
+ },
+ {
+  "title": "How to Rob a Bank",
+  "outcome": "excluded",
+  "reason": "Rated R heist; Indian Express: flashy but forgettable."
+ },
+ {
+  "title": "I Play Rocky",
+  "outcome": "excluded",
+  "reason": "Hollywood PG-13 (IMDb 8.1; The Hindu, Indian Express positive) but not conservatively appropriate for a 9-year-old (boxing-film themes unverified) and Hollywood must be feel-good and kid-safe; skipped."
+ },
+ {
+  "title": "The Cat in the Hat",
+  "outcome": "excluded",
+  "reason": "Animated (PG); no cartoons unless Inside Out-level."
+ },
+ {
+  "title": "Ebenezer / Ghost Soldier / Wildwood / Street Fighter / Clayface",
+  "outcome": "excluded",
+  "reason": "Hollywood titles in local theaters; PG-13 or R, no listed reviewer endorsement, not kid-safe or not feel-good."
+ },
+ {
+  "title": "Bachelor Party D'eux",
+  "outcome": "excluded",
+  "reason": "Malayalam sequel; The Hindu and Indian Express: forgettable."
+ },
+ {
+  "title": "Sathyavan Savithri",
+  "outcome": "excluded",
+  "reason": "Tamil courtroom drama at Union City; The Hindu: contrived, tries too hard."
+ },
+ {
+  "title": "Anbil Avan",
+  "outcome": "excluded",
+  "reason": "SonyLIV Tamil romantic thriller with Hindi audio; IMDb 9.0 from about 2.6K votes looks inflated; Koimoi and Cinema Express negative; no listed-source endorsement."
+ },
+ {
+  "title": "Haiku / 418",
+  "outcome": "excluded",
+  "reason": "Netflix Tamil/Kannada titles with Hindi audio (Deepak Bhurani reviewed); romance and horror-thriller, weak fit, no clear endorsement verified."
+ },
+ {
+  "title": "Aadi Anant",
+  "outcome": "excluded",
+  "reason": "Marathi family film (Yogi Bolta Hai 4/5), theatrical in India only; no US availability found."
+ },
+ {
+  "title": "Cult (2026) / Lenin Pandiyan",
+  "outcome": "excluded",
+  "reason": "IMDb 3.3 and 6.2 with no listed-source endorsement; Cult rated below 6.0."
+ },
+ {
+  "title": "Kiku Chiranjeevi / Ali Baba Aur 40 Bhoot / Mr & Mrs Office",
+  "outcome": "excluded",
+  "reason": "JioHotstar-only (US availability not verified); Ali Baba is horror-comedy at IMDb 6.4."
+ },
+ {
+  "title": "Percy Jackson and the Olympians S3",
+  "outcome": "excluded",
+  "reason": "JioHotstar, English fantasy series; US JioHotstar not verified; Hollywood."
+ },
+ {
+  "title": "Rautu Ka Raaz",
+  "outcome": "excluded",
+  "reason": "Older ZEE5 Hindi mystery (IMDb 6.3, US ZEE5 verified); The Hindu only mixed. Runner-up, ranked below the five."
+ },
+ {
+  "title": "Gondhal",
+  "outcome": "excluded",
+  "reason": "Marathi; not available in the US (excluded last week too)."
+ },
+ {
+  "title": "Saas Bahu Achaar S2",
+  "outcome": "excluded",
+  "reason": "No Season 2 exists: only Season 1 is on YouTube; selected as an older hidden gem."
+ },
+ {
+  "title": "Yeh Prem Mol Liya",
+  "outcome": "excluded",
+  "reason": "Unreleased (Nov 27): added as a labeled preview, not a pick."
+ }
+]

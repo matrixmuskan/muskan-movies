@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-13",
+  "updated": "2026-11-20",
   "method": "Beta-Bernoulli bandit per source, Thompson sampling for exploration; state rebuilt from the prior on every update",
   "prior": {
     "alpha": 2.0,
@@ -36,19 +36,19 @@
       "flavor": "critic",
       "kind": "critic",
       "status": "established",
-      "alpha": 3.0,
-      "beta": 2.0,
-      "n_obs": 1,
+      "alpha": 3.5,
+      "beta": 2.5,
+      "n_obs": 2,
       "surfaced": 9,
-      "rated": 1,
-      "stars_sum": 4,
-      "stars_count": 1,
+      "rated": 2,
+      "stars_sum": 7,
+      "stars_count": 2,
       "keeps": 0,
       "discards": 0,
-      "successes": 1.0,
-      "failures": 0.0,
-      "mean": 0.6,
-      "avg_stars": 4.0
+      "successes": 1.5,
+      "failures": 0.5,
+      "mean": 0.5833,
+      "avg_stars": 3.5
     },
     "fcg": {
       "name": "Film Critics Guild Reviews (FCG)",
@@ -96,7 +96,7 @@
       "alpha": 2.0,
       "beta": 2.0,
       "n_obs": 0,
-      "surfaced": 2,
+      "surfaced": 3,
       "rated": 0,
       "stars_sum": 0,
       "stars_count": 0,
@@ -324,7 +324,7 @@
       "alpha": 2.0,
       "beta": 2.0,
       "n_obs": 0,
-      "surfaced": 0,
+      "surfaced": 2,
       "rated": 0,
       "stars_sum": 0,
       "stars_count": 0,
@@ -400,7 +400,7 @@
       "alpha": 2.0,
       "beta": 2.0,
       "n_obs": 0,
-      "surfaced": 1,
+      "surfaced": 2,
       "rated": 0,
       "stars_sum": 0,
       "stars_count": 0,
@@ -419,7 +419,7 @@
       "alpha": 2.0,
       "beta": 2.0,
       "n_obs": 0,
-      "surfaced": 0,
+      "surfaced": 1,
       "rated": 0,
       "stars_sum": 0,
       "stars_count": 0,
@@ -514,7 +514,7 @@
       "alpha": 2.0,
       "beta": 2.0,
       "n_obs": 0,
-      "surfaced": 7,
+      "surfaced": 8,
       "rated": 0,
       "stars_sum": 0,
       "stars_count": 0,
@@ -552,7 +552,7 @@
       "alpha": 4.0,
       "beta": 2.0,
       "n_obs": 2,
-      "surfaced": 9,
+      "surfaced": 10,
       "rated": 2,
       "stars_sum": 8,
       "stars_count": 2,
@@ -568,42 +568,42 @@
       "flavor": "critic",
       "kind": "critic",
       "status": "established",
-      "alpha": 2.0,
-      "beta": 2.0,
-      "n_obs": 0,
+      "alpha": 2.5,
+      "beta": 2.5,
+      "n_obs": 1,
       "surfaced": 2,
-      "rated": 0,
-      "stars_sum": 0,
-      "stars_count": 0,
+      "rated": 1,
+      "stars_sum": 3,
+      "stars_count": 1,
       "keeps": 0,
       "discards": 0,
-      "successes": 0.0,
-      "failures": 0.0,
+      "successes": 0.5,
+      "failures": 0.5,
       "mean": 0.5,
-      "avg_stars": null
+      "avg_stars": 3.0
     }
   },
   "flavors": {
     "critic": {
-      "alpha": 3.0,
-      "beta": 2.0,
-      "n_obs": 1,
-      "surfaced": 14,
-      "rated": 1,
-      "stars_sum": 4,
-      "stars_count": 1,
+      "alpha": 3.5,
+      "beta": 2.5,
+      "n_obs": 2,
+      "surfaced": 15,
+      "rated": 2,
+      "stars_sum": 7,
+      "stars_count": 2,
       "keeps": 0,
       "discards": 0,
-      "successes": 1.0,
-      "failures": 0.0,
-      "mean": 0.6,
-      "avg_stars": 4.0
+      "successes": 1.5,
+      "failures": 0.5,
+      "mean": 0.5833,
+      "avg_stars": 3.5
     },
     "hindi-youtube": {
       "alpha": 2.0,
       "beta": 2.0,
       "n_obs": 0,
-      "surfaced": 4,
+      "surfaced": 5,
       "rated": 0,
       "stars_sum": 0,
       "stars_count": 0,
@@ -618,7 +618,7 @@
       "alpha": 2.0,
       "beta": 2.0,
       "n_obs": 0,
-      "surfaced": 0,
+      "surfaced": 2,
       "rated": 0,
       "stars_sum": 0,
       "stars_count": 0,
@@ -648,7 +648,7 @@
       "alpha": 4.0,
       "beta": 2.0,
       "n_obs": 2,
-      "surfaced": 10,
+      "surfaced": 11,
       "rated": 2,
       "stars_sum": 8,
       "stars_count": 2,
@@ -824,8 +824,12 @@
       "votes": {},
       "votes_recorded": "backfill (prior trust 0.50)",
       "score": null,
-      "feedback": null,
-      "reward": null
+      "feedback": {
+        "action": "discard",
+        "rating": null,
+        "timestamp": "2026-11-14T01:32:53.786Z"
+      },
+      "reward": 0.0
     },
     {
       "id": "matargashti",
@@ -931,8 +935,12 @@
       },
       "votes_recorded": "backfill (prior trust 0.50)",
       "score": null,
-      "feedback": null,
-      "reward": null
+      "feedback": {
+        "action": "rate",
+        "rating": 3,
+        "timestamp": "2026-11-14T01:33:03.605Z"
+      },
+      "reward": 0.5
     },
     {
       "id": "meethe-mein-kya-hai",
@@ -1235,6 +1243,94 @@
       "id": "dune-part-three",
       "week": "2026-11-13",
       "slot": "exploit",
+      "sources": [],
+      "votes": {},
+      "votes_recorded": "backfill (prior trust 0.50)",
+      "score": null,
+      "feedback": null,
+      "reward": null
+    },
+    {
+      "id": "ene-repeat",
+      "week": "2026-11-20",
+      "slot": "exploit",
+      "sources": [
+        "the-hindu-reviews",
+        "thyview",
+        "barbell-pitch-meetings"
+      ],
+      "votes": {
+        "the-hindu-reviews": 0.6667,
+        "thyview": 0.25,
+        "barbell-pitch-meetings": 0.125
+      },
+      "votes_recorded": "rank 2026-11-20",
+      "score": 0.6512,
+      "feedback": null,
+      "reward": null
+    },
+    {
+      "id": "dhindora-season-2",
+      "week": "2026-11-20",
+      "slot": "exploit",
+      "sources": [
+        "abhi-ka-review",
+        "deepak-bhurani"
+      ],
+      "votes": {
+        "abhi-ka-review": 0.5,
+        "deepak-bhurani": 0.5
+      },
+      "votes_recorded": "rank 2026-11-20",
+      "score": 0.7896,
+      "feedback": null,
+      "reward": null
+    },
+    {
+      "id": "saas-bahu-achaar-pvt-ltd",
+      "week": "2026-11-20",
+      "slot": "exploit",
+      "sources": [
+        "indian-express-reviews"
+      ],
+      "votes": {
+        "indian-express-reviews": 0.5
+      },
+      "votes_recorded": "rank 2026-11-20",
+      "score": 0.631,
+      "feedback": null,
+      "reward": null
+    },
+    {
+      "id": "premada-oorali",
+      "week": "2026-11-20",
+      "slot": "explore",
+      "sources": [
+        "deepak-bhurani"
+      ],
+      "votes": {
+        "deepak-bhurani": 0.5
+      },
+      "votes_recorded": "rank 2026-11-20",
+      "score": 0.5459,
+      "feedback": null,
+      "reward": null
+    },
+    {
+      "id": "mitronpolitan-life-in-20s",
+      "week": "2026-11-20",
+      "slot": "exploit",
+      "sources": [],
+      "votes": {},
+      "votes_recorded": "rank 2026-11-20",
+      "score": 0.4469,
+      "feedback": null,
+      "reward": null
+    },
+    {
+      "id": "yeh-prem-mol-liya",
+      "week": "2026-11-20",
+      "slot": null,
       "sources": [],
       "votes": {},
       "votes_recorded": "backfill (prior trust 0.50)",

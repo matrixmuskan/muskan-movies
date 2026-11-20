@@ -1,0 +1,180 @@
+{
+  "week": "2026-11-20",
+  "version": 1,
+  "discovery_started": "2026-11-20T13:55:00-08:00",
+  "built_by": "weekly build (additive; build.py not used)",
+  "sources_checked": {
+    "youtube_rss_7d": "16 of the 17 YouTube channels mapped from data/sources.json (RSS; no uploads in the window for filmy-reminder; sudhir-srinivasan channel returned 4 interviews). Transcripts via youtube_transcript_api for the reviews cited.",
+    "x_public_posts": [
+      "rahul-desai (7 posts; reviews of Parivarik ManuRanjan, SOTY After Dark, Blind Game, Teen Tigada)",
+      "sudhir-srinivasan (12 posts; interviews and cricket commentary, no film reviews)",
+      "taran-adarsh (24 posts; release calendar and box office, no vote)",
+      "deepak-bhurani (X returned nothing)",
+      "shubhra-gupta (handle id not resolved; read her reviews via Indian Express RSS)"
+    ],
+    "review_site_rss": [
+      "indian-express-reviews",
+      "the-hindu-reviews",
+      "rediff-movies (news only, no reviews this week)",
+      "fcg (fcgreviews.com home page)",
+      "thr-india-reviews (/reviews HTML)"
+    ],
+    "local_theaters": [
+      "Cinemark Pacific Commons Fremont (bigscreen.com, Nov 20)",
+      "Cinemark Union Landing Union City (bigscreen.com, Nov 20)"
+    ],
+    "imdb": "r.jina.ai proxy of IMDb title pages and the IMDb suggestion API",
+    "availability": "web search for US OTT availability; Netflix newsroom; JustWatch US; Times of India, Couch Menu OTT lists"
+  },
+  "coverage_gaps": [
+    "Instagram sources skipped by design (the-indian-web-series, india-movie-dekho, karan-mirchandani)",
+    "X reads not run for baradwaj-rangan, sucharita-tyagi, abhi-ka-review, thyview, filmxpro, india-movie-dekho (YouTube/RSS covered them); deepak-bhurani X returned nothing; shubhra-gupta X id not resolved",
+    "Yogi Bolta Hai Dhindora 2 review transcript unavailable, so not counted as an endorsement",
+    "Suraj Kumar Review transcripts are in Bengali and were not scored",
+    "Fremont/Union City showtimes for Dec titles (Maatrubhumi, Avengers, Dune) not yet listed; BigScreen window is 7 days",
+    "factcityindia, filmxpro, filmy-reminder listicles read by title only",
+    "thr-india-reviews: THR India video for OM and ENE Repeat reviews seen by title only"
+  ],
+  "candidates_file": "data/runs/candidates-2026-11-20.json",
+  "selected": [
+    {
+      "id": "dhindora-season-2",
+      "slot": "exploit",
+      "platform": "Netflix",
+      "score": 0.7896,
+      "sources": [
+        "abhi-ka-review",
+        "deepak-bhurani"
+      ]
+    },
+    {
+      "id": "ene-repeat",
+      "slot": "exploit",
+      "platform": "theaters (Fremont, Union City)",
+      "score": 0.6512,
+      "sources": [
+        "the-hindu-reviews",
+        "thyview",
+        "barbell-pitch-meetings"
+      ]
+    },
+    {
+      "id": "saas-bahu-achaar-pvt-ltd",
+      "slot": "exploit",
+      "platform": "YouTube",
+      "score": 0.631,
+      "sources": [
+        "indian-express-reviews"
+      ]
+    },
+    {
+      "id": "premada-oorali",
+      "slot": "explore",
+      "platform": "Prime Video",
+      "score": 0.5459,
+      "sources": [
+        "deepak-bhurani"
+      ]
+    },
+    {
+      "id": "mitronpolitan-life-in-20s",
+      "slot": "exploit",
+      "platform": "YouTube",
+      "score": 0.4469,
+      "sources": []
+    }
+  ],
+  "mix": {
+    "off_netflix_prime": 3,
+    "netflix_prime": 2,
+    "hollywood": 0,
+    "exploit": 4,
+    "explore": 1
+  },
+  "ranking_tool_note": "tools/score_sources.py rank selected the five; ENE Repeat is exploit per the tool (explore went to Premada Oorali via the newer source deepak-bhurani). Manual rules applied outside the tool: Hollywood kid-safe, US availability, listed-source endorsement checks, and exclusion of unrated reviewed titles.",
+  "previews": {
+    "updated": [
+      "the-hunger-games-sunrise-on-the-reaping (released; IMDb 7.7)",
+      "om-chapter-1-udhiram-the-blood-wood (released; IMDb not yet rated; same film as O.M: Operation Mole)",
+      "maatrubhumi",
+      "avengers-doomsday",
+      "dune-part-three"
+    ],
+    "added": [
+      "yeh-prem-mol-liya (Nov 27)"
+    ],
+    "history_file": "data/preview-history.json (version 2 entries; version 1 marked superseded_by 2)"
+  },
+  "older_picks_recheck": {
+    "removals": [
+      {
+        "id": "daayra",
+        "imdb_before": 7.0,
+        "imdb_now": 6.5,
+        "reason": "IMDb fell 0.5 in a week and critics remain mixed; audience reaction on X is positive. Marked removed, entry kept."
+      }
+    ],
+    "imdb_drift_updated": {
+      "udta-teer": [
+        6.8,
+        6.7
+      ],
+      "baththa": [
+        8.7,
+        8.5
+      ],
+      "last-man-in-tower": [
+        7.5,
+        7.7
+      ],
+      "matargashti": [
+        7.5,
+        7.4
+      ],
+      "sumo-didi": [
+        7.6,
+        7.5
+      ],
+      "mirzapur-the-movie": [
+        7.3,
+        7.2
+      ],
+      "ramayana-part-1": [
+        8.3,
+        8.2
+      ],
+      "scene-2026": [
+        8.2,
+        8.1
+      ],
+      "jailer-2": [
+        7.9,
+        7.7
+      ]
+    },
+    "watch": "Babita Singh Reporting is at IMDb 6.2, close to the 6.0 floor.",
+    "note": "Rated and kept titles are never removed; Hunkkaar: The Roar (3 stars) and others with feedback were not touched."
+  },
+  "feedback": {
+    "files_read": 14,
+    "newest": "2026-11-14T01:33:03Z (Nov 13, 5:33 PM PT)",
+    "new_since_last_build": 2,
+    "items": [
+      "very-parivarik discard",
+      "hunkkaar-the-roar rate 3"
+    ],
+    "sources_with_feedback": 3,
+    "insufficient_for_trust": true
+  },
+  "source_trust_top3": [
+    "the-hindu-reviews 0.67 Beta(4,2)",
+    "rahul-desai 0.58 Beta(3.5,2.5)",
+    "thr-india-reviews 0.50 Beta(2.5,2.5)"
+  ],
+  "changes": [
+    "Appended 5 picks and 1 preview to data/picks.json (earlier weeks untouched); updated 5 existing previews in place with version history in data/preview-history.json",
+    "Marked Daayra removed (downtrend); refreshed IMDb drift on 9 unacted picks",
+    "Rebuilt data/source-scores.json (tools/score_sources.py update and rank --record)",
+    "Updated data/taste-profile.json and data/ratings-log.json with the two new feedback items; added their notes to tools/build_ratings_log.py"
+  ]
+}
