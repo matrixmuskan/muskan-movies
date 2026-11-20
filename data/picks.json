@@ -5,7 +5,7 @@
     "year": 2026,
     "type": "movie",
     "language": "Hindi",
-    "imdb_rating": 6.8,
+    "imdb_rating": 6.7,
     "imdb_id": "tt31806773",
     "imdb_url": "https://www.imdb.com/title/tt31806773/",
     "hook": "Amnesiac Pakistani mole wakes up convinced he's India's most patriotic spy - Ayushmann spy comedy.",
@@ -51,7 +51,7 @@
     "year": 2026,
     "type": "movie",
     "language": "Tamil (Hindi dub available)",
-    "imdb_rating": 8.7,
+    "imdb_rating": 8.5,
     "imdb_id": "tt44090278",
     "imdb_url": "https://www.imdb.com/title/tt44090278/",
     "hook": "Vijay Sethupathi in a funny, emotional crowd-pleaser that switches tone like a pro.",
@@ -104,7 +104,7 @@
     "year": 2026,
     "type": "movie",
     "language": "Hindi",
-    "imdb_rating": 7.5,
+    "imdb_rating": 7.7,
     "imdb_id": "tt36267730",
     "imdb_url": "https://www.imdb.com/title/tt36267730/",
     "hook": "Manoj Bajpayee is the one flat-owner refusing a builder's buyout - a middle-class standoff.",
@@ -288,7 +288,7 @@
     "year": 2026,
     "type": "series",
     "language": "Hindi",
-    "imdb_rating": 7.5,
+    "imdb_rating": 7.4,
     "imdb_id": "tt49702110",
     "imdb_url": "https://www.imdb.com/title/tt49702110/",
     "hook": "An overprotective dad tries to sabotage his teen daughter's love life - warm father-daughter comedy.",
@@ -316,7 +316,7 @@
     "year": 2023,
     "type": "movie",
     "language": "Hindi",
-    "imdb_rating": 7.6,
+    "imdb_rating": 7.5,
     "imdb_id": "tt24226306",
     "imdb_url": "https://www.imdb.com/title/tt24226306/",
     "hook": "True story of India's first female sumo wrestler turning her weight into her weapon.",
@@ -631,7 +631,7 @@
     "year": 2026,
     "type": "movie",
     "language": "Hindi",
-    "imdb_rating": 7.3,
+    "imdb_rating": 7.2,
     "imdb_id": "tt34339725",
     "imdb_url": "https://www.imdb.com/title/tt34339725/",
     "hook": "Excel's big-screen Mirzapur: the fight for the throne flares up again with old enemies back.",
@@ -810,7 +810,7 @@
     "year": 2026,
     "type": "movie",
     "language": "Hindi",
-    "imdb_rating": 8.3,
+    "imdb_rating": 8.2,
     "imdb_id": "tt27988879",
     "imdb_url": "https://www.imdb.com/title/tt27988879/",
     "hook": "Nitesh Tiwari's Part 1 epic: Ranbir Kapoor as Ram, Yash as Ravan, Sai Pallavi as Sita. CGI-heavy live action, PG-13; most listed reviewers cheer the scale.",
@@ -878,7 +878,7 @@
     "year": 2026,
     "type": "movie",
     "language": "Tamil (Hindi dub expected on Netflix)",
-    "imdb_rating": 8.2,
+    "imdb_rating": 8.1,
     "imdb_id": "tt38192494",
     "imdb_url": "https://www.imdb.com/title/tt38192494/",
     "hook": "Suriya laughs at his own star image in Jithu Madhavan's (Aavesham) wild dark-comedy investigative thriller, with Nazriya Nazim and Naslen.",
@@ -962,7 +962,7 @@
     "year": 2026,
     "type": "movie",
     "language": "Tamil (Hindi audio on Prime Video)",
-    "imdb_rating": 7.9,
+    "imdb_rating": 7.7,
     "imdb_id": "tt33318732",
     "imdb_url": "https://www.imdb.com/title/tt33318732/",
     "hook": "Retired jailer Tiger Muthuvel Pandian is dragged back when an idol-smuggling gang threatens his family. Rajinikanth action-comedy with Hrithik Roshan and Mohanlal.",
@@ -991,7 +991,7 @@
     "year": 2026,
     "type": "movie",
     "language": "Hindi",
-    "imdb_rating": 7.0,
+    "imdb_rating": 6.5,
     "imdb_id": "tt32634611",
     "imdb_url": "https://www.imdb.com/title/tt32634611/",
     "hook": "Meghna Gulzar's cop drama: after four rape-case suspects die in a disputed encounter, a vigilance officer (Kareena Kapoor) asks if it was staged. Reviews are mixed.",
@@ -1001,12 +1001,13 @@
     "kid_safe": false,
     "week": "2026-11-13",
     "source": "Netflix premiere Nov 13 (Pinkvilla, Filmverse). The Hindu review is mixed; no listed source is clearly positive. Explore pick on legal/victim-side theme.",
-    "status": "new",
+    "status": "removed",
     "endorsements": [],
     "slot": "explore",
     "sources": [
       "the-hindu-reviews"
-    ]
+    ],
+    "removed_reason": "Downtrending: IMDb fell from 7.0 to 6.5 in a week and critics stay mixed (The Hindu mixed; no listed reviewer is positive)."
   },
   {
     "id": "the-hunger-games-sunrise-on-the-reaping",
@@ -1014,44 +1015,44 @@
     "year": 2026,
     "type": "movie",
     "language": "English",
-    "imdb_rating": null,
+    "imdb_rating": 7.7,
     "imdb_id": "tt32558705",
     "imdb_url": "https://www.imdb.com/title/tt32558705/",
-    "hook": "Preview, not yet reviewed: Haymitch Abernathy at the 50th Hunger Games (Joseph Zada, Mckenna Grace). PG-13 dystopian violence, not for a 9-year-old.",
-    "where_to_watch": "In theaters Nov 20. Advance tickets on sale; Cinemark Pacific Commons and Union Landing showtimes not listed yet (checked Nov 13).",
+    "hook": "Released today: Haymitch's 50th Hunger Games (Joseph Zada). Early reviews are lukewarm (Indian Express: snoozefest; The Hindu: familiar). PG-13 violence, not for a 9-year-old.",
+    "where_to_watch": "In theaters now: Cinemark Pacific Commons (Fremont) and Cinemark Union Landing (Union City), many shows today incl. 3D, XD and D-BOX (BigScreen, Nov 20)",
     "trailer_url": "https://www.youtube.com/watch?v=lYXtL5TreOE",
     "poster_url": "https://m.media-amazon.com/images/M/MV5BNjEzYTE2ODEtNzY5Zi00ZmVmLWEyYzEtYjdlZWU2NjcyYzMzXkEyXkFqcGc@._V1_UX600_.jpg",
     "kid_safe": false,
     "week": "2026-11-13",
-    "source": "Major-release preview (Lionsgate; Tom's Guide holiday guide, Nov 13). No reviews yet.",
+    "source": "Update v2 (Nov 20): released; IMDb 7.7 from about 7.5K votes; reviews from The Indian Express (Shubhra Gupta) and The Hindu are lukewarm. Earlier v1: Major-release preview (Lionsgate; Tom's Guide holiday guide, Nov 13).",
     "status": "new",
     "endorsements": [],
     "preview": true,
     "release_date": "2026-11-20",
-    "preview_note": "Trailer buzz only; no reviews yet."
+    "preview_note": "Update Nov 20: released today; IMDb 7.7; reviews lukewarm; local showtimes confirmed. Kept as an update of the Nov 13 preview, not a new pick."
   },
   {
     "id": "om-chapter-1-udhiram-the-blood-wood",
-    "title": "OM Chapter 1: Udhiram - The Blood Wood",
+    "title": "O.M: Operation Mole (OM Chapter 1: Udhiram)",
     "year": 2026,
     "type": "movie",
-    "language": "Tamil",
+    "language": "Tamil (Hindi trailer and Hindi-dub reviews exist; local shows are Tamil and Telugu)",
     "imdb_rating": null,
     "imdb_id": "tt34515768",
     "imdb_url": "https://www.imdb.com/title/tt34515768/",
-    "hook": "Preview, not yet reviewed: Dhanush and Mammootty team up in Rajkumar Periasamy's action thriller, with Sai Pallavi.",
-    "where_to_watch": "In theaters Nov 20 (US and Canada release reported). Local Cinemark showtimes not listed yet (checked Nov 13).",
-    "trailer_url": "https://www.youtube.com/watch?v=aGSOpb_6kv8",
-    "trailer_lang": "Tamil (original; Hindi trailer not verified)",
+    "hook": "Released today: Dhanush goes undercover against a red-sanders smuggling ring, Sai Pallavi leads the task force, Mammootty is the smuggler. Reviews are mixed. Not for a 9-year-old.",
+    "where_to_watch": "In theaters now: Cinemark Pacific Commons (Fremont, Tamil) and Cinemark Union Landing (Union City, Tamil and Telugu), English subtitles; no Hindi shows listed locally",
+    "trailer_url": "https://www.youtube.com/watch?v=6ov8KjUENv0",
+    "trailer_lang": "Hindi",
     "poster_url": "https://m.media-amazon.com/images/M/MV5BNjQ5YzNiNjYtNjEyOS00ZjcxLWJiZWQtNjlhNmYzNThlZmIyXkEyXkFqcGc@._V1_UX600_.jpg",
     "kid_safe": false,
     "week": "2026-11-13",
-    "source": "Major-release preview (Variety India date report; Taran Adarsh X post of Nov 11 on North India distribution). No reviews yet.",
+    "source": "Update v2 (Nov 20): same film as IMDb tt34515768 (IMDb title O.M: Operation Mole). Mixed: ABHI KA REVIEW 6/10 (Hindi dub), The Hindu: bloated, convenient action thriller where Dhanush and Sai Pallavi score. IMDb not yet rated. Earlier v1: trailer buzz.",
     "status": "new",
     "endorsements": [],
     "preview": true,
     "release_date": "2026-11-20",
-    "preview_note": "Trailer and release buzz only; no reviews yet."
+    "preview_note": "Update Nov 20: released today; IMDb not yet rated; reviews mixed; local showtimes confirmed. Update of the Nov 13 preview, not a new pick."
   },
   {
     "id": "maatrubhumi",
@@ -1063,17 +1064,17 @@
     "imdb_id": "tt27610832",
     "imdb_url": "https://www.imdb.com/title/tt27610832/",
     "hook": "Preview, not yet reviewed: Salman Khan in a Galwan-inspired war drama. Trailer reactions are split on length and AI-looking visuals.",
-    "where_to_watch": "In theaters Dec 4 (worldwide release announced). US bookings and local showtimes not reported yet (checked Nov 13).",
+    "where_to_watch": "In theaters Dec 4 (limited US release, Fandango listing; Cinemark shows reported in some US cities). Fremont and Union City showtimes not listed yet (checked Nov 20).",
     "trailer_url": "https://www.youtube.com/watch?v=fA8-gXDoAk8",
     "poster_url": "https://m.media-amazon.com/images/M/MV5BMjczZGRmNjEtYzI5Ni00MjdiLWE5OWUtNzRjYWZkNzQ5ODhhXkEyXkFqcGc@._V1_UX600_.jpg",
     "kid_safe": false,
     "week": "2026-11-13",
-    "source": "Major-release preview (Taran Adarsh X post Nov 10; NDTV Profit and India Today trailer reaction roundups). Trailer reviews from Yogi Bolta Hai, Deepak Bhurani, Suraj Kumar and Shan Prasher are reactions, not film reviews.",
+    "source": "Update v2 (Nov 20): trailer reactions mixed (Variety India: stirring plea for peace; X users criticise VFX and alleged AI visuals, Times Now). Salman Khan hit back at critics (Indian Express, Nov 20). Earlier v1: Nov 13 preview.",
     "status": "new",
     "endorsements": [],
     "preview": true,
     "release_date": "2026-12-04",
-    "preview_note": "Trailer buzz only; mixed reactions; no reviews yet."
+    "preview_note": "Update Nov 20: trailer reactions mixed, no reviews or rating yet; US ticketing listed."
   },
   {
     "id": "avengers-doomsday",
@@ -1085,7 +1086,7 @@
     "imdb_id": "tt21357150",
     "imdb_url": "https://www.imdb.com/title/tt21357150/",
     "hook": "Preview, not yet reviewed: the Avengers, Fantastic Four and X-Men face Doctor Doom (Robert Downey Jr.). CGI-heavy live action, PG-13.",
-    "where_to_watch": "In theaters Dec 18. Local Cinemark showtimes not verified yet (checked Nov 13).",
+    "where_to_watch": "In theaters Dec 18. US tickets on sale at Cinemark and Fandango since August; Fremont and Union City showtimes not verified yet (checked Nov 20).",
     "trailer_url": "https://www.youtube.com/watch?v=irVNGjRFZGk",
     "poster_url": "https://m.media-amazon.com/images/M/MV5BNGEwYWZkN2UtOTQ5Mi00MGQzLWEzNjYtMWMyNDBkMTkzMWNkXkEyXkFqcGc@._V1_UX600_.jpg",
     "kid_safe": false,
@@ -1095,7 +1096,7 @@
     "endorsements": [],
     "preview": true,
     "release_date": "2026-12-18",
-    "preview_note": "Pre-release buzz only; no reviews yet."
+    "preview_note": "Update Nov 20: not yet rated; no reviews; US tickets on sale."
   },
   {
     "id": "dune-part-three",
@@ -1107,7 +1108,7 @@
     "imdb_id": "tt31378509",
     "imdb_url": "https://www.imdb.com/title/tt31378509/",
     "hook": "Preview, not yet reviewed: Paul Atreides faces plots and a galaxy-wide holy war (Timothee Chalamet, Zendaya). CGI-heavy live action, PG-13.",
-    "where_to_watch": "In theaters Dec 18. Local Cinemark showtimes not verified yet (checked Nov 13).",
+    "where_to_watch": "In theaters Dec 18. Cinemark XD and IMAX premium tickets on sale since August; Fremont and Union City showtimes not verified yet (checked Nov 20).",
     "trailer_url": "https://www.youtube.com/watch?v=uJqaGLmZpGo",
     "poster_url": "https://m.media-amazon.com/images/M/MV5BNDhiOTAwMjktZDc0ZS00MzVmLWFkNzktOGEzZTdlNzcyNDAxXkEyXkFqcGc@._V1_UX600_.jpg",
     "kid_safe": false,
@@ -1117,6 +1118,178 @@
     "endorsements": [],
     "preview": true,
     "release_date": "2026-12-18",
-    "preview_note": "Pre-release buzz only; no reviews yet."
+    "preview_note": "Update Nov 20: not yet rated; no reviews; Cinemark premium-format tickets on sale."
+  },
+  {
+    "id": "ene-repeat",
+    "title": "ENE Repeat",
+    "year": 2026,
+    "type": "movie",
+    "language": "Telugu",
+    "imdb_rating": 7.4,
+    "imdb_id": "tt37501891",
+    "imdb_url": "https://www.imdb.com/title/tt37501891/",
+    "hook": "Eight years on, the Ee Nagaraniki Emaindi gang (Vishwak Sen and friends) try to make a survival film: a funny, self-aware Telugu friendship comedy. Reviews are split.",
+    "where_to_watch": "In theaters: Cinemark Pacific Commons (Fremont) and Cinemark Union Landing (Union City), Telugu with English subtitles",
+    "trailer_url": "https://www.youtube.com/watch?v=TXJrO0Lt2Q0",
+    "trailer_lang": "Telugu",
+    "poster_url": "https://m.media-amazon.com/images/M/MV5BNGNiNGM0OTYtYmRjZC00MDhmLTg3Y2QtZmIxOGUxNjIzY2I5XkEyXkFqcGc@._V1_UX600_.jpg",
+    "kid_safe": false,
+    "week": "2026-11-20",
+    "source": "Local theater listing (BigScreen, Nov 20) and reviews: The Hindu, THYVIEW and Barbell Pitch Meetings like it; The Indian Express is negative and Filmy Geeks mixed. Explore pick from newer Telugu YouTube sources. No Hindi trailer or Hindi shows found.",
+    "status": "new",
+    "endorsements": [
+      {
+        "name": "The Hindu",
+        "url": "https://www.thehindu.com/entertainment/movies/ene-repeat-movie-review-tharun-bhasckers-entertaining-love-letter-to-friendship-and-cinema/article71715698.ece"
+      },
+      {
+        "name": "THYVIEW",
+        "url": "https://www.youtube.com/watch?v=OG8cKSJ7PrI"
+      },
+      {
+        "name": "Barbell Pitch Meetings",
+        "url": "https://www.youtube.com/watch?v=YGk6lKq91Dc"
+      }
+    ],
+    "slot": "exploit",
+    "sources": [
+      "the-hindu-reviews",
+      "thyview",
+      "barbell-pitch-meetings"
+    ]
+  },
+  {
+    "id": "dhindora-season-2",
+    "title": "Dhindora (Season 2)",
+    "year": 2026,
+    "type": "series",
+    "language": "Hindi",
+    "imdb_rating": 8.7,
+    "imdb_id": "tt14650074",
+    "imdb_url": "https://www.imdb.com/title/tt14650074/",
+    "hook": "Bhuvan Bam plays the whole family again: Titu Mama nurses an Rs 11 crore loss and tries to make peace with his in-laws. Loud, desi, quotable comedy; strong language.",
+    "where_to_watch": "Netflix (US, all 8 episodes from Nov 20)",
+    "trailer_url": "https://www.youtube.com/watch?v=AjGW8oxTars",
+    "poster_url": "https://m.media-amazon.com/images/M/MV5BNDgxYzRkNGEtMzMzZi00MjgyLTk3YzQtNjcxYjJkM2I2M2Q5XkEyXkFqcGc@._V1_UX600_.jpg",
+    "kid_safe": false,
+    "week": "2026-11-20",
+    "source": "Netflix premiere Nov 20 (Netflix newsroom; Filmverse US listing). ABHI KA REVIEW 8.5/10 and Deepak Bhurani 7.5/10. IMDb 8.7 is for the show so far (Season 1). Strong abusive language: not for a 9-year-old.",
+    "status": "new",
+    "endorsements": [
+      {
+        "name": "ABHI KA REVIEW",
+        "url": "https://www.youtube.com/watch?v=2TtHbOwsbN8"
+      },
+      {
+        "name": "Deepak Bhurani",
+        "url": "https://www.youtube.com/watch?v=MeSD5UsugL0"
+      }
+    ],
+    "slot": "exploit",
+    "sources": [
+      "abhi-ka-review",
+      "deepak-bhurani"
+    ]
+  },
+  {
+    "id": "saas-bahu-achaar-pvt-ltd",
+    "title": "Saas Bahu Achaar Pvt. Ltd.",
+    "year": 2022,
+    "type": "series",
+    "language": "Hindi",
+    "imdb_rating": 8.2,
+    "imdb_id": "tt20753964",
+    "imdb_url": "https://www.imdb.com/title/tt20753964/",
+    "hook": "Amruta Subhash plays a middle-class Old Delhi housewife who turns to pickle-making to stand on her own: TVF's warm mohalla family drama, free on YouTube with a new episode weekly.",
+    "where_to_watch": "YouTube (free, The Viral Fever channel, new episode weekly)",
+    "trailer_url": "https://www.youtube.com/watch?v=c72k7HaLU2A",
+    "poster_url": "https://m.media-amazon.com/images/M/MV5BYjBmMjE3NzMtODYxOC00MDk0LWFiZjQtNGJiMTYyOTc1M2IwXkEyXkFqcGc@._V1_UX600_.jpg",
+    "kid_safe": false,
+    "week": "2026-11-20",
+    "source": "Older hidden gem: TVF's 2022 ZEE5 series, uploaded to its YouTube channel from Nov 6 (EP3 on Nov 17). Only listed-source review is The Indian Express (Shubhra Gupta, July 2022): flavourful but dull and contrived in places. Kid-safe not confirmed.",
+    "status": "new",
+    "endorsements": [
+      {
+        "name": "The Indian Express (Shubhra Gupta, 2022)",
+        "url": "https://indianexpress.com/article/entertainment/web-series/saas-bahu-achaar-pvt-ltd-review-a-flavourful-series-amruta-subhash-8017424/"
+      }
+    ],
+    "slot": "exploit",
+    "sources": [
+      "indian-express-reviews"
+    ]
+  },
+  {
+    "id": "premada-oorali",
+    "title": "Premada Oorali",
+    "year": 2026,
+    "type": "movie",
+    "language": "Kannada (Hindi dub on Prime Video in India; US audio not confirmed)",
+    "imdb_rating": 7.5,
+    "imdb_id": "tt33381528",
+    "imdb_url": "https://www.imdb.com/title/tt33381528/",
+    "hook": "A village father wants his son to marry an educated girl, and love, loss and farm worries make this a tear-jerking Kannada rural drama. Deepak Bhurani likes it but calls it imperfect.",
+    "where_to_watch": "Prime Video (US listing per JustWatch; Hindi dub confirmed for India only)",
+    "trailer_url": "https://www.youtube.com/watch?v=271GZatiFG0",
+    "trailer_lang": "Kannada",
+    "poster_url": "https://m.media-amazon.com/images/M/MV5BMDg2M2E5NWUtM2FlYS00OGRlLTk3YWEtMWU5MDhlMWIyMDEyXkEyXkFqcGc@._V1_UX600_.jpg",
+    "kid_safe": false,
+    "week": "2026-11-20",
+    "source": "Explore pick: Deepak Bhurani (newer source) reviewed the Hindi dub on Prime Video on Nov 17 and liked it, with no adult content. Only an official Kannada title teaser was found (no official Hindi trailer). Kid-safe not confirmed.",
+    "status": "new",
+    "endorsements": [
+      {
+        "name": "Deepak Bhurani",
+        "url": "https://www.youtube.com/watch?v=Ky-M22NI9rQ"
+      }
+    ],
+    "slot": "explore",
+    "sources": [
+      "deepak-bhurani"
+    ]
+  },
+  {
+    "id": "mitronpolitan-life-in-20s",
+    "title": "MitronPolitan: Life in 20s",
+    "year": 2025,
+    "type": "series",
+    "language": "Hindi",
+    "imdb_rating": 8.0,
+    "imdb_id": "tt35288556",
+    "imdb_url": "https://www.imdb.com/title/tt35288556/",
+    "hook": "A group of 20-somethings juggles jobs, rent, roasts and relationships in Mumbai: TVF's weekly Hindi sitcom, IMDb 8.0. Episode 7 came out today. No listed reviewer yet.",
+    "where_to_watch": "YouTube (free, The Screen Patti channel, new episode weekly; EP7 out Nov 20)",
+    "trailer_url": "https://www.youtube.com/watch?v=q5oyH9llm4k",
+    "poster_url": "https://m.media-amazon.com/images/M/MV5BZTk5MGQwMGYtOTk4YS00MTEyLTk3MzgtNDBmYjdhYjljNWQ5XkEyXkFqcGc@._V1_UX600_.jpg",
+    "kid_safe": false,
+    "week": "2026-11-20",
+    "source": "TVF weekly show: TVF posts every episode and the announcement trailer. IMDb 8.0 (episodes 8.9 to 9.5). No listed-source review found, so no Recommended by line. Kid-safe not confirmed.",
+    "status": "new",
+    "endorsements": [],
+    "slot": "exploit",
+    "sources": []
+  },
+  {
+    "id": "yeh-prem-mol-liya",
+    "title": "Yeh Prem Mol Liya",
+    "year": 2026,
+    "type": "movie",
+    "language": "Hindi",
+    "imdb_rating": null,
+    "imdb_id": "tt27124947",
+    "imdb_url": "https://www.imdb.com/title/tt27124947/",
+    "hook": "Preview, not yet reviewed: Sooraj Barjatya's family drama with Ayushmann Khurrana and Sharvari. A groom's family moves in with her six-woman household. Trailer out Nov 19.",
+    "where_to_watch": "In theaters Nov 27 (US release listed on Fandango, NR, about 3 hours). Fremont and Union City showtimes not listed yet (checked Nov 20).",
+    "trailer_url": "https://www.youtube.com/watch?v=vdhNar4uxm4",
+    "poster_url": "https://m.media-amazon.com/images/M/MV5BZGVjOGUyMmQtYjZkNy00ZmNiLWIwMmMtNjZiMTgwN2M0ZjQzXkEyXkFqcGc@._V1_UX600_.jpg",
+    "kid_safe": false,
+    "week": "2026-11-20",
+    "source": "Major Hindi release preview: Taran Adarsh (X, Nov 18, trailer launch, in cinemas Nov 27), The Hindu trailer report (Nov 19), Fandango listing. No reviews yet.",
+    "status": "new",
+    "endorsements": [],
+    "preview": true,
+    "release_date": "2026-11-27",
+    "preview_note": "Trailer only; no reviews or IMDb rating yet. Kid-safe not confirmed."
   }
 ]

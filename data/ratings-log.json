@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-13",
+  "updated": "2026-11-20",
   "source": "matrixmuskan/muskan-movies-feedback/feedback/",
   "rules": {
     "loved": "4-5 stars or keep",
@@ -85,6 +85,27 @@
   ],
   "neutral": [
     {
+      "title": "Hunkkaar: The Roar",
+      "id": "hunkkaar-the-roar",
+      "type": "series",
+      "language": "Hindi",
+      "genres": [
+        "crime",
+        "drama",
+        "victim-side justice",
+        "legal/courtroom"
+      ],
+      "action": "rate",
+      "stars": 3,
+      "date": "2026-11-14T01:33:03.605Z",
+      "endorsers": [
+        "Rahul Desai",
+        "Suchin Mehrotra (THR India)",
+        "Bollywood Hungama"
+      ],
+      "lesson": "Victim-side courtroom drama earned a middling 3 stars: keep the theme but demand strong reviews, not just a fitting premise."
+    },
+    {
       "title": "Gram Chikitsalay (Season 2)",
       "id": "gram-chikitsalay-season-2",
       "type": "series",
@@ -109,6 +130,25 @@
     }
   ],
   "disliked": [
+    {
+      "title": "Very Parivarik",
+      "id": "very-parivarik",
+      "type": "series",
+      "language": "Hindi",
+      "genres": [
+        "comedy",
+        "slice-of-life",
+        "TVF production",
+        "family/kids"
+      ],
+      "action": "discard",
+      "stars": null,
+      "date": "2026-11-14T01:32:53.786Z",
+      "endorsers": [
+        "Aunty Eve (All About Eve)"
+      ],
+      "lesson": "A TVF label is not enough: a parents-move-in family sitcom got discarded, so weigh the premise and reviews, not the producer alone."
+    },
     {
       "title": "Adarsh Baal Vidyalaya",
       "id": "adarsh-baal-vidyalaya",

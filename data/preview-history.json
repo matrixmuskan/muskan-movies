@@ -3,14 +3,22 @@
     "id": "the-hunger-games-sunrise-on-the-reaping",
     "title": "The Hunger Games: Sunrise on the Reaping",
     "release_date": "2026-11-20",
-    "imdb": "not yet rated",
+    "imdb": "7.7",
     "versions": [
       {
         "version": 1,
         "checked": "2026-11-13",
         "status": "preview",
         "note": "Trailer buzz only; no reviews yet.",
-        "where": "In theaters Nov 20. Advance tickets on sale; Cinemark Pacific Commons and Union Landing showtimes not listed yet (checked Nov 13)."
+        "where": "In theaters Nov 20. Advance tickets on sale; Cinemark Pacific Commons and Union Landing showtimes not listed yet (checked Nov 13).",
+        "superseded_by": 2
+      },
+      {
+        "version": 2,
+        "checked": "2026-11-20",
+        "status": "released",
+        "note": "Released Nov 20. IMDb 7.7 (about 7.5K votes). Reviews lukewarm: The Indian Express (snoozefest), The Hindu (familiar spin-off). PG-13, not kid-safe.",
+        "where": "In theaters now: Cinemark Pacific Commons (Fremont) and Cinemark Union Landing (Union City), many shows today incl. 3D, XD and D-BOX (BigScreen, Nov 20)"
       }
     ]
   },
@@ -25,7 +33,15 @@
         "checked": "2026-11-13",
         "status": "preview",
         "note": "Trailer and release buzz only; no reviews yet.",
-        "where": "In theaters Nov 20 (US and Canada release reported). Local Cinemark showtimes not listed yet (checked Nov 13)."
+        "where": "In theaters Nov 20 (US and Canada release reported). Local Cinemark showtimes not listed yet (checked Nov 13).",
+        "superseded_by": 2
+      },
+      {
+        "version": 2,
+        "checked": "2026-11-20",
+        "status": "released",
+        "note": "Released Nov 20; same film as IMDb tt34515768 (O.M: Operation Mole). IMDb not yet rated. Reviews mixed: ABHI KA REVIEW 6/10 (Hindi dub), The Hindu bloated but Dhanush and Sai Pallavi score. Official Hindi trailer found.",
+        "where": "In theaters now: Cinemark Pacific Commons (Fremont, Tamil) and Cinemark Union Landing (Union City, Tamil and Telugu), English subtitles; no Hindi shows listed locally"
       }
     ]
   },
@@ -40,7 +56,15 @@
         "checked": "2026-11-13",
         "status": "preview",
         "note": "Trailer buzz only; mixed reactions; no reviews yet.",
-        "where": "In theaters Dec 4 (worldwide release announced). US bookings and local showtimes not reported yet (checked Nov 13)."
+        "where": "In theaters Dec 4 (worldwide release announced). US bookings and local showtimes not reported yet (checked Nov 13).",
+        "superseded_by": 2
+      },
+      {
+        "version": 2,
+        "checked": "2026-11-20",
+        "status": "preview",
+        "note": "Trailer reactions mixed (Variety India positive, Times Now: VFX criticism). Salman Khan responded to critics Nov 20. No reviews yet.",
+        "where": "In theaters Dec 4 (limited US release, Fandango listing; Cinemark shows reported in some US cities). Fremont and Union City showtimes not listed yet (checked Nov 20)."
       }
     ]
   },
@@ -55,7 +79,15 @@
         "checked": "2026-11-13",
         "status": "preview",
         "note": "Pre-release buzz only; no reviews yet.",
-        "where": "In theaters Dec 18. Local Cinemark showtimes not verified yet (checked Nov 13)."
+        "where": "In theaters Dec 18. Local Cinemark showtimes not verified yet (checked Nov 13).",
+        "superseded_by": 2
+      },
+      {
+        "version": 2,
+        "checked": "2026-11-20",
+        "status": "preview",
+        "note": "No reviews yet. US tickets on sale since August.",
+        "where": "In theaters Dec 18. US tickets on sale at Cinemark and Fandango since August; Fremont and Union City showtimes not verified yet (checked Nov 20)."
       }
     ]
   },
@@ -70,7 +102,30 @@
         "checked": "2026-11-13",
         "status": "preview",
         "note": "Pre-release buzz only; no reviews yet.",
-        "where": "In theaters Dec 18. Local Cinemark showtimes not verified yet (checked Nov 13)."
+        "where": "In theaters Dec 18. Local Cinemark showtimes not verified yet (checked Nov 13).",
+        "superseded_by": 2
+      },
+      {
+        "version": 2,
+        "checked": "2026-11-20",
+        "status": "preview",
+        "note": "No reviews yet. Cinemark premium-format tickets on sale since August.",
+        "where": "In theaters Dec 18. Cinemark XD and IMAX premium tickets on sale since August; Fremont and Union City showtimes not verified yet (checked Nov 20)."
+      }
+    ]
+  },
+  {
+    "id": "yeh-prem-mol-liya",
+    "title": "Yeh Prem Mol Liya",
+    "release_date": "2026-11-27",
+    "imdb": "not yet rated",
+    "versions": [
+      {
+        "version": 1,
+        "checked": "2026-11-20",
+        "status": "preview",
+        "note": "New preview: trailer launched Nov 18 to 19; no reviews yet.",
+        "where": "In theaters Nov 27 (US release listed on Fandango, NR, about 3 hours). Fremont and Union City showtimes not listed yet (checked Nov 20)."
       }
     ]
   }

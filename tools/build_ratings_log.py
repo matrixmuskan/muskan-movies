@@ -37,6 +37,14 @@ NOTES = {
         ["drama", "study/college/coaching life", "TVF production"],
         "TVF study-life shows are a safe bet, as Kota Factory and Aspirants suggested.",
     ),
+    "very-parivarik": (
+        ["comedy", "slice-of-life", "TVF production", "family/kids"],
+        "A TVF label is not enough: a parents-move-in family sitcom got discarded, so weigh the premise and reviews, not the producer alone.",
+    ),
+    "hunkkaar-the-roar": (
+        ["crime", "drama", "victim-side justice", "legal/courtroom"],
+        "Victim-side courtroom drama earned a middling 3 stars: keep the theme but demand strong reviews, not just a fitting premise.",
+    ),
     "forgotten-island": (
         ["animation (family)", "adventure", "English (Hollywood)"],
         "Skip animated films unless they are Inside Out-level blockbusters; good reviews alone are not enough.",

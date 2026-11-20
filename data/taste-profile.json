@@ -40,11 +40,11 @@
     "Other": 0.1
   },
   "genre_weights": {
-    "comedy": 0.84,
+    "comedy": 0.79,
     "thriller": 0.89,
     "suspense/mystery": 0.85,
     "crime": 0.88,
-    "slice-of-life": 0.94,
+    "slice-of-life": 0.89,
     "drama": 0.63,
     "courtroom/legal": 0.8,
     "biopic": 0.6,
@@ -68,7 +68,7 @@
     "cop/investigation": 0.74,
     "gangster violence": 0.45,
     "Excel Entertainment Prime shows": 0.8,
-    "TVF production": 0.94
+    "TVF production": 0.89
   },
   "producer_weights": {
     "TVF": 0.9,
@@ -92,7 +92,8 @@
     "heavy horror (any)",
     "Adarsh Baal Vidyalaya",
     "Shaun the Sheep: The Beast of Mossy Bottom",
-    "Forgotten Island"
+    "Forgotten Island",
+    "Very Parivarik"
   ],
   "reviewer_trust_weights": {
     "Rahul Desai (The Hollywood Reporter India critic)": 0.5,
@@ -146,12 +147,16 @@
     "Gram Chikitsalay (Season 2)",
     "Adarsh Baal Vidyalaya",
     "Shaun the Sheep: The Beast of Mossy Bottom",
-    "Forgotten Island"
+    "Forgotten Island",
+    "Very Parivarik",
+    "Hunkkaar: The Roar"
   ],
   "seen_or_rejected": [
     "Adarsh Baal Vidyalaya",
     "Shaun the Sheep: The Beast of Mossy Bottom",
-    "Forgotten Island"
+    "Forgotten Island",
+    "Very Parivarik",
+    "Hunkkaar: The Roar"
   ],
   "feedback_log": [
     {
@@ -209,8 +214,22 @@
       "stars": null,
       "delta": -0.05,
       "date": "2026-11-04"
+    },
+    {
+      "id": "very-parivarik",
+      "action": "discard",
+      "stars": null,
+      "delta": -0.05,
+      "date": "2026-11-14"
+    },
+    {
+      "id": "hunkkaar-the-roar",
+      "action": "rate",
+      "stars": 3,
+      "delta": 0.0,
+      "date": "2026-11-14"
     }
   ],
-  "updated": "2026-11-13",
-  "last_build_note": "2026-11-13: no new feedback since 2026-11-06; weights unchanged."
+  "updated": "2026-11-20",
+  "last_build_note": "2026-11-20: feedback since 2026-11-13: Very Parivarik discarded (-0.05 to comedy, slice-of-life, TVF production), Hunkkaar: The Roar 3 stars (no change). Other weights unchanged."
 }
