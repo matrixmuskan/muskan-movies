@@ -45,6 +45,34 @@ NOTES = {
         ["crime", "drama", "victim-side justice", "legal/courtroom"],
         "Victim-side courtroom drama earned a middling 3 stars: keep the theme but demand strong reviews, not just a fitting premise.",
     ),
+    "pritam-and-pedro": (
+        ["comedy", "crime", "cop/investigation"],
+        "A Rajkumar Hirani cop-and-hacker comedy got 5 stars: light crime comedy with a clever duo is a strong lane.",
+    ),
+    "family-kirana-store-season-3": (
+        ["comedy", "slice-of-life", "rustic/small-town (TVF, Panchayat-style)", "TVF production"],
+        "TVF's free YouTube family sitcoms land (5 stars) even without a listed-source review; keep surfacing them.",
+    ),
+    "ramayana-part-1": (
+        ["mythology/epic", "action", "drama"],
+        "A big CGI-heavy live-action Hindi epic earned 5 stars: major Hindi theatrical events deserve a slot when reviewers back them.",
+    ),
+    "last-man-in-tower": (
+        ["drama", "victim-side justice"],
+        "A slow middle-class standoff drama was only 3 stars: critic praise alone is not enough for quiet dramas.",
+    ),
+    "sumo-didi": (
+        ["biopic", "drama"],
+        "A sports biopic got 2 stars: lower the weight on inspirational biopics unless the premise is funny or tense.",
+    ),
+    "saas-bahu-achaar-pvt-ltd": (
+        ["drama", "slice-of-life", "TVF production", "father-daughter/family warmth"],
+        "An older TVF hidden gem on YouTube got 5 stars: older TVF titles are a reliable well to draw from.",
+    ),
+    "sookshmadarshini": (
+        ["suspense/mystery", "comedy", "thriller"],
+        "A Malayalam suspense comedy with a Hindi dub got 4 stars: well-reviewed South thrillers with humour work.",
+    ),
     "forgotten-island": (
         ["animation (family)", "adventure", "English (Hollywood)"],
         "Skip animated films unless they are Inside Out-level blockbusters; good reviews alone are not enough.",

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-20",
+  "updated": "2026-11-27",
   "source": "matrixmuskan/muskan-movies-feedback/feedback/",
   "rules": {
     "loved": "4-5 stars or keep",
@@ -8,6 +8,107 @@
     "disliked": "1-2 stars or discard"
   },
   "loved": [
+    {
+      "title": "Sookshmadarshini",
+      "id": "sookshmadarshini",
+      "type": "movie",
+      "language": "Malayalam (Hindi dub available)",
+      "genres": [
+        "suspense/mystery",
+        "comedy",
+        "thriller"
+      ],
+      "action": "rate",
+      "stars": 4,
+      "date": "2026-11-23T05:54:06.370Z",
+      "endorsers": [
+        "The Hindu",
+        "Anandu Suresh (The Indian Express)",
+        "Baradwaj Rangan",
+        "The Hollywood Reporter India - Reviews"
+      ],
+      "lesson": "A Malayalam suspense comedy with a Hindi dub got 4 stars: well-reviewed South thrillers with humour work."
+    },
+    {
+      "title": "Saas Bahu Achaar Pvt. Ltd.",
+      "id": "saas-bahu-achaar-pvt-ltd",
+      "type": "series",
+      "language": "Hindi",
+      "genres": [
+        "drama",
+        "slice-of-life",
+        "TVF production",
+        "father-daughter/family warmth"
+      ],
+      "action": "rate",
+      "stars": 5,
+      "date": "2026-11-23T05:03:56.141Z",
+      "endorsers": [
+        "The Indian Express (Shubhra Gupta, 2022)"
+      ],
+      "lesson": "An older TVF hidden gem on YouTube got 5 stars: older TVF titles are a reliable well to draw from."
+    },
+    {
+      "title": "Ramayana: Rise of a Legend (Part 1)",
+      "id": "ramayana-part-1",
+      "type": "movie",
+      "language": "Hindi",
+      "genres": [
+        "mythology/epic",
+        "action",
+        "drama"
+      ],
+      "action": "rate",
+      "stars": 5,
+      "date": "2026-11-21T05:14:10.150Z",
+      "endorsers": [
+        "Yogi Bolta Hai",
+        "ABHI KA REVIEW",
+        "Shan Prasher",
+        "Tried & Refused Productions",
+        "Suraj Kumar Review",
+        "Filmy Geeks",
+        "The Hollywood Reporter India (Anupama Chopra)",
+        "The Indian Express",
+        "The Hindu"
+      ],
+      "lesson": "A big CGI-heavy live-action Hindi epic earned 5 stars: major Hindi theatrical events deserve a slot when reviewers back them."
+    },
+    {
+      "title": "Family Kirana Store (Season 3)",
+      "id": "family-kirana-store-season-3",
+      "type": "series",
+      "language": "Hindi",
+      "genres": [
+        "comedy",
+        "slice-of-life",
+        "rustic/small-town (TVF, Panchayat-style)",
+        "TVF production"
+      ],
+      "action": "rate",
+      "stars": 5,
+      "date": "2026-11-21T05:14:02.910Z",
+      "endorsers": [],
+      "lesson": "TVF's free YouTube family sitcoms land (5 stars) even without a listed-source review; keep surfacing them."
+    },
+    {
+      "title": "Pritam and Pedro",
+      "id": "pritam-and-pedro",
+      "type": "series",
+      "language": "Hindi",
+      "genres": [
+        "comedy",
+        "crime",
+        "cop/investigation"
+      ],
+      "action": "rate",
+      "stars": 5,
+      "date": "2026-11-21T05:13:34.283Z",
+      "endorsers": [
+        "Archika Khurana (Times of India)"
+      ],
+      "lesson": "A Rajkumar Hirani cop-and-hacker comedy got 5 stars: light crime comedy with a clever duo is a strong lane."
+    },
     {
       "title": "Hello Bachhon",
       "id": "hello-bachhon",
@@ -85,6 +186,25 @@
   ],
   "neutral": [
     {
+      "title": "Last Man in Tower",
+      "id": "last-man-in-tower",
+      "type": "movie",
+      "language": "Hindi",
+      "genres": [
+        "drama",
+        "victim-side justice"
+      ],
+      "action": "rate",
+      "stars": 3,
+      "date": "2026-11-21T05:14:23.133Z",
+      "endorsers": [
+        "Rahul Desai",
+        "India Today",
+        "Anuj Kumar (The Hindu)"
+      ],
+      "lesson": "A slow middle-class standoff drama was only 3 stars: critic praise alone is not enough for quiet dramas."
+    },
+    {
       "title": "Hunkkaar: The Roar",
       "id": "hunkkaar-the-roar",
       "type": "series",
@@ -130,6 +250,24 @@
     }
   ],
   "disliked": [
+    {
+      "title": "Sumo Didi",
+      "id": "sumo-didi",
+      "type": "movie",
+      "language": "Hindi",
+      "genres": [
+        "biopic",
+        "drama"
+      ],
+      "action": "rate",
+      "stars": 2,
+      "date": "2026-11-21T05:14:27.906Z",
+      "endorsers": [
+        "Rahul Desai",
+        "Alaka Sahani (The Indian Express)"
+      ],
+      "lesson": "A sports biopic got 2 stars: lower the weight on inspirational biopics unless the premise is funny or tense."
+    },
     {
       "title": "Very Parivarik",
       "id": "very-parivarik",

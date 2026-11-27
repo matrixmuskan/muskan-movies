@@ -1,0 +1,473 @@
+[
+ {
+  "id": "aakasamlo-oka-tara",
+  "title": "Aakasamlo Oka Tara",
+  "year": 2026,
+  "type": "movie",
+  "language": "Telugu (Hindi version released; local shows Telugu)",
+  "imdb_id": "tt33044571",
+  "imdb_rating": 8.8,
+  "imdb_votes": "1.5K",
+  "where_to_watch": "In theaters: Cinemark Union Landing (Union City), Telugu with English subtitles",
+  "in_local_theater": true,
+  "genres": [
+   "drama",
+   "romance"
+  ],
+  "themes": [
+   "rustic/small-town (TVF, Panchayat-style)",
+   "father-daughter/family warmth"
+  ],
+  "producer": null,
+  "hollywood": false,
+  "animated": false,
+  "kid_safe": false,
+  "endorsements": [
+   {
+    "name": "Baradwaj Rangan",
+    "source_id": "baradwaj-rangan",
+    "url": "https://x.com/baradwajrangan/status/2125908134455562500",
+    "verdict": "positive review",
+    "note": "X text review Nov 26: warm, beautifully acted, emotionally satisfying"
+   },
+   {
+    "name": "The Hindu",
+    "source_id": "the-hindu-reviews",
+    "url": "https://www.thehindu.com/entertainment/movies/aaksamlo-oka-tara-movie-review-dulquer-salmaan-satvika-veeravalli-shine-in-a-telugu-film-about-hope/article71721323.ece",
+    "verdict": "positive review",
+    "note": "Dulquer Salmaan, Satvika Veeravalli shine in a Telugu film about hope"
+   },
+   {
+    "name": "The Indian Express",
+    "source_id": "indian-express-reviews",
+    "url": "https://indianexpress.com/article/entertainment/movie-review/aakasamlo-oka-tara-review-dulquer-salmaan-satvika-shine-in-a-moving-tale-of-love-and-dreams-10970428/",
+    "verdict": "positive review",
+    "note": "Dulquer Salmaan shines in a moving tale of love and dreams"
+   },
+   {
+    "name": "THYVIEW",
+    "source_id": "thyview",
+    "url": "https://x.com/Thyview/status/2123798223878082595",
+    "verdict": "positive review",
+    "note": "X Nov 20: a sweet, inspiring family drama"
+   }
+  ],
+  "not_counted_reviews": [
+   {
+    "name": "Barbell Pitch Meetings",
+    "url": "https://www.youtube.com/watch?v=fYSdJwWUpvs",
+    "verdict": "negative: did not click for him (Telugu transcript)"
+   },
+   {
+    "name": "Filmy Geeks",
+    "url": "https://www.youtube.com/watch?v=jCRB-f-OmHk",
+    "verdict": "mixed: promising first half, predictable second half"
+   }
+  ],
+  "trailer_url": "https://www.youtube.com/watch?v=2z-QCqVSMM8",
+  "trailer_lang": "Hindi",
+  "note": "Excluded on Nov 20 only because IMDb had no rating; now 8.8 (1.5K votes).",
+  "outcome": "selected",
+  "slot": "exploit",
+  "score": 0.8496
+ },
+ {
+  "id": "drishyam-the-conclusion",
+  "title": "Drishyam: The Conclusion",
+  "year": 2026,
+  "type": "movie",
+  "language": "Hindi",
+  "imdb_id": "tt27050858",
+  "imdb_rating": 7.6,
+  "imdb_votes": "8.8K",
+  "where_to_watch": "Netflix (US, streaming from Nov 27)",
+  "genres": [
+   "thriller",
+   "crime",
+   "suspense/mystery"
+  ],
+  "themes": [
+   "cop/investigation",
+   "father-daughter/family warmth"
+  ],
+  "producer": null,
+  "hollywood": false,
+  "animated": false,
+  "kid_safe": false,
+  "endorsements": [
+   {
+    "name": "Rahul Desai",
+    "source_id": "rahul-desai",
+    "url": "https://www.hollywoodreporterindia.com/reviews/theatrical/drishyam-the-conclusion-movie-review-ajay-devgn-led-franchise-leaves-on-a-bollywood-high",
+    "verdict": "positive review",
+    "note": "THR India, Oct 2: a surprisingly satisfying watch"
+   },
+   {
+    "name": "The Hindu",
+    "source_id": "the-hindu-reviews",
+    "url": "https://www.thehindu.com/entertainment/movies/drishyam-the-conclusion-movie-review-ajay-devgn-and-jaideep-ahlawat-play-to-the-gallery-in-a-gripping-finale/article71535792.ece",
+    "verdict": "positive review",
+    "note": "Anuj Kumar: a gripping finale"
+   },
+   {
+    "name": "The Indian Express (Shubhra Gupta)",
+    "source_id": "indian-express-reviews",
+    "url": "https://indianexpress.com/article/entertainment/movie-review/drishyam-3-movie-review-terrific-ajay-devgn-tabu-give-drishyam-the-conclusion-it-deserved-10903384/",
+    "verdict": "positive review",
+    "note": "3/5: terrific Devgn and Tabu; loud background score"
+   },
+   {
+    "name": "Deepak Bhurani",
+    "source_id": "deepak-bhurani",
+    "url": "https://www.youtube.com/watch?v=kd66ogcIVsw",
+    "verdict": "positive (ranking)",
+    "note": "Ranking Indian Movies of 2026 (Nov 25): puts it in his top \"first class\" tier"
+   }
+  ],
+  "trailer_url": "https://www.youtube.com/watch?v=BSZZwBaNQAA",
+  "note": "Theatrical Oct 2; Netflix US Nov 27 (Netflix title 83074116; Reelgood lists US). Hindi audio. TV-14.",
+  "outcome": "selected",
+  "slot": "exploit",
+  "score": 0.846
+ },
+ {
+  "id": "hail-mary-2026",
+  "title": "Hail Mary",
+  "year": 2026,
+  "type": "movie",
+  "language": "Malayalam",
+  "imdb_id": "tt44090225",
+  "imdb_rating": 8.1,
+  "imdb_votes": "45",
+  "where_to_watch": "In theaters: Cinemark Union Landing (Union City), Malayalam with English subtitles",
+  "in_local_theater": true,
+  "genres": [
+   "thriller",
+   "suspense/mystery",
+   "crime"
+  ],
+  "themes": [
+   "cop/investigation",
+   "victim-side justice"
+  ],
+  "producer": null,
+  "hollywood": false,
+  "animated": false,
+  "kid_safe": false,
+  "endorsements": [
+   {
+    "name": "Rediff",
+    "source_id": "rediff-movies",
+    "url": "https://www.rediff.com/movies/review/hail-mary-movie-review-absorbing-thriller/20261127.htm",
+    "verdict": "positive review",
+    "note": "Sreeju Sudhakaran: absorbing thriller, a compelling watch"
+   }
+  ],
+  "not_counted_reviews": [
+   {
+    "name": "The Hindu",
+    "url": "https://www.thehindu.com/entertainment/movies/hail-mary-movie-review-kunchacko-boban-suraj-venjaramoodu-anu-sithara-suhasini-maniratnam/article71745898.ece",
+    "verdict": "mixed: gripping yet flawed, weak third act"
+   },
+   {
+    "name": "The Indian Express",
+    "url": "https://indianexpress.com/article/entertainment/movie-review/hail-mary-movie-review-kunchacko-boban-suraj-venjaramoodu-mystery-loses-steam-midway-10978918/",
+    "verdict": "mixed: loses steam midway"
+   }
+  ],
+  "trailer_url": "https://www.youtube.com/watch?v=MeYJ38OCXjs",
+  "trailer_lang": "Malayalam",
+  "note": "Released Nov 26. IMDb 8.1 on only 45 votes. One show a day at Union City. No Hindi dub or Hindi trailer found.",
+  "outcome": "selected",
+  "slot": "explore",
+  "score": 0.6223
+ },
+ {
+  "id": "garividi-lakshmi",
+  "title": "Garividi Lakshmi",
+  "year": 2026,
+  "type": "movie",
+  "language": "Telugu (Hindi dub available)",
+  "imdb_id": "tt37645628",
+  "imdb_rating": 8.7,
+  "imdb_votes": "1.1K",
+  "where_to_watch": "Prime Video (US, from Nov 26; Hindi dub among 5 languages); also showing at Cinemark Union Landing (Union City)",
+  "in_local_theater": true,
+  "genres": [
+   "biopic",
+   "drama"
+  ],
+  "themes": [
+   "rustic/small-town (TVF, Panchayat-style)"
+  ],
+  "producer": null,
+  "hollywood": false,
+  "animated": false,
+  "kid_safe": false,
+  "endorsements": [
+   {
+    "name": "Deepak Bhurani",
+    "source_id": "deepak-bhurani",
+    "url": "https://www.youtube.com/watch?v=ylvFeP7gri8",
+    "verdict": "positive review",
+    "note": "Hindi-dub review Nov 26: 7/10, works for him; no abuse or vulgarity; Hindi dubbing good"
+   }
+  ],
+  "trailer_url": "https://www.youtube.com/watch?v=F0B4WHNzKr8",
+  "trailer_lang": "Telugu",
+  "note": "Folk singer biopic. No Hindi trailer found (Prime US listing per filmverse/JustWatch).",
+  "outcome": "selected",
+  "slot": "exploit",
+  "score": 0.6238
+ },
+ {
+  "id": "sandeep-bhaiya",
+  "title": "Sandeep Bhaiya (Season 1)",
+  "year": 2023,
+  "type": "series",
+  "language": "Hindi",
+  "imdb_id": "tt28227737",
+  "imdb_rating": 9.0,
+  "imdb_votes": "78K",
+  "where_to_watch": "YouTube (free, The Viral Fever channel, all 5 episodes)",
+  "genres": [
+   "drama"
+  ],
+  "themes": [
+   "study/college/coaching life",
+   "TVF production"
+  ],
+  "producer": "TVF",
+  "hollywood": false,
+  "animated": false,
+  "kid_safe": false,
+  "endorsements": [],
+  "trailer_url": "https://www.youtube.com/watch?v=_dsSzmFy8gA",
+  "note": "Older TVF hidden gem: Aspirants spin-off (Aspirants is on the seen list; Sandeep Bhaiya is not). EP01 gYu2dEju6bI playable, published 2023-06-29. No listed-source review found.",
+  "outcome": "selected",
+  "slot": "exploit",
+  "score": 0.5423
+ },
+ {
+  "id": "delhi-2021",
+  "title": "Delhi 2021",
+  "year": 2026,
+  "type": "movie",
+  "language": "Hindi",
+  "imdb_id": "tt26445716",
+  "imdb_rating": 6.8,
+  "imdb_votes": "41",
+  "where_to_watch": "ZEE5 (free with ads per Deepak Bhurani; US availability not verified)",
+  "genres": [
+   "drama",
+   "thriller"
+  ],
+  "themes": [],
+  "producer": null,
+  "hollywood": false,
+  "animated": false,
+  "kid_safe": false,
+  "endorsements": [
+   {
+    "name": "Deepak Bhurani",
+    "source_id": "deepak-bhurani",
+    "url": "https://www.youtube.com/watch?v=cHHOeNCCSwo",
+    "verdict": "lukewarm (6/10)",
+    "note": "Nov 25: 6/10, some abusive language"
+   }
+  ],
+  "trailer_url": null,
+  "outcome": "excluded",
+  "reason": "Ranked into the top five by tools/score_sources.py on the first pass (explore slot), then removed by hand: ZEE5 US availability not verified for this title, the only listed-source take is a lukewarm 6/10 (Deepak Bhurani), and IMDb 6.8 rests on 41 votes. Sandeep Bhaiya took the slot on the re-run."
+ },
+ {
+  "title": "Yeh Prem Mol Liya",
+  "outcome": "excluded",
+  "reason": "Existing Nov 20 preview: updated on the same entry (released today; IMDb not yet rated; listed critics mostly negative or mixed). Not a new pick.",
+  "imdb_id": "tt27124947"
+ },
+ {
+  "title": "O.M: Operation Mole (OM Chapter 1: Udhiram)",
+  "outcome": "excluded",
+  "reason": "Existing Nov 13 preview: updated (now IMDb 8.7), critics mixed. Not a new pick.",
+  "imdb_id": "tt34515768"
+ },
+ {
+  "title": "The Hunger Games: Sunrise on the Reaping",
+  "outcome": "excluded",
+  "reason": "Existing preview: updated (IMDb 7.5). PG-13, not a new pick.",
+  "imdb_id": "tt32558705"
+ },
+ {
+  "title": "Ramayana: Rise of a Legend (Ramayana: Part 1)",
+  "outcome": "excluded",
+  "reason": "Already picked Nov 13 and rated 5 stars. Coverage check: still showing at both Cinemarks in week 4 (Hindi, 2D and 3D); Part 2 is now dated Diwali 2028 (The Indian Express, ET Now).",
+  "imdb_id": "tt27988879"
+ },
+ {
+  "title": "ENE Repeat",
+  "outcome": "excluded",
+  "reason": "Already picked Nov 20 (still at both Cinemarks). Not repeated.",
+  "imdb_id": "tt37501891"
+ },
+ {
+  "title": "Hanuman Ansh",
+  "outcome": "excluded",
+  "reason": "SonyLIV Hindi (IMDb 8.5, 13K votes; clean family film). No favourable listed source: Rahul Desai (X, Nov 27: 'It isn't bad. It's worse.') and Rediff (overrated devotional drama, though clean family viewing). US SonyLIV availability not checked because it failed the review screen first.",
+  "imdb_id": "tt39390582"
+ },
+ {
+  "title": "Gunmaaster G9",
+  "outcome": "excluded",
+  "reason": "Hindi action, Nov 27. Not in Fremont/Union City theaters; IMDb not yet rated; The Indian Express (incoherent, violent mess), Rediff (lacks punch), Shubhra Gupta negative; The Hindu mildly positive; Taran Adarsh 3.5/5 (calendar, no vote); Yogi Bolta Hai: A-rated, heavy gore.",
+  "imdb_id": "tt37539573"
+ },
+ {
+  "title": "Bhogi",
+  "outcome": "excluded",
+  "reason": "Telugu revenge drama, Nov 27: The Indian Express, The Hindu and THYVIEW negative; not in local theaters."
+ },
+ {
+  "title": "Cosmic Samson",
+  "outcome": "excluded",
+  "reason": "Malayalam, Union City: IMDb not yet rated; The Indian Express and The Hindu call it middling.",
+  "imdb_id": "tt39139918"
+ },
+ {
+  "title": "Mayookha",
+  "outcome": "excluded",
+  "reason": "Hindi-dubbed crime thriller on JioHotstar (IMDb 7.8); Deepak Bhurani 6.5/10. JioHotstar US availability not verified.",
+  "imdb_id": "tt39378361"
+ },
+ {
+  "title": "Dhai Chaal",
+  "outcome": "excluded",
+  "reason": "JioHotstar Hindi student-politics series: IMDb not yet rated; US availability not verified. Fits the college-life theme; re-check next week.",
+  "imdb_id": "tt41496092"
+ },
+ {
+  "title": "Octopus",
+  "outcome": "excluded",
+  "reason": "ZEE5 Tamil thriller series, Nov 27: IMDb not yet rated; no reviews yet.",
+  "imdb_id": "tt50986623"
+ },
+ {
+  "title": "Sathyameva",
+  "outcome": "excluded",
+  "reason": "ZEE5 Malayalam courtroom series, Nov 27: IMDb not yet rated; no reviews yet.",
+  "imdb_id": "tt50508547"
+ },
+ {
+  "title": "Enemy of the Smuggler",
+  "outcome": "excluded",
+  "reason": "Sun NXT customs-smuggling thriller (IMDb 8.5): The Hindu negative (gritty premise weighed down), Cinema Express 1.5/5.",
+  "imdb_id": "tt43681681"
+ },
+ {
+  "title": "Aadarsha Kutumbam House No: 47 - AK 47",
+  "outcome": "excluded",
+  "reason": "Netflix Telugu comedy: IMDb 5.7, below 6.0 (Deepak Bhurani 6.5/10).",
+  "imdb_id": "tt30768979"
+ },
+ {
+  "title": "Kaali Kheti",
+  "outcome": "excluded",
+  "reason": "Horror-thriller (IMDb 6.4); Deepak Bhurani positive, but horror is excluded.",
+  "imdb_id": "tt42854785"
+ },
+ {
+  "title": "Teen Tigada",
+  "outcome": "excluded",
+  "reason": "ZEE5 series: IMDb 7.2 on 14 votes; Rahul Desai negative (Nov 20); Deepak Bhurani noncommittal; not family viewing.",
+  "imdb_id": "tt50943841"
+ },
+ {
+  "title": "Pratap",
+  "outcome": "excluded",
+  "reason": "Hindi prison drama: Rediff calls it tedious; India theatrical only, not in local theaters.",
+  "imdb_id": "tt28023987"
+ },
+ {
+  "title": "Vysanasametham Bandhumithradhikal",
+  "outcome": "excluded",
+  "reason": "Malayalam funeral satire (2025, IMDb 7.0, The Hindu positive). ManoramaMAX only; US availability and Hindi dub not verified.",
+  "imdb_id": "tt34623207"
+ },
+ {
+  "title": "Lakshmiputra",
+  "outcome": "excluded",
+  "reason": "Kannada village drama: The Hindu calls it predictable; not rated; not local.",
+  "imdb_id": "tt39310334"
+ },
+ {
+  "title": "Panchayat (Season 5)",
+  "outcome": "excluded",
+  "reason": "Unreleased (Dec 3, Prime Video): added as a labeled preview.",
+  "imdb_id": "tt12004706"
+ },
+ {
+  "title": "King",
+  "outcome": "excluded",
+  "reason": "Unreleased (Dec 24): added as a labeled preview.",
+  "imdb_id": "tt28228084"
+ },
+ {
+  "title": "Maatrubhumi / Avengers: Doomsday / Dune: Part Three",
+  "outcome": "excluded",
+  "reason": "Existing previews: updated in place."
+ },
+ {
+  "title": "Dalimb",
+  "outcome": "excluded",
+  "reason": "ZEE5 Hindi thriller with Jitendra Kumar, Dec 4 (Taran Adarsh, trailer). Not a major release, so no preview card; re-check after release.",
+  "imdb_id": "tt40415766"
+ },
+ {
+  "title": "Hershey",
+  "outcome": "excluded",
+  "reason": "Hollywood PG biopic at both Cinemarks (IMDb 6.8). Common Sense Media says 10+ (a child's death is shown) and no listed source reviewed it, so it fails the conservative 9-year-old test.",
+  "imdb_id": "tt17055444"
+ },
+ {
+  "title": "Way of the Warrior Kid",
+  "outcome": "excluded",
+  "reason": "Apple TV+ (IMDb 6.4): PG-13, Common Sense 13+.",
+  "imdb_id": "tt32213169"
+ },
+ {
+  "title": "Focker In-Law",
+  "outcome": "excluded",
+  "reason": "Hollywood PG-13 comedy (IMDb 6.1); The Indian Express: an afterthought.",
+  "imdb_id": "tt34966140"
+ },
+ {
+  "title": "Hexed / The Cat in the Hat / Wildwood",
+  "outcome": "excluded",
+  "reason": "Animated; not Inside Out-level (Hexed IMDb 6.7; The Indian Express: plays it safe)."
+ },
+ {
+  "title": "Paper Tiger / Club Kid / Godzilla Minus Zero / Clayface / Wild Horse Nine / Ebenezer / I Play Rocky",
+  "outcome": "excluded",
+  "reason": "Hollywood titles in local theaters: R-rated or PG-13 and not conservatively OK for a 9-year-old."
+ },
+ {
+  "title": "Spider-Man: Brand New Day / Supergirl / Blade Runner 2099 / Dig / Clashing Through the Snow / The Mosquito Bowl / MobLand S2 / The Altruists / Cunk on Cinema",
+  "outcome": "excluded",
+  "reason": "English OTT releases this week: superhero, adult or not feel-good; Hollywood is capped at one kid-safe feel-good title."
+ },
+ {
+  "title": "Sapne Vs Everyone / Hostel Daze / TVF Tripling / Dahaad",
+  "outcome": "excluded",
+  "reason": "Older TVF/Excel-adjacent hidden gems considered. Sapne Vs Everyone and Hostel Daze are on Prime Video (US season availability not verified); Tripling and Dahaad lack a checked listed-source review this week. Sandeep Bhaiya (free on YouTube) was chosen as the older TVF gem."
+ },
+ {
+  "title": "Ice Cream Man / Anbil Avan / Drones / The Scarecrow",
+  "outcome": "excluded",
+  "reason": "Deepak Bhurani Hindi-dub reviews: gory (Ice Cream Man), inflated rating and negative press (Anbil Avan, excluded Nov 20), IMDb 5.2 (Drones), Korean series (The Scarecrow)."
+ },
+ {
+  "title": "Aadi Anant / Ruff and Tuff Kanya",
+  "outcome": "excluded",
+  "reason": "Marathi and Gujarati films with no US availability found."
+ }
+]

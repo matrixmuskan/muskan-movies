@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-20",
+  "updated": "2026-11-27",
   "method": "Beta-Bernoulli bandit per source, Thompson sampling for exploration; state rebuilt from the prior on every update",
   "prior": {
     "alpha": 2.0,
@@ -36,19 +36,19 @@
       "flavor": "critic",
       "kind": "critic",
       "status": "established",
-      "alpha": 3.5,
-      "beta": 2.5,
-      "n_obs": 2,
-      "surfaced": 9,
-      "rated": 2,
-      "stars_sum": 7,
-      "stars_count": 2,
+      "alpha": 4.0,
+      "beta": 4.0,
+      "n_obs": 4,
+      "surfaced": 10,
+      "rated": 4,
+      "stars_sum": 12,
+      "stars_count": 4,
       "keeps": 0,
       "discards": 0,
-      "successes": 1.5,
-      "failures": 0.5,
-      "mean": 0.5833,
-      "avg_stars": 3.5
+      "successes": 2.0,
+      "failures": 2.0,
+      "mean": 0.5,
+      "avg_stars": 3.0
     },
     "fcg": {
       "name": "Film Critics Guild Reviews (FCG)",
@@ -93,19 +93,19 @@
       "flavor": "hindi-youtube",
       "kind": "critic",
       "status": "established",
-      "alpha": 2.0,
+      "alpha": 3.0,
       "beta": 2.0,
-      "n_obs": 0,
+      "n_obs": 1,
       "surfaced": 3,
-      "rated": 0,
-      "stars_sum": 0,
-      "stars_count": 0,
+      "rated": 1,
+      "stars_sum": 5,
+      "stars_count": 1,
       "keeps": 0,
       "discards": 0,
-      "successes": 0.0,
+      "successes": 1.0,
       "failures": 0.0,
-      "mean": 0.5,
-      "avg_stars": null
+      "mean": 0.6,
+      "avg_stars": 5.0
     },
     "shubhra-gupta": {
       "name": "Shubhra Gupta (The Indian Express / SCREEN)",
@@ -131,38 +131,38 @@
       "flavor": "hindi-youtube",
       "kind": "critic",
       "status": "established",
-      "alpha": 2.0,
+      "alpha": 3.0,
       "beta": 2.0,
-      "n_obs": 0,
+      "n_obs": 1,
       "surfaced": 2,
-      "rated": 0,
-      "stars_sum": 0,
-      "stars_count": 0,
+      "rated": 1,
+      "stars_sum": 5,
+      "stars_count": 1,
       "keeps": 0,
       "discards": 0,
-      "successes": 0.0,
+      "successes": 1.0,
       "failures": 0.0,
-      "mean": 0.5,
-      "avg_stars": null
+      "mean": 0.6,
+      "avg_stars": 5.0
     },
     "suraj-kumar-review": {
       "name": "Suraj Kumar Review",
       "flavor": "hindi-youtube",
       "kind": "critic",
       "status": "established",
-      "alpha": 2.0,
+      "alpha": 3.0,
       "beta": 2.0,
-      "n_obs": 0,
+      "n_obs": 1,
       "surfaced": 4,
-      "rated": 0,
-      "stars_sum": 0,
-      "stars_count": 0,
+      "rated": 1,
+      "stars_sum": 5,
+      "stars_count": 1,
       "keeps": 0,
       "discards": 0,
-      "successes": 0.0,
+      "successes": 1.0,
       "failures": 0.0,
-      "mean": 0.5,
-      "avg_stars": null
+      "mean": 0.6,
+      "avg_stars": 5.0
     },
     "the-indian-web-series": {
       "name": "The Indian Web Series (Dharmil Mehta)",
@@ -207,57 +207,57 @@
       "flavor": "critic",
       "kind": "critic",
       "status": "established",
-      "alpha": 2.0,
+      "alpha": 3.0,
       "beta": 2.0,
-      "n_obs": 0,
+      "n_obs": 1,
       "surfaced": 1,
-      "rated": 0,
-      "stars_sum": 0,
-      "stars_count": 0,
+      "rated": 1,
+      "stars_sum": 5,
+      "stars_count": 1,
       "keeps": 0,
       "discards": 0,
-      "successes": 0.0,
+      "successes": 1.0,
       "failures": 0.0,
-      "mean": 0.5,
-      "avg_stars": null
+      "mean": 0.6,
+      "avg_stars": 5.0
     },
     "yogi-bolta-hai": {
       "name": "Yogi Bolta Hai",
       "flavor": "hindi-youtube",
       "kind": "critic",
       "status": "established",
-      "alpha": 2.0,
+      "alpha": 3.0,
       "beta": 2.0,
-      "n_obs": 0,
+      "n_obs": 1,
       "surfaced": 3,
-      "rated": 0,
-      "stars_sum": 0,
-      "stars_count": 0,
+      "rated": 1,
+      "stars_sum": 5,
+      "stars_count": 1,
       "keeps": 0,
       "discards": 0,
-      "successes": 0.0,
+      "successes": 1.0,
       "failures": 0.0,
-      "mean": 0.5,
-      "avg_stars": null
+      "mean": 0.6,
+      "avg_stars": 5.0
     },
     "shan-prasher": {
       "name": "Shan Prasher",
       "flavor": "hindi-youtube",
       "kind": "critic",
       "status": "established",
-      "alpha": 2.0,
+      "alpha": 3.0,
       "beta": 2.0,
-      "n_obs": 0,
+      "n_obs": 1,
       "surfaced": 1,
-      "rated": 0,
-      "stars_sum": 0,
-      "stars_count": 0,
+      "rated": 1,
+      "stars_sum": 5,
+      "stars_count": 1,
       "keeps": 0,
       "discards": 0,
-      "successes": 0.0,
+      "successes": 1.0,
       "failures": 0.0,
-      "mean": 0.5,
-      "avg_stars": null
+      "mean": 0.6,
+      "avg_stars": 5.0
     },
     "ottplay": {
       "name": "OTTplay",
@@ -283,19 +283,19 @@
       "flavor": "south",
       "kind": "critic",
       "status": "established",
-      "alpha": 2.0,
+      "alpha": 3.0,
       "beta": 2.0,
-      "n_obs": 0,
-      "surfaced": 2,
-      "rated": 0,
-      "stars_sum": 0,
-      "stars_count": 0,
+      "n_obs": 1,
+      "surfaced": 3,
+      "rated": 1,
+      "stars_sum": 4,
+      "stars_count": 1,
       "keeps": 0,
       "discards": 0,
-      "successes": 0.0,
+      "successes": 1.0,
       "failures": 0.0,
-      "mean": 0.5,
-      "avg_stars": null
+      "mean": 0.6,
+      "avg_stars": 4.0
     },
     "taran-adarsh": {
       "name": "Taran Adarsh",
@@ -324,7 +324,7 @@
       "alpha": 2.0,
       "beta": 2.0,
       "n_obs": 0,
-      "surfaced": 2,
+      "surfaced": 4,
       "rated": 0,
       "stars_sum": 0,
       "stars_count": 0,
@@ -419,7 +419,7 @@
       "alpha": 2.0,
       "beta": 2.0,
       "n_obs": 0,
-      "surfaced": 1,
+      "surfaced": 2,
       "rated": 0,
       "stars_sum": 0,
       "stars_count": 0,
@@ -435,19 +435,19 @@
       "flavor": "south",
       "kind": "critic",
       "status": "new",
-      "alpha": 2.0,
+      "alpha": 3.0,
       "beta": 2.0,
-      "n_obs": 0,
+      "n_obs": 1,
       "surfaced": 2,
-      "rated": 0,
-      "stars_sum": 0,
-      "stars_count": 0,
+      "rated": 1,
+      "stars_sum": 5,
+      "stars_count": 1,
       "keeps": 0,
       "discards": 0,
-      "successes": 0.0,
+      "successes": 1.0,
       "failures": 0.0,
-      "mean": 0.5,
-      "avg_stars": null
+      "mean": 0.6,
+      "avg_stars": 5.0
     },
     "factcityindia": {
       "name": "FACT CITY INDIA",
@@ -511,19 +511,19 @@
       "flavor": "critic",
       "kind": "critic",
       "status": "established",
-      "alpha": 2.0,
-      "beta": 2.0,
-      "n_obs": 0,
-      "surfaced": 8,
-      "rated": 0,
-      "stars_sum": 0,
-      "stars_count": 0,
+      "alpha": 5.0,
+      "beta": 3.0,
+      "n_obs": 4,
+      "surfaced": 10,
+      "rated": 4,
+      "stars_sum": 16,
+      "stars_count": 4,
       "keeps": 0,
       "discards": 0,
-      "successes": 0.0,
-      "failures": 0.0,
-      "mean": 0.5,
-      "avg_stars": null
+      "successes": 3.0,
+      "failures": 1.0,
+      "mean": 0.625,
+      "avg_stars": 4.0
     },
     "rediff-movies": {
       "name": "Rediff Movies (Sukanya Verma, others)",
@@ -533,7 +533,7 @@
       "alpha": 2.0,
       "beta": 2.0,
       "n_obs": 0,
-      "surfaced": 2,
+      "surfaced": 3,
       "rated": 0,
       "stars_sum": 0,
       "stars_count": 0,
@@ -549,18 +549,18 @@
       "flavor": "south",
       "kind": "critic",
       "status": "established",
-      "alpha": 4.0,
-      "beta": 2.0,
-      "n_obs": 2,
-      "surfaced": 10,
-      "rated": 2,
-      "stars_sum": 8,
-      "stars_count": 2,
+      "alpha": 6.5,
+      "beta": 2.5,
+      "n_obs": 5,
+      "surfaced": 12,
+      "rated": 5,
+      "stars_sum": 20,
+      "stars_count": 5,
       "keeps": 0,
       "discards": 0,
-      "successes": 2.0,
-      "failures": 0.0,
-      "mean": 0.6667,
+      "successes": 4.5,
+      "failures": 0.5,
+      "mean": 0.7222,
       "avg_stars": 4.0
     },
     "thr-india-reviews": {
@@ -568,27 +568,10 @@
       "flavor": "critic",
       "kind": "critic",
       "status": "established",
-      "alpha": 2.5,
-      "beta": 2.5,
-      "n_obs": 1,
-      "surfaced": 2,
-      "rated": 1,
-      "stars_sum": 3,
-      "stars_count": 1,
-      "keeps": 0,
-      "discards": 0,
-      "successes": 0.5,
-      "failures": 0.5,
-      "mean": 0.5,
-      "avg_stars": 3.0
-    }
-  },
-  "flavors": {
-    "critic": {
       "alpha": 3.5,
       "beta": 2.5,
       "n_obs": 2,
-      "surfaced": 15,
+      "surfaced": 2,
       "rated": 2,
       "stars_sum": 7,
       "stars_count": 2,
@@ -598,27 +581,44 @@
       "failures": 0.5,
       "mean": 0.5833,
       "avg_stars": 3.5
-    },
-    "hindi-youtube": {
-      "alpha": 2.0,
-      "beta": 2.0,
-      "n_obs": 0,
-      "surfaced": 5,
-      "rated": 0,
-      "stars_sum": 0,
-      "stars_count": 0,
+    }
+  },
+  "flavors": {
+    "critic": {
+      "alpha": 7.0,
+      "beta": 4.0,
+      "n_obs": 7,
+      "surfaced": 18,
+      "rated": 7,
+      "stars_sum": 26,
+      "stars_count": 7,
       "keeps": 0,
       "discards": 0,
-      "successes": 0.0,
+      "successes": 5.0,
+      "failures": 2.0,
+      "mean": 0.6364,
+      "avg_stars": 3.71
+    },
+    "hindi-youtube": {
+      "alpha": 3.0,
+      "beta": 2.0,
+      "n_obs": 1,
+      "surfaced": 5,
+      "rated": 1,
+      "stars_sum": 5,
+      "stars_count": 1,
+      "keeps": 0,
+      "discards": 0,
+      "successes": 1.0,
       "failures": 0.0,
-      "mean": 0.5,
-      "avg_stars": null
+      "mean": 0.6,
+      "avg_stars": 5.0
     },
     "hidden-gems": {
       "alpha": 2.0,
       "beta": 2.0,
       "n_obs": 0,
-      "surfaced": 2,
+      "surfaced": 4,
       "rated": 0,
       "stars_sum": 0,
       "stars_count": 0,
@@ -645,18 +645,18 @@
       "avg_stars": null
     },
     "south": {
-      "alpha": 4.0,
-      "beta": 2.0,
-      "n_obs": 2,
-      "surfaced": 11,
-      "rated": 2,
-      "stars_sum": 8,
-      "stars_count": 2,
+      "alpha": 6.5,
+      "beta": 2.5,
+      "n_obs": 5,
+      "surfaced": 13,
+      "rated": 5,
+      "stars_sum": 20,
+      "stars_count": 5,
       "keeps": 0,
       "discards": 0,
-      "successes": 2.0,
-      "failures": 0.0,
-      "mean": 0.6667,
+      "successes": 4.5,
+      "failures": 0.5,
+      "mean": 0.7222,
       "avg_stars": 4.0
     },
     "mainstream-calendar": {
@@ -747,8 +747,12 @@
       },
       "votes_recorded": "backfill (prior trust 0.50)",
       "score": null,
-      "feedback": null,
-      "reward": null
+      "feedback": {
+        "action": "rate",
+        "rating": 3,
+        "timestamp": "2026-11-21T05:14:23.133Z"
+      },
+      "reward": 0.5
     },
     {
       "id": "dupahiya-season-2",
@@ -798,8 +802,12 @@
       },
       "votes_recorded": "backfill (prior trust 0.50)",
       "score": null,
-      "feedback": null,
-      "reward": null
+      "feedback": {
+        "action": "rate",
+        "rating": 4,
+        "timestamp": "2026-11-23T05:54:06.370Z"
+      },
+      "reward": 1.0
     },
     {
       "id": "ghar-waapsi",
@@ -860,8 +868,12 @@
       },
       "votes_recorded": "backfill (prior trust 0.50)",
       "score": null,
-      "feedback": null,
-      "reward": null
+      "feedback": {
+        "action": "rate",
+        "rating": 2,
+        "timestamp": "2026-11-21T05:14:27.906Z"
+      },
+      "reward": 0.0
     },
     {
       "id": "babita-singh-reporting",
@@ -961,8 +973,12 @@
       "votes": {},
       "votes_recorded": "backfill (prior trust 0.50)",
       "score": null,
-      "feedback": null,
-      "reward": null
+      "feedback": {
+        "action": "rate",
+        "rating": 5,
+        "timestamp": "2026-11-21T05:13:34.283Z"
+      },
+      "reward": 1.0
     },
     {
       "id": "adarsh-baal-vidyalaya",
@@ -1120,8 +1136,12 @@
       },
       "votes_recorded": "rank 2026-11-13",
       "score": 0.8205,
-      "feedback": null,
-      "reward": null
+      "feedback": {
+        "action": "rate",
+        "rating": 5,
+        "timestamp": "2026-11-21T05:14:10.150Z"
+      },
+      "reward": 1.0
     },
     {
       "id": "scene-2026",
@@ -1160,8 +1180,12 @@
       "votes": {},
       "votes_recorded": "rank 2026-11-13",
       "score": 0.4939,
-      "feedback": null,
-      "reward": null
+      "feedback": {
+        "action": "rate",
+        "rating": 5,
+        "timestamp": "2026-11-21T05:14:02.910Z"
+      },
+      "reward": 1.0
     },
     {
       "id": "jailer-2",
@@ -1298,8 +1322,12 @@
       },
       "votes_recorded": "rank 2026-11-20",
       "score": 0.631,
-      "feedback": null,
-      "reward": null
+      "feedback": {
+        "action": "rate",
+        "rating": 5,
+        "timestamp": "2026-11-23T05:03:56.141Z"
+      },
+      "reward": 1.0
     },
     {
       "id": "premada-oorali",
@@ -1330,6 +1358,111 @@
     {
       "id": "yeh-prem-mol-liya",
       "week": "2026-11-20",
+      "slot": null,
+      "sources": [],
+      "votes": {},
+      "votes_recorded": "backfill (prior trust 0.50)",
+      "score": null,
+      "feedback": null,
+      "reward": null
+    },
+    {
+      "id": "aakasamlo-oka-tara",
+      "week": "2026-11-27",
+      "slot": "exploit",
+      "sources": [
+        "baradwaj-rangan",
+        "the-hindu-reviews",
+        "indian-express-reviews",
+        "thyview"
+      ],
+      "votes": {
+        "the-hindu-reviews": 0.7222,
+        "baradwaj-rangan": 0.3,
+        "thyview": 0.125,
+        "indian-express-reviews": 0.625
+      },
+      "votes_recorded": "rank 2026-11-27",
+      "score": 0.8496,
+      "feedback": null,
+      "reward": null
+    },
+    {
+      "id": "hail-mary-2026",
+      "week": "2026-11-27",
+      "slot": "explore",
+      "sources": [
+        "rediff-movies"
+      ],
+      "votes": {
+        "rediff-movies": 0.5
+      },
+      "votes_recorded": "rank 2026-11-27",
+      "score": 0.6223,
+      "feedback": null,
+      "reward": null
+    },
+    {
+      "id": "drishyam-the-conclusion",
+      "week": "2026-11-27",
+      "slot": "exploit",
+      "sources": [
+        "rahul-desai",
+        "the-hindu-reviews",
+        "indian-express-reviews",
+        "deepak-bhurani"
+      ],
+      "votes": {
+        "indian-express-reviews": 0.625,
+        "rahul-desai": 0.25,
+        "the-hindu-reviews": 0.7222,
+        "deepak-bhurani": 0.5
+      },
+      "votes_recorded": "rank 2026-11-27",
+      "score": 0.846,
+      "feedback": null,
+      "reward": null
+    },
+    {
+      "id": "sandeep-bhaiya",
+      "week": "2026-11-27",
+      "slot": "exploit",
+      "sources": [],
+      "votes": {},
+      "votes_recorded": "rank 2026-11-27",
+      "score": 0.5423,
+      "feedback": null,
+      "reward": null
+    },
+    {
+      "id": "garividi-lakshmi",
+      "week": "2026-11-27",
+      "slot": "exploit",
+      "sources": [
+        "deepak-bhurani"
+      ],
+      "votes": {
+        "deepak-bhurani": 0.5
+      },
+      "votes_recorded": "rank 2026-11-27",
+      "score": 0.6238,
+      "feedback": null,
+      "reward": null
+    },
+    {
+      "id": "panchayat-season-5",
+      "week": "2026-11-27",
+      "slot": null,
+      "sources": [],
+      "votes": {},
+      "votes_recorded": "backfill (prior trust 0.50)",
+      "score": null,
+      "feedback": null,
+      "reward": null
+    },
+    {
+      "id": "king-2026",
+      "week": "2026-11-27",
       "slot": null,
       "sources": [],
       "votes": {},
