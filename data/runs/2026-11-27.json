@@ -1,0 +1,177 @@
+{
+  "week": "2026-11-27",
+  "version": 1,
+  "discovery_started": "2026-11-27T13:52:42-08:00",
+  "built_by": "weekly build (additive; old scratch build.py not used); fresh clone /workspace/muskan-movies-build-20261127",
+  "sources_checked": {
+    "youtube_rss_7d": "All 18 YouTube channels mapped from data/sources.json via RSS (window Nov 20-27): sucharita-tyagi, abhi-ka-review, tried-and-refused, suraj-kumar-review, thr-india, yogi-bolta-hai, shan-prasher, deepak-bhurani, sudhir-srinivasan, india-movie-dekho (0 uploads), barbell-pitch-meetings, thyview, filmy-geeks, factcityindia, filmxpro, filmy-reminder (0 uploads). RSS worked, so yt_channel.py was not needed. Transcripts (youtube_transcript_api) read for 25 review videos.",
+    "x_public_posts": [
+      "rahul-desai (5 posts: Yeh Prem Mol Liya and Hanuman Ansh negative, Dhindora 2)",
+      "shubhra-gupta (4: Gunmaaster G9 and Yeh Prem Mol Liya negative)",
+      "baradwaj-rangan (25: Aakasamlo Oka Tara and ENE Repeat text reviews, interviews)",
+      "taran-adarsh (25: release calendar and box office, no vote)",
+      "thyview (13: Bhogi negative, AOT and ENE Repeat positive, You Can See Everything)",
+      "sudhir-srinivasan (5: OM thoughts, cricket)",
+      "abhi-ka-review (1, off-topic)",
+      "sucharita-tyagi (0)",
+      "deepak-bhurani (0)",
+      "india-movie-dekho (0)"
+    ],
+    "review_site_rss": [
+      "indian-express-reviews (RSS)",
+      "the-hindu-reviews (RSS)",
+      "rediff-movies (RSS + OTT guide Nov 27 + Hanuman Ansh and Hail Mary reviews)",
+      "fcg (fcgreviews.com home page: Yeh Prem Mol Liya reviews mixed, Bhogi negative, Hail Mary and OM listed; no aggregate verdict used as an endorsement)",
+      "thr-india-reviews (via the THR India YouTube feed and the Drishyam review page)"
+    ],
+    "local_theaters": [
+      "Cinemark Pacific Commons Fremont (BigScreen theater=29354, Nov 27)",
+      "Cinemark Union Landing Union City (BigScreen theater=5994, Nov 27)"
+    ],
+    "ott_and_availability": "Rediff OTT guide (Nov 27), filmverse US/Canada guide (Nov 27), Netflix title page 83074116, Reelgood US, JustWatch, Prime Video and TVF YouTube pages",
+    "imdb": "r.jina.ai proxy of IMDb title pages + IMDb suggestion API"
+  },
+  "coverage_gaps": [
+    "Instagram-only sources skipped by design (the-indian-web-series, karan-mirchandani; india-movie-dekho Instagram)",
+    "Facebook-only sources (ormax-media, ottplay) not machine-readable; no Ormax chart read",
+    "X not polled for filmxpro (5 posts total, marked not worth polling); deepak-bhurani and sucharita-tyagi X returned nothing in the window",
+    "Suraj Kumar Review and some ABHI KA REVIEW transcripts only available as auto-translations; verdicts read from those",
+    "JioHotstar and ZEE5 per-title US availability not verified (Mayookha, Dhai Chaal, Delhi 2021)",
+    "Local showtimes for December titles (Maatrubhumi, Avengers, Dune, King) not listed yet; BigScreen shows only the current day"
+  ],
+  "candidates_file": "data/runs/candidates-2026-11-27.json",
+  "selected": [
+    {
+      "id": "aakasamlo-oka-tara",
+      "slot": "exploit",
+      "platform": "theater (Union City)",
+      "score": 0.8496,
+      "sources": [
+        "baradwaj-rangan",
+        "the-hindu-reviews",
+        "indian-express-reviews",
+        "thyview"
+      ]
+    },
+    {
+      "id": "drishyam-the-conclusion",
+      "slot": "exploit",
+      "platform": "Netflix",
+      "score": 0.846,
+      "sources": [
+        "rahul-desai",
+        "the-hindu-reviews",
+        "indian-express-reviews",
+        "deepak-bhurani"
+      ]
+    },
+    {
+      "id": "garividi-lakshmi",
+      "slot": "exploit",
+      "platform": "Prime Video (Hindi dub) + Union City theater",
+      "score": 0.6238,
+      "sources": [
+        "deepak-bhurani"
+      ]
+    },
+    {
+      "id": "hail-mary-2026",
+      "slot": "explore",
+      "platform": "theater (Union City)",
+      "score": 0.6223,
+      "sources": [
+        "rediff-movies"
+      ]
+    },
+    {
+      "id": "sandeep-bhaiya",
+      "slot": "exploit",
+      "platform": "YouTube",
+      "score": 0.5423,
+      "sources": []
+    }
+  ],
+  "mix": {
+    "off_netflix_prime": 4,
+    "netflix_prime": 1,
+    "hollywood": 0,
+    "exploit": 4,
+    "explore": 1,
+    "hindi_original": 2,
+    "hindi_dub_or_trailer": 2
+  },
+  "ranking_tool_note": "tools/score_sources.py rank (week seed 2026-11-27). First pass picked Delhi 2021 as the second explore title; it was removed by hand (ZEE5 US availability not verified, lukewarm 6/10, 41 IMDb votes) and the re-run with --record put Sandeep Bhaiya in as exploit (no listed-source review; picked on taste: TVF + study life, and the Saas Bahu Achaar 5-star lesson). Manual rules outside the tool: US availability, Hollywood kid-safety, endorsement verdict checks.",
+  "previews": {
+    "updated": [
+      "yeh-prem-mol-liya (released Nov 27; IMDb not yet rated; reviews mostly negative or mixed; local showtimes confirmed)",
+      "om-chapter-1-udhiram-the-blood-wood (IMDb now 8.7)",
+      "the-hunger-games-sunrise-on-the-reaping (IMDb 7.5)",
+      "maatrubhumi (Dec 4; UA 16+)",
+      "avengers-doomsday (final trailer; Dec 18)",
+      "dune-part-three (Dec 18 confirmed; early-screening buzz positive)"
+    ],
+    "added": [
+      "panchayat-season-5 (Prime Video, Dec 3)",
+      "king-2026 (Dec 24)"
+    ],
+    "history_file": "data/preview-history.json (new version per title; previous version marked superseded_by)",
+    "ramayana_check": "Ramayana Part 1 (picked Nov 13, rated 5) still showing at both Cinemarks in week 4; Part 2 now dated Diwali 2028."
+  },
+  "older_picks_recheck": {
+    "removals": [],
+    "imdb_drift_updated": {
+      "matargashti": [
+        7.4,
+        7.3
+      ],
+      "ene-repeat": [
+        7.4,
+        7.2
+      ],
+      "premada-oorali": [
+        7.5,
+        7.3
+      ],
+      "the-hunger-games-sunrise-on-the-reaping (preview)": [
+        7.7,
+        7.5
+      ],
+      "om-chapter-1-udhiram-the-blood-wood (preview)": [
+        null,
+        8.7
+      ]
+    },
+    "unchanged": "udta-teer 6.7, baththa 8.5, ghar-waapsi 8.7, babita-singh-reporting 6.2, tenzing 7.4, mirzapur-the-movie 7.2, scene-2026 8.1, jailer-2 7.7, dhindora-season-2 8.7, mitronpolitan-life-in-20s 8.0",
+    "watch": "Babita Singh Reporting stays at 6.2, close to the floor. ENE Repeat and Premada Oorali slipped 0.2 on small vote counts; Baradwaj Rangan's ENE Repeat review (Nov 27) is positive, so neither counts as a downtrend yet.",
+    "note": "No downtrend removals this week. Rated and kept titles untouched."
+  },
+  "feedback": {
+    "files_read": 21,
+    "newest": "2026-11-23T05:54:06Z (Nov 22, 9:54 PM PT)",
+    "new_since_last_build": 7,
+    "items": [
+      "pritam-and-pedro rate 5",
+      "family-kirana-store-season-3 rate 5",
+      "ramayana-part-1 rate 5",
+      "last-man-in-tower rate 3",
+      "sumo-didi rate 2",
+      "saas-bahu-achaar-pvt-ltd rate 5",
+      "sookshmadarshini rate 4"
+    ],
+    "sources_with_feedback": 12,
+    "insufficient_for_trust": true,
+    "taste_changes": "Hindi 1.0, comedy 0.99, slice-of-life 1.0, TVF 1.0, crime 0.96, thriller 0.93, mythology/epic 0.58, biopic 0.56 (down after Sumo Didi)."
+  },
+  "source_trust_top3": [
+    "the-hindu-reviews 0.72 Beta(6.5,2.5)",
+    "indian-express-reviews 0.62 Beta(5,3)",
+    "abhi-ka-review / baradwaj-rangan and four others tied at 0.60 Beta(3,2) on one rated pick each"
+  ],
+  "changes": [
+    "Appended 5 picks and 2 previews (week 2026-11-27) to data/picks.json; earlier weeks untouched except preview updates and IMDb drift values",
+    "Updated 6 existing previews in place with a new version each in data/preview-history.json",
+    "Rebuilt data/source-scores.json (weekly, rank --record, update)",
+    "Updated data/taste-profile.json and data/ratings-log.json with 7 new feedback items; added their notes to tools/build_ratings_log.py",
+    "Saved digest as data/runs/friday-message-2026-11-27-v1.md"
+  ]
+}

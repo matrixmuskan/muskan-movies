@@ -31,50 +31,50 @@
     "kid_safe_default": "conservative (false unless family/PG)"
   },
   "language_weights": {
-    "Hindi": 0.95,
+    "Hindi": 1.0,
     "Tamil (Hindi dub)": 0.75,
     "Telugu (Hindi dub)": 0.75,
-    "Malayalam (Hindi dub)": 0.75,
+    "Malayalam (Hindi dub)": 0.79,
     "Kannada (Hindi dub)": 0.7,
     "English (Hollywood)": 0.1,
     "Other": 0.1
   },
   "genre_weights": {
-    "comedy": 0.79,
-    "thriller": 0.89,
-    "suspense/mystery": 0.85,
-    "crime": 0.88,
-    "slice-of-life": 0.89,
-    "drama": 0.63,
+    "comedy": 0.99,
+    "thriller": 0.93,
+    "suspense/mystery": 0.89,
+    "crime": 0.96,
+    "slice-of-life": 1.0,
+    "drama": 0.75,
     "courtroom/legal": 0.8,
-    "biopic": 0.6,
+    "biopic": 0.56,
     "family/kids": 0.75,
     "animation (family)": 0.4,
-    "action": 0.45,
+    "action": 0.53,
     "romance": 0.35,
-    "mythology/epic": 0.5,
+    "mythology/epic": 0.58,
     "horror-comedy": 0.3,
     "heavy horror": 0.0
   },
   "theme_weights": {
-    "rustic/small-town (TVF, Panchayat-style)": 0.99,
+    "rustic/small-town (TVF, Panchayat-style)": 1.0,
     "scam/fraud ring/pills/smuggling": 0.98,
     "study/college/coaching life": 0.89,
     "medical": 0.8,
     "legal/courtroom": 0.8,
     "victim-side justice": 0.8,
     "stories with kids": 0.8,
-    "father-daughter/family warmth": 0.7,
-    "cop/investigation": 0.74,
+    "father-daughter/family warmth": 0.78,
+    "cop/investigation": 0.82,
     "gangster violence": 0.45,
     "Excel Entertainment Prime shows": 0.8,
-    "TVF production": 0.89
+    "TVF production": 1.0
   },
   "producer_weights": {
-    "TVF": 0.9,
+    "TVF": 1.0,
     "Excel Entertainment": 0.8,
     "Posham Pa Pictures": 0.65,
-    "Rajkumar Hirani Films": 0.65
+    "Rajkumar Hirani Films": 0.73
   },
   "liked_examples": [
     "Panchayat",
@@ -86,36 +86,42 @@
     "Hello Bachhon",
     "Taskaree: The Smuggler's Web",
     "Dupahiya (Season 2)",
-    "Matka King"
+    "Matka King",
+    "Pritam and Pedro",
+    "Family Kirana Store (Season 3)",
+    "Ramayana: Part 1",
+    "Saas Bahu Achaar Pvt. Ltd.",
+    "Sookshmadarshini"
   ],
   "disliked_examples": [
     "heavy horror (any)",
     "Adarsh Baal Vidyalaya",
     "Shaun the Sheep: The Beast of Mossy Bottom",
     "Forgotten Island",
-    "Very Parivarik"
+    "Very Parivarik",
+    "Sumo Didi"
   ],
   "reviewer_trust_weights": {
-    "Rahul Desai (The Hollywood Reporter India critic)": 0.5,
+    "Rahul Desai (The Hollywood Reporter India critic)": 0.46,
     "Film Critics Guild Reviews (FCG)": 0.5,
     "Sucharita Tyagi": 0.5,
-    "ABHI KA REVIEW": 0.5,
-    "Shubhra Gupta (The Indian Express / SCREEN)": 0.5,
-    "Tried & Refused Productions": 0.5,
-    "Suraj Kumar Review": 0.5,
+    "ABHI KA REVIEW": 0.58,
+    "Shubhra Gupta (The Indian Express / SCREEN)": 0.58,
+    "Tried & Refused Productions": 0.58,
+    "Suraj Kumar Review": 0.58,
     "The Indian Web Series (Dharmil Mehta)": 0.5,
     "Ormax Media (weekly OTT viewership charts)": 0.5,
-    "The Hollywood Reporter India": 0.5,
-    "Yogi Bolta Hai": 0.5,
-    "Shan Prasher": 0.5,
+    "The Hollywood Reporter India": 0.58,
+    "Yogi Bolta Hai": 0.58,
+    "Shan Prasher": 0.58,
     "OTTplay": 0.5,
-    "Baradwaj Rangan (Galatta Plus)": 0.5,
+    "Baradwaj Rangan (Galatta Plus)": 0.54,
     "Taran Adarsh": 0.5,
     "Film Critics Guild Reviews": 0.5,
-    "The Indian Express - Movie Reviews": 0.5,
+    "The Indian Express - Movie Reviews": 0.66,
     "Rediff Movies (Sukanya Verma, others)": 0.5,
-    "The Hindu - Reviews": 0.5,
-    "The Hollywood Reporter India - Reviews": 0.5
+    "The Hindu - Reviews": 0.62,
+    "The Hollywood Reporter India - Reviews": 0.54
   },
   "seen": [
     "Panchayat",
@@ -149,14 +155,22 @@
     "Shaun the Sheep: The Beast of Mossy Bottom",
     "Forgotten Island",
     "Very Parivarik",
-    "Hunkkaar: The Roar"
+    "Hunkkaar: The Roar",
+    "Pritam and Pedro",
+    "Family Kirana Store (Season 3)",
+    "Ramayana: Part 1",
+    "Last Man in Tower",
+    "Sumo Didi",
+    "Saas Bahu Achaar Pvt. Ltd.",
+    "Sookshmadarshini"
   ],
   "seen_or_rejected": [
     "Adarsh Baal Vidyalaya",
     "Shaun the Sheep: The Beast of Mossy Bottom",
     "Forgotten Island",
     "Very Parivarik",
-    "Hunkkaar: The Roar"
+    "Hunkkaar: The Roar",
+    "Sumo Didi"
   ],
   "feedback_log": [
     {
@@ -228,8 +242,57 @@
       "stars": 3,
       "delta": 0.0,
       "date": "2026-11-14"
+    },
+    {
+      "id": "pritam-and-pedro",
+      "action": "rate",
+      "stars": 5,
+      "delta": 0.08,
+      "date": "2026-11-21"
+    },
+    {
+      "id": "family-kirana-store-season-3",
+      "action": "rate",
+      "stars": 5,
+      "delta": 0.08,
+      "date": "2026-11-21"
+    },
+    {
+      "id": "ramayana-part-1",
+      "action": "rate",
+      "stars": 5,
+      "delta": 0.08,
+      "date": "2026-11-21"
+    },
+    {
+      "id": "last-man-in-tower",
+      "action": "rate",
+      "stars": 3,
+      "delta": 0.0,
+      "date": "2026-11-21"
+    },
+    {
+      "id": "sumo-didi",
+      "action": "rate",
+      "stars": 2,
+      "delta": -0.04,
+      "date": "2026-11-21"
+    },
+    {
+      "id": "saas-bahu-achaar-pvt-ltd",
+      "action": "rate",
+      "stars": 5,
+      "delta": 0.08,
+      "date": "2026-11-23"
+    },
+    {
+      "id": "sookshmadarshini",
+      "action": "rate",
+      "stars": 4,
+      "delta": 0.04,
+      "date": "2026-11-23"
     }
   ],
-  "updated": "2026-11-20",
-  "last_build_note": "2026-11-20: feedback since 2026-11-13: Very Parivarik discarded (-0.05 to comedy, slice-of-life, TVF production), Hunkkaar: The Roar 3 stars (no change). Other weights unchanged."
+  "updated": "2026-11-27",
+  "last_build_note": "2026-11-27: feedback since 2026-11-20 (7 new taps): Pritam and Pedro 5 stars (+0.08); Family Kirana Store (Season 3) 5 stars (+0.08); Ramayana: Part 1 5 stars (+0.08); Last Man in Tower 3 stars (0.0); Sumo Didi 2 stars (-0.04); Saas Bahu Achaar Pvt. Ltd. 5 stars (+0.08); Sookshmadarshini 4 stars (+0.04). Deltas follow update_rules (rating: (stars-3)*0.04 to the title tags, language and listed reviewers). Source trust itself lives in data/source-scores.json."
 }

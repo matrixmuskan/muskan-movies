@@ -3,7 +3,7 @@
     "id": "the-hunger-games-sunrise-on-the-reaping",
     "title": "The Hunger Games: Sunrise on the Reaping",
     "release_date": "2026-11-20",
-    "imdb": "7.7",
+    "imdb": "7.5",
     "versions": [
       {
         "version": 1,
@@ -18,7 +18,15 @@
         "checked": "2026-11-20",
         "status": "released",
         "note": "Released Nov 20. IMDb 7.7 (about 7.5K votes). Reviews lukewarm: The Indian Express (snoozefest), The Hindu (familiar spin-off). PG-13, not kid-safe.",
-        "where": "In theaters now: Cinemark Pacific Commons (Fremont) and Cinemark Union Landing (Union City), many shows today incl. 3D, XD and D-BOX (BigScreen, Nov 20)"
+        "where": "In theaters now: Cinemark Pacific Commons (Fremont) and Cinemark Union Landing (Union City), many shows today incl. 3D, XD and D-BOX (BigScreen, Nov 20)",
+        "superseded_by": 3
+      },
+      {
+        "version": 3,
+        "checked": "2026-11-27",
+        "status": "released",
+        "note": "IMDb 7.5 (about 38K votes); reviews remain lukewarm. PG-13.",
+        "where": "In theaters: Cinemark Pacific Commons (Fremont, incl. XD) and Cinemark Union Landing (Union City, incl. XD and D-BOX) (BigScreen, Nov 27)"
       }
     ]
   },
@@ -26,7 +34,7 @@
     "id": "om-chapter-1-udhiram-the-blood-wood",
     "title": "OM Chapter 1: Udhiram - The Blood Wood",
     "release_date": "2026-11-20",
-    "imdb": "not yet rated",
+    "imdb": "8.7",
     "versions": [
       {
         "version": 1,
@@ -41,7 +49,15 @@
         "checked": "2026-11-20",
         "status": "released",
         "note": "Released Nov 20; same film as IMDb tt34515768 (O.M: Operation Mole). IMDb not yet rated. Reviews mixed: ABHI KA REVIEW 6/10 (Hindi dub), The Hindu bloated but Dhanush and Sai Pallavi score. Official Hindi trailer found.",
-        "where": "In theaters now: Cinemark Pacific Commons (Fremont, Tamil) and Cinemark Union Landing (Union City, Tamil and Telugu), English subtitles; no Hindi shows listed locally"
+        "where": "In theaters now: Cinemark Pacific Commons (Fremont, Tamil) and Cinemark Union Landing (Union City, Tamil and Telugu), English subtitles; no Hindi shows listed locally",
+        "superseded_by": 3
+      },
+      {
+        "version": 3,
+        "checked": "2026-11-27",
+        "status": "released",
+        "note": "Now rated: IMDb 8.7 (about 9.5K votes). Critics mixed (Rediff, Yogi Bolta Hai, The Hindu).",
+        "where": "In theaters: Cinemark Union Landing (Union City), one Tamil show a day with English subtitles (BigScreen, Nov 27); no longer listed at Fremont"
       }
     ]
   },
@@ -64,7 +80,15 @@
         "checked": "2026-11-20",
         "status": "preview",
         "note": "Trailer reactions mixed (Variety India positive, Times Now: VFX criticism). Salman Khan responded to critics Nov 20. No reviews yet.",
-        "where": "In theaters Dec 4 (limited US release, Fandango listing; Cinemark shows reported in some US cities). Fremont and Union City showtimes not listed yet (checked Nov 20)."
+        "where": "In theaters Dec 4 (limited US release, Fandango listing; Cinemark shows reported in some US cities). Fremont and Union City showtimes not listed yet (checked Nov 20).",
+        "superseded_by": 3
+      },
+      {
+        "version": 3,
+        "checked": "2026-11-27",
+        "status": "preview",
+        "note": "Dec 4 confirmed; UA 16+, 154 min; slow US pre-sales; no reviews.",
+        "where": "In theaters Dec 4. US advance bookings open (about 115 tickets across 85 US cinemas as of Nov 26, filmsdiscourse). Fremont and Union City showtimes not listed yet (checked Nov 27)."
       }
     ]
   },
@@ -87,6 +111,14 @@
         "checked": "2026-11-20",
         "status": "preview",
         "note": "No reviews yet. US tickets on sale since August.",
+        "where": "In theaters Dec 18. US tickets on sale at Cinemark and Fandango since August; Fremont and Union City showtimes not verified yet (checked Nov 20).",
+        "superseded_by": 3
+      },
+      {
+        "version": 3,
+        "checked": "2026-11-27",
+        "status": "preview",
+        "note": "Final trailer out Nov 23-24; India Dec 17, US Dec 18; no reviews.",
         "where": "In theaters Dec 18. US tickets on sale at Cinemark and Fandango since August; Fremont and Union City showtimes not verified yet (checked Nov 20)."
       }
     ]
@@ -110,6 +142,14 @@
         "checked": "2026-11-20",
         "status": "preview",
         "note": "No reviews yet. Cinemark premium-format tickets on sale since August.",
+        "where": "In theaters Dec 18. Cinemark XD and IMAX premium tickets on sale since August; Fremont and Union City showtimes not verified yet (checked Nov 20).",
+        "superseded_by": 3
+      },
+      {
+        "version": 3,
+        "checked": "2026-11-27",
+        "status": "preview",
+        "note": "Dec 18 confirmed; early-screening buzz positive; reactions expected Dec 1, reviews Dec 9.",
         "where": "In theaters Dec 18. Cinemark XD and IMAX premium tickets on sale since August; Fremont and Union City showtimes not verified yet (checked Nov 20)."
       }
     ]
@@ -125,7 +165,45 @@
         "checked": "2026-11-20",
         "status": "preview",
         "note": "New preview: trailer launched Nov 18 to 19; no reviews yet.",
-        "where": "In theaters Nov 27 (US release listed on Fandango, NR, about 3 hours). Fremont and Union City showtimes not listed yet (checked Nov 20)."
+        "where": "In theaters Nov 27 (US release listed on Fandango, NR, about 3 hours). Fremont and Union City showtimes not listed yet (checked Nov 20).",
+        "superseded_by": 2
+      },
+      {
+        "version": 2,
+        "checked": "2026-11-27",
+        "status": "released",
+        "note": "Released Nov 27; IMDb not yet rated; listed critics mostly negative or mixed; Deepak Bhurani calls it family-safe.",
+        "where": "In theaters now: Cinemark Pacific Commons (Fremont) 9:50a, 1:40, 5:30, 9:20 and Cinemark Union Landing (Union City) 12:00, 3:50, 7:40; Hindi with English subtitles (BigScreen, Nov 27)"
+      }
+    ]
+  },
+  {
+    "id": "panchayat-season-5",
+    "title": "Panchayat (Season 5)",
+    "release_date": "2026-12-03",
+    "imdb": "not yet rated",
+    "versions": [
+      {
+        "version": 1,
+        "checked": "2026-11-27",
+        "status": "preview",
+        "note": "New preview: official trailer Nov 23; Prime Video Dec 3.",
+        "where": "Prime Video, from Dec 3 (India and 240+ countries per Hindustan Times)"
+      }
+    ]
+  },
+  {
+    "id": "king-2026",
+    "title": "King",
+    "release_date": "2026-12-24",
+    "imdb": "not yet rated",
+    "versions": [
+      {
+        "version": 1,
+        "checked": "2026-11-27",
+        "status": "preview",
+        "note": "New preview: Dec 24 release confirmed by Red Chillies; no official trailer yet.",
+        "where": "In theaters Dec 24 (worldwide). Local showtimes not listed yet (checked Nov 27)."
       }
     ]
   }
